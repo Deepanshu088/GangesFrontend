@@ -1,0 +1,79 @@
+/* cabbooking.css */
+
+.cabbooking-booking {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    position: relative;
+  }
+  
+  .cabbooking-contact-bg02 {
+    padding-left: 20px;
+  }
+  
+  .cabbooking-section-title h2 {
+    font-size: 28px;
+  }
+  
+  .cabbooking-form input[type='text'],
+  .cabbooking-form input[type='email'],
+  .cabbooking-form input[type='tel'],
+  .cabbooking-form input[type='date'],
+  .cabbooking-form input[type='time'] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+  }
+  
+  .cabbooking-form input[type='text']:focus,
+  .cabbooking-form input[type='email']:focus,
+  .cabbooking-form input[type='tel']:focus,
+  .cabbooking-form input[type='date']:focus,
+  .cabbooking-form input[type='time']:focus {
+    border-bottom: 2px solid #4CAF50;
+  }
+  
+  .cabbooking-form input[type='submit'] {
+    background: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    cursor: pointer;
+  }
+  
+  .cabbooking-tab {
+    display: none;
+  }
+  
+  .cabbooking-booking-img img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .cabbooking-btn-wrapper {
+    text-align: right;
+  }
+  
+  .cabbooking-next-btn {
+    background-color: yellow;
+  }
+  
+  .cabbooking-submit-btn {
+    background-color: yellow;
+  }
+  
+  .cabbooking-step {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .cabbooking-step.active {
+    background-color: #4CAF50;
+  }
+  
