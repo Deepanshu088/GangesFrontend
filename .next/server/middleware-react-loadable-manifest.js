@@ -1,0 +1,1 @@
+self.__REACT_LOADABLE_MANIFEST='{"components/sections/TeamDetailsInner.js -> @/components/elements/CounterUp":{"id":12,"files":["static/chunks/3798.b984a5d4e9d4591f.js","static/chunks/12.3a472df9240ed248.js"]}}';
