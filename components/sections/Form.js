@@ -41,7 +41,7 @@ export default function Form() {
                       <i className="fa fa-angle-down"></i>
                     </div>
                     <div className="form-submit">
-                      <button type="submit">Make Bookings</button>
+                      <button type="submit">Book Now</button>
                     </div>
                   </form>
                 </div>
@@ -56,7 +56,7 @@ export default function Form() {
                   <p style={{ color: 'white' , fontSize: '17px'}}> Our elegant rooms, delectable cuisine, and serene ambiance ensure a truly unforgettable stay</p>
                   <div className="contact-info">
                     <div className="icon-box"><i className="flaticon-customer-service"></i></div>
-                    <span>Booking Now</span>
+                    <span>Book Now</span>
                     <h4 className="title">+91-7408423504 <br/>+91-7408423511</h4>
                   </div>
                 </div>

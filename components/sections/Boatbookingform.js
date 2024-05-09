@@ -53,20 +53,6 @@ const Cabbooking = () => {
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
           }
-
-          .cabbooking-input {
-            width: calc(100% - 20px);
-            padding: 10px;
-            margin-bottom: 20px;
-            border: none;
-            border-bottom: 1px solid #ccc;
-            outline: none;
-          }
-
-          .cabbooking-input:focus {
-            border-bottom: 2px solid #4CAF50;
-          }
-
           .cabbooking-button {
             background-color: #ad9700;
             color: white;
@@ -103,20 +89,20 @@ const Cabbooking = () => {
             <div className="w3layoutscontactagileits cabbooking-booking-form">
               <form id="cabbooking-regForm" action="/action_page.php">
                 <div className={`cabbooking-tab ${currentTab === 0 ? 'active' : ''}`} style={{ display: currentTab === 0 ? 'block' : 'none' }}>
-                  <p><input type="date" placeholder="Date" onInput={handleInputChange} name="date" className="cabbooking-input" required /></p>
-                  <p><input type="time" placeholder="Time" onInput={handleInputChange} name="time" className="cabbooking-input" required /></p>
-                  <p><input placeholder="City" onInput={handleInputChange} name="city" className="cabbooking-input" required /></p>
-                  <p><input placeholder="Country" onInput={handleInputChange} name="country" className="cabbooking-input" required /></p>
-                  <p><input placeholder="No. of Passengers" onInput={handleInputChange} name="numberOfPassengers" className="cabbooking-input" required /></p>
+                  <p><input type="date" placeholder="Date" onInput={handleInputChange} name="date" className={`w-full text-base font-normal p-4 py-3 rounded-md bg-gray-100 border border-primaryBorderColor focus:border-primaryBorderColor`} style={{width: "100%"}}  required /></p>
+                  <p><input type="time" placeholder="Time" onInput={handleInputChange} name="time" className={`w-full text-base font-normal p-4 py-3 rounded-md bg-gray-100 border border-primaryBorderColor focus:border-primaryBorderColor`} style={{width: "100%"}}  required /></p>
+                  <p><input placeholder="City" onInput={handleInputChange} name="city" className={`w-full text-base font-normal p-4 py-3 rounded-md bg-gray-100 border border-primaryBorderColor focus:border-primaryBorderColor`} style={{width: "100%"}}  required /></p>
+                  <p><input placeholder="Country" onInput={handleInputChange} name="country" className={`w-full text-base font-normal p-4 py-3 rounded-md bg-gray-100 border border-primaryBorderColor focus:border-primaryBorderColor`} style={{width: "100%"}}  required /></p>
+                  <p><input placeholder="No. of Passengers" onInput={handleInputChange} name="numberOfPassengers" className={`w-full text-base font-normal p-4 py-3 rounded-md bg-gray-100 border border-primaryBorderColor focus:border-primaryBorderColor`} style={{width: "100%"}}  required /></p>
                   <span>Amount Payable: Rs. 1000</span>
                   <div style={{ textAlign: 'right' }}>
                     <button type="button" id="cabbooking-nextBtn" onClick={() => nextPrev(1)} className="cabbooking-button">Next</button>
                   </div>
                 </div>
                 <div className={`cabbooking-tab ${currentTab === 1 ? 'active' : ''}`} style={{ display: currentTab === 1 ? 'block' : 'none' }}>
-                  <p><input placeholder="Your Name" onInput={handleInputChange} name="name" className="cabbooking-input" required /></p>
-                  <p><input placeholder="E-mail..." onInput={handleInputChange} name="email" className="cabbooking-input" required /></p>
-                  <p><input placeholder="Phone..." onInput={handleInputChange} name="phone" className="cabbooking-input" required /></p>
+                  <p><input placeholder="Your Name" onInput={handleInputChange} name="name" className={`w-full text-base font-normal p-4 py-3 rounded-md bg-gray-100 border border-primaryBorderColor focus:border-primaryBorderColor`} style={{width: "100%"}}  required /></p>
+                  <p><input placeholder="E-mail..." onInput={handleInputChange} name="email" className={`w-full text-base font-normal p-4 py-3 rounded-md bg-gray-100 border border-primaryBorderColor focus:border-primaryBorderColor`} style={{width: "100%"}}  required /></p>
+                  <p><input placeholder="Phone..." onInput={handleInputChange} name="phone" className={`w-full text-base font-normal p-4 py-3 rounded-md bg-gray-100 border border-primaryBorderColor focus:border-primaryBorderColor`} style={{width: "100%"}}  required /></p>
                   <div style={{ overflow: 'auto' }}>
                     <div style={{ float: 'left' }}>
                       <button type="button" id="cabbooking-prevBtn" onClick={() => nextPrev(-1)} className="cabbooking-button1">Previous</button>

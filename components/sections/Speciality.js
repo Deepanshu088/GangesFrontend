@@ -43,7 +43,7 @@ export default function SPECIALITY() {
           </div>
         </div>
       </section>
-      <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="L61p2uyiMSo" onClose={() => setOpen(false)} />
+      <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="FEGSV2bMNxA" onClose={() => setOpen(false)} />
       {/* Add Services component here */}
       <Services />
       {/* Add Testimonial2 component here */}

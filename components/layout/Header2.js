@@ -7,13 +7,9 @@ import LogoWhite from '../../public/images/icons/Logo-Black.png';
 import LogoDark from '../../public/images/icons/Logo-Black.png';
 
 const Header1 = ({ handleMobileMenu, searchToggle, handleSearch, scroll, isSearch }) => {
-
-
-
     return (
         <>
-
-                <header className={`main-header header-style-one ${scroll ? "fixed-header" : ""} ${searchToggle ? "moblie-search-active" : ""}`} style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)', marginTop:5 }}>
+                <header className={`main-header header-style-one ${scroll ? "fixed-header" : ""} ${searchToggle ? "moblie-search-active" : ""}`} style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)', marginTop:0 }}>
                 <div className="auto-container">
                     <div className="header-top">
                         <div className="inner-box">
@@ -24,7 +20,7 @@ const Header1 = ({ handleMobileMenu, searchToggle, handleSearch, scroll, isSearc
                     <div className="main-box">
                         <div className="logo-box">
                             <div className="logo">
-                            <Image src={LogoDark} alt="Hoexr" title="Hoexr" width={180} height={80} /></div>
+                            <Image src={LogoDark} alt="Hoexr" title="Hoexr" /></div>
                             
                         </div>
                         <div className="nav-outer">

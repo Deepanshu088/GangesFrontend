@@ -23,7 +23,7 @@ export default function Features() {
                       <h2>The Restaurant</h2>
                       <div className="text">Indulge in a culinary journey at our restaurant, where every dish is a masterpiece of flavor and presentation. Our chefs skillfully blend local ingredients with global influences to create a menu that delights the senses. Enjoy impeccable service and a warm ambiance that sets the stage for a memorable dining experience..</div>
                     </div>
-                    <Link href="/room-details" className="theme-btn btn-style-one read-more">MAKE BOOKINGS</Link>
+                    <Link href="/room-details" className="theme-btn btn-style-one read-more">MAKE BOOKING</Link>
                     <figure className="image-2"><img src="images/resource/icon.png" alt=""/></figure>
                   </div>
                 </div>

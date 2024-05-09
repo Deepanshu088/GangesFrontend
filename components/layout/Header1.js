@@ -18,7 +18,7 @@ const Header1 = ({ handleMobileMenu, searchToggle, handleToggle, scroll }) => {
                     <div className="main-box">
                     <div className="logo-box">
                         <div className="logo">
-                        <Image src={LogoDark} alt="Hoexr" title="Hoexr" width={180} height={80} /></div>
+                        <Image src={LogoDark} alt="Hoexr" title="Hoexr" /></div>
                         
                     </div>
                     <div className="nav-outer">
@@ -87,7 +87,7 @@ const Header1 = ({ handleMobileMenu, searchToggle, handleToggle, scroll }) => {
                     <div className="auto-container">
                         <div className="inner-container">
                             <div className="logo">
-                            <Image src={LogoDark} alt="Hoexr" title="Hoexr" width={180} height={80} />
+                            <Image src={LogoDark} alt="Hoexr" title="Hoexr" />
                             </div>
                             <div className="nav-outer">
                                 <nav className="main-menu">

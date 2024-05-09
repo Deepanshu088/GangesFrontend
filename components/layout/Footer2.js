@@ -36,10 +36,10 @@ const Footer1 = () => {
 
 					<div className="footer-column col-lg-3 col-sm-6 mb-0">
 						<div className="footer-widget links-widget wow fadeInLeft" data-wow-delay="200ms">
-						<h4 className="widget-title">Services Links</h4>
+						<h4 className="widget-title">Quick Links</h4>
 							<div className="widget-content">
 								<ul className="user-links">
-									<li><Link href="#"><i className="fa-solid fa-crosshairs"></i>Home</Link></li>
+									<li><Link href="/"><i className="fa-solid fa-crosshairs"></i>Home</Link></li>
 									<li><Link href="#"><i className="fa-solid fa-crosshairs"></i>Suites</Link></li>
 									<li><Link href="#"><i className="fa-solid fa-crosshairs"></i>Restaurant</Link></li>
 									<li><Link href="#"><i className="fa-solid fa-crosshairs"></i>News</Link></li>

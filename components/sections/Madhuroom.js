@@ -73,7 +73,7 @@ export default function Madhuroom() {
             
                 </div>
                 <div className="sidebar__single sidebar__post">
-                  <h3 className="sidebar__title">Compare Room</h3>
+                  <h3 className="sidebar__title">Also Available</h3>
                   <ul className="sidebar__post-list list-unstyled">
                     <li>
                       <div className="sidebar__post-image"> <img src="/images/room-1.jpg" alt=""/> </div>

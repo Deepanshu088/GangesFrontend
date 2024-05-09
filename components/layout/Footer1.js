@@ -38,14 +38,14 @@ const Footer1 = () => {
 
 					<div className="footer-column col-lg-2 col-sm-6 mb-0">
 						<div className="footer-widget links-widget wow fadeInLeft" data-wow-delay="200ms">
-						<h4 className="widget-title">Services Links</h4>
+						<h4 className="widget-title">Quick Links</h4>
 						<div className="widget-content">
 							<ul className="user-links">
-							<li><Link href="#"><i className="fa-solid fa-crosshairs"></i>Home</Link></li>
-							<li><Link href="#"><i className="fa-solid fa-crosshairs"></i>Rooms</Link></li>
-							<li><Link href="#"><i className="fa-solid fa-crosshairs"></i>Cab Srvices</Link></li>
-							<li><Link href="#"><i className="fa-solid fa-crosshairs"></i>Boat Booking</Link></li>
-							<li><Link href="#"><i className="fa-solid fa-crosshairs"></i>About Hotel</Link></li>
+							<li><Link href="/"><i className="fa-solid fa-crosshairs"></i>Home</Link></li>
+							<li><Link href="/our-rooms"><i className="fa-solid fa-crosshairs"></i>Rooms</Link></li>
+							<li><Link href="/page-cabbooking"><i className="fa-solid fa-crosshairs"></i>Cab Srvices</Link></li>
+							<li><Link href="/page-boatbooking"><i className="fa-solid fa-crosshairs"></i>Boat Booking</Link></li>
+							<li><Link href="/page-about"><i className="fa-solid fa-crosshairs"></i>About Hotel</Link></li>
 							<li><Link href="#"><i className="fa-solid fa-crosshairs"></i>Contact</Link></li>
 							</ul>
 						</div>
@@ -91,7 +91,7 @@ const Footer1 = () => {
     <div className="footer-bottom">
       <div className="auto-container">
         <div className="inner-container">
-          <div className="copyright-text">&copy;© Palace on Ganges, Varanasi</div>
+          <div className="copyright-text">&copy; Palace on Ganges, Varanasi</div>
           <BackToTop />
         </div>
       </div>

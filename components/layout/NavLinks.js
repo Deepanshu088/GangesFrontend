@@ -9,16 +9,16 @@ const NavLinks = ({ extraClassName }) => {
         <Link href="#">Our Rooms</Link>
         <ul>
           <li>
-            <Link href="/page-groundfloor">Ground Floor</Link>
+            <Link href="/page-groundfloor">Heritage Deluxe</Link>
           </li>
           <li>
-            <Link href="/page-firstfloor">First Floor</Link>
+            <Link href="/page-firstfloor">Heritage Luxury</Link>
           </li>
           <li>
-            <Link href="/page-secondfloor">Second Floor</Link>
+            <Link href="/page-secondfloor">Heritage Royal</Link>
           </li>
           <li>
-            <Link href="/page-thirdfloor">Third Floor</Link>
+            <Link href="/page-thirdfloor">Ganga River View</Link>
           </li>
         </ul>
       </li>
@@ -40,12 +40,10 @@ const NavLinks = ({ extraClassName }) => {
       <li className="dropdown">
         <Link href="/page-about">About</Link>
         <ul>
-          <li>
-            <Link href="/page-md">MD Message</Link>
-          </li>
+          <li> <Link href="/page-md">MD Message</Link> </li>
+          <li><Link href="/page-profile">Profile</Link></li>
         </ul>
       </li>
-      <li><Link href="/page-profile">PROFILE</Link></li>
       <li><Link href="/page-speciality">SPECIALITY</Link></li>
       <li><Link href="/page-gallery">GALLERY</Link></li>
       <li><a href="https://staahmax.staah.net/be/indexpack?propertyId=MTA5OQ&amp;individual=true&amp;roomTypeId=100333">Check Availablity</a></li>

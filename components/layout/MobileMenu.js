@@ -28,18 +28,18 @@ export default function MobileMenu() {
                 </li>
                 <li className="dropdown"><Link href="/">Our Rooms</Link>
                     <ul style={{ display: `${isActive.key == 2 ? "block" : "none"}` }}>
-                        <li><Link href="/page-rooms">Ground Floor</Link></li>
-                        <li><Link href="/page-rooms-suite">First Floor</Link></li>
-                        <li><Link href="/room-details">Second Floor</Link></li>
-                        <li><Link href="/room-details">Third Floor</Link></li>
+                        <li><Link href="/page-groundfloor">Heritage Deluxe</Link></li>
+                        <li><Link href="/page-firstfloor">Heritage Luxury</Link></li>
+                        <li><Link href="/page-secondfloor">Heritage Royal</Link></li>
+                        <li><Link href="/page-thirdfloor">Ganga River View</Link></li>
                     </ul>
                     <div className="dropdown-btn" onClick={() => handleClick(2)}><i className="fa fa-angle-down"/></div>
                 </li>
                 <li className="dropdown"><Link href="/page-services">Facilities</Link>
                     <ul style={{ display: `${isActive.key == 3 ? "block" : "none"}` }}>
-                        <li><Link href="/page-about">Cab Booking</Link></li>
-                        <li><Link href="/page-pricing">Boat Booking</Link></li>
-                        <li><Link href="/page-testimonial">City Tour</Link></li>
+                        <li><Link href="/page-cabbooking">Cab Booking</Link></li>
+                        <li><Link href="/page-boatbooking">Boat Booking</Link></li>
+                        <li><Link href="/page-citytour">City Tour</Link></li>
                     </ul>
                     <div className="dropdown-btn" onClick={() => handleClick(3)}><i className="fa fa-angle-down"/></div>
                 </li>

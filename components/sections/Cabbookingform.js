@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Input from '../shared/Input/Input';
 
 const Cabbooking = () => {
   const [currentTab, setCurrentTab] = useState(0);
@@ -85,20 +86,100 @@ const Cabbooking = () => {
             <div className="w3layoutscontactagileits cabbooking-booking-form">
               <form id="cabbooking-regForm" action="/action_page.php">
                 <div className={`cabbooking-tab ${currentTab === 0 ? 'active' : ''}`} style={{ display: currentTab === 0 ? 'block' : 'none' }}>
-                  <p><input placeholder="Pickup Point" onInput={handleInputChange} name="pickupPoint" className="cabbooking-input" required /></p>
-                  <p><input placeholder="Dropoff Point" onInput={handleInputChange} name="dropoffPoint" className="cabbooking-input" required /></p>
-                  <p><input type="date" placeholder="Date" onInput={handleInputChange} name="date" className="cabbooking-input" required /></p>
-                  <p><input type="time" placeholder="Time" onInput={handleInputChange} name="time" className="cabbooking-input" required /></p>
-                  <p><input placeholder="Number of Adults" onInput={handleInputChange} name="numberOfAdults" className="cabbooking-input" required /></p>
-                  <p><input placeholder="Number of Child" onInput={handleInputChange} name="numberOfChild" className="cabbooking-input" required /></p>
+                  <Input
+                    id="pickupPoint"
+                    name="pickupPoint"
+                    placeholder="Enter Pick Up Point"
+                    // value={""}
+                    // onChange={onTextChange}
+                    // validator={["PHONE_NUMBER"]}
+                    // label="Pick Up Point"
+                    className="mb-4"
+                    // isError={showFormErrors && formErrors.phoneNumber}
+                    errorMessage="This field is required."
+                  />
+
+                  <Input
+                    id="dropoffPoint"
+                    name="dropoffPoint"
+                    placeholder="Enter Drop Off Point"
+                    // value={""}
+                    // onChange={onTextChange}
+                    // validator={["PHONE_NUMBER"]}
+                    // label="Drop Off Point"
+                    className="mb-4"
+                    // isError={showFormErrors && formErrors.phoneNumber}
+                    errorMessage="This field is required."
+                  />
+                  {/* <p><input placeholder="Pickup Point" onInput={handleInputChange} name="pickupPoint" className="cabbooking-input" required /></p> */}
+                  {/* <p><input placeholder="Dropoff Point" onInput={handleInputChange} name="dropoffPoint" className="cabbooking-input" required /></p> */}
+
+                  <Input
+                    id="plannedDate"
+                    name="plannedDate"
+                    placeholder="Enter Drop Off Point"
+                    value={"dd/mm/yyyy"}
+                    // onChange={onTextChange}
+                    // validator={["PHONE_NUMBER"]}
+                    // label="Drop Off Point"
+                    className="mb-4"
+                    // isError={showFormErrors && formErrors.phoneNumber}
+                    errorMessage="This field is required."
+                  />
+
+                  <Input
+                    id="plannedTime"
+                    name="plannedTime"
+                    placeholder="Enter Drop Off Point"
+                    value={"--:-- --"}
+                    // onChange={onTextChange}
+                    // validator={["PHONE_NUMBER"]}
+                    // label="Drop Off Point"
+                    className="mb-4"
+                    // isError={showFormErrors && formErrors.phoneNumber}
+                    errorMessage="This field is required."
+                  />
+
+                  {/* <p><input type="date" placeholder="Date" onInput={handleInputChange} name="date" className="cabbooking-input" required /></p>
+                  <p><input type="time" placeholder="Time" onInput={handleInputChange} name="time" className="cabbooking-input" required /></p> */}
+
+
+                  <Input
+                    id="numberOfAdults"
+                    name="numberOfAdults"
+                    placeholder="Number of Adults"
+                    // value={""}
+                    // onChange={onTextChange}
+                    // validator={["PHONE_NUMBER"]}
+                    // label="Drop Off Point"
+                    className="mb-4"
+                    // isError={showFormErrors && formErrors.phoneNumber}
+                    errorMessage="This field is required."
+                  />
+
+                  <Input
+                    id="numberOfChild"
+                    name="numberOfChild"
+                    placeholder="Number of Children"
+                    // value={""}
+                    // onChange={onTextChange}
+                    // validator={["PHONE_NUMBER"]}
+                    // label="Drop Off Point"
+                    className="mb-4"
+                    // isError={showFormErrors && formErrors.phoneNumber}
+                    errorMessage="This field is required."
+                  />
+
+                  {/* <p><input placeholder="Number of Adults" onInput={handleInputChange} name="numberOfAdults" className="cabbooking-input" required /></p>
+                  <p><input placeholder="Number of Child" onInput={handleInputChange} name="numberOfChild" className="cabbooking-input" required /></p> */}
                   <div style={{ textAlign: 'right' }}>
                     <button type="button" id="cabbooking-nextBtn" onClick={() => nextPrev(1)} className="cabbooking-button">Next</button>
                   </div>
                 </div>
                 <div className={`cabbooking-tab ${currentTab === 1 ? 'active' : ''}`} style={{ display: currentTab === 1 ? 'block' : 'none' }}>
-                  <p><input placeholder="Your Name" onInput={handleInputChange} name="name" className="cabbooking-input" required /></p>
-                  <p><input placeholder="E-mail..." onInput={handleInputChange} name="email" className="cabbooking-input" required /></p>
-                  <p><input placeholder="Phone..." onInput={handleInputChange} name="phone" className="cabbooking-input" required /></p>
+                  <p><input placeholder="Your Name" onInput={handleInputChange} name="name" className={`w-full text-base font-normal p-4 py-3 rounded-md bg-gray-100 border border-primaryBorderColor focus:border-primaryBorderColor`} style={{width: "100%"}}  required /></p>
+                  <p><input placeholder="E-mail..." onInput={handleInputChange} name="email" className={`w-full text-base font-normal p-4 py-3 rounded-md bg-gray-100 border border-primaryBorderColor focus:border-primaryBorderColor`} style={{width: "100%"}}  required /></p>
+                  <p><input placeholder="Phone..." onInput={handleInputChange} name="phone" className={`w-full text-base font-normal p-4 py-3 rounded-md bg-gray-100 border border-primaryBorderColor focus:border-primaryBorderColor`} style={{width: "100%"}}  required /></p>
                   <div style={{ overflow: 'auto' }}>
                     <div style={{ float: 'left' }}>
                       <button type="button" id="cabbooking-prevBtn" onClick={() => nextPrev(-1)} className="cabbooking-button1">Previous</button>

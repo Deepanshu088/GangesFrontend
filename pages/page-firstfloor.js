@@ -6,7 +6,7 @@ export default function pagegroundfloor() {
   return (
     <>
       <Layout headerStyle={2}>
-      <PageTitle pageName="Firstfloor" />
+      <PageTitle pageName="Heritage Luxury ( First Floor )" />
       <Firstfloor/>
       </Layout>
     </>
