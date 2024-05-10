@@ -36,7 +36,7 @@ export default function About1() {
                                 <a href="page-about.html" className="theme-btn btn-style-one"><span className="btn-title">Discover More</span></a>
                                 <div className="contact-info">
                                     <div className="icon-box"><i className="flaticon-customer-service"></i></div>
-                                    <span>Book Now</span>
+                                    <a href="https://staahmax.staah.net/be/indexpackdetail?propertyId=MTA5OQ==&individual=true" className='whitespace-nowrap'>Book Now</a>
                                     <h4 className="title">+91-7408423504 <br/>+91-7408423511</h4>
                                 </div>
                                 </div>

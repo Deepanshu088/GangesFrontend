@@ -14,10 +14,12 @@ export default function Form() {
                     <h2>Hotel Booking </h2>
                   </div>
                   <form className="bk-form">
-                    <div className="frm-field">
-                      <input type="text" name="check-in" className="date-pick" placeholder="Check in" />
-                      <img src="images/icons/mail.png" alt="" />
+                    fdsf
+                    <div class="frm-field">
+                        <input type="text" name="check-in" class="date-pick" placeholder="Check out" />
+                        <img src="images/icons/mail.png" alt />
                     </div>
+
                     <div className="frm-field">
                       <input type="text" name="check-in" className="date-pick" placeholder="Check out" />
                       <img src="images/icons/mail.png" alt="" />
@@ -56,7 +58,7 @@ export default function Form() {
                   <p style={{ color: 'white' , fontSize: '17px'}}> Our elegant rooms, delectable cuisine, and serene ambiance ensure a truly unforgettable stay</p>
                   <div className="contact-info">
                     <div className="icon-box"><i className="flaticon-customer-service"></i></div>
-                    <span>Book Now</span>
+                    <span><a href='https://staahmax.staah.net/be/indexpackdetail?propertyId=MTA5OQ==&individual=true' className='text-white'>Book Now</a></span>
                     <h4 className="title">+91-7408423504 <br/>+91-7408423511</h4>
                   </div>
                 </div>

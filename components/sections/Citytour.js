@@ -1,13 +1,12 @@
 import React from 'react';
-import Link from 'next/link';
 
 // Define the TravelIdeasSection component
 function TravelIdeasSection() {
     return (
-        <section className="travel-ideas-section pt-0 pb-0 p-relative">
-            <div className="container">
-                <div className="section-title center-align mb-6">
-                    <h2 style={{ fontSize: '30px', textAlign: 'center' , marginTop:'-150px'}}>Our Specialization with Your Travel Idea</h2>
+        <section className="travel-ideas-section p-relative">
+            <div className="container pt-0">
+                <div className="section-title text-center mb-20">
+                    <h3>Our Specialization with Your Travel Idea</h3>
                 </div>
                 <div className="row">
                     <div className="col-lg-3">
@@ -43,22 +42,46 @@ function TravelIdeasSection() {
 // Define the Citytour component
 function Citytour() {
     return (
-        <div className="container">
-            <div className="row">
-                <div className="col-md-6">
-                    <img src="images/city05.jpeg" alt="Cab" style={{ width: '70%', height: 'auto' }} /><br/><br/>
-                </div>
-                <div className="col-md 6">
-                    <h2 style={{ fontSize: '24px' }}>Our Exclusive City Tour</h2>
-                    <p>Step into the vibrant pulse of City and uncover its hidden treasures with our captivating City Tour. Whether you're a history buff, a culinary explorer, or simply seeking to soak in the sights and sounds of this bustling metropolis, our expertly curated tour promises an unforgettable journey through the city's rich tapestry of culture, history, and flavors.</p>
-                    <ul>
-                        <li><i className="fa-regular fa-square-check"></i> Unveil the Stories Behind the Landmarks</li>
-                        <li><i className="fa-regular fa-square-check"></i> Explore Like a Local, with Locals</li>
-                        <li><i className="fa-regular fa-square-check"></i> Tailored Experiences to Suit Your Style</li><br/><br/>
-                    </ul>
+        <section className="booking-details-section">
+            <div className="container pt-0 pb-0 mb-0">
+                <div className="row">
+                    <div className="image-side col-xl-4 col-lg-4">
+                        <div className="inner-column">
+                            <div className="imagecorner">
+                                <figure className="new-image wow fadeInUp"><img src="images/city05.jpeg" alt="" /></figure>
+                            </div>
+                            <div className="new-quote-box">
+                                <div className="new-icon-box"><i className="flaticon-quotation"></i></div>
+                                <div className="new-text">Great hospitality is the key to our longstanding reputation for excellence.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="content-side col-xl-8">
+                        <div className="inner-column pl-8 pt-6">
+                            <div className="new-sec-title">
+                                <span className="new-sub-title"></span>
+                                <h3>Our Exclusive City Tour</h3>
+                                <div className="new-text">Step into the vibrant pulse of City and uncover its hidden treasures with our
+                                    captivating City Tour.
+
+                                    Whether you're a history buff, a culinary explorer, or simply seeking to soak in the sights and sounds
+                                    of this bustling metropolis, our expertly curated tour promises an unforgettable journey through the
+                                    city's rich tapestry of culture, history, and flavors.</div>
+                                <div className="new-healthy-food mt-4">
+                                    <div className="new-food-list">
+                                        <ul>
+                                            <li><i className="fa-regular fa-square-check mr-4 mb-2"></i>Unveil the Stories Behind the Landmarks</li>
+                                            <li><i className="fa-regular fa-square-check mr-4 mb-2"></i>Explore Like a Local, with Locals</li>
+                                            <li><i className="fa-regular fa-square-check mr-4 mb-2"></i>Tailored Experiences to Suit Your Style</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
 

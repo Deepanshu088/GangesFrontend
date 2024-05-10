@@ -29,7 +29,7 @@ const Header1 = ({ handleMobileMenu, searchToggle, handleSearch, scroll, isSearc
                             </nav>
                         </div>
                         <div className="outer-box">
-                        <a href="https://staahmax.staah.net/be/indexpack?propertyId=MTA5OQ&individual=true&roomTypeId=100333" title="Book Now" className="header-btn">Book Now</a>
+                        <a href="https://staahmax.staah.net/be/indexpackdetail?propertyId=MTA5OQ==&individual=true" title="Book Now" className="header-btn">Book Now</a>
                         <div className="mobile-nav-toggler" onClick={handleMobileMenu}><span className="icon lnr-icon-bars" /></div>
                     </div>
                         <div className="outer-box">

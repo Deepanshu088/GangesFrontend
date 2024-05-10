@@ -37,7 +37,7 @@ export default function Slider1() {
             <div className="content-box">
               <span className="sub-title" data-animation-in="fadeInUp" data-delay-in="0.1">unique place and luxury hotel</span>
               <h1 data-animation-in="fadeInUp" data-delay-in="0.3">LUXURY HERITAGE <br/>EXPERIENCE</h1>
-              <Link href="/page-about" className="btn" data-animation-in="fadeInUp" data-delay-in="0.5">OUR ROOMS</Link>
+              <Link href="/our-rooms" className="btn" data-animation-in="fadeInUp" data-delay-in="0.5">OUR ROOMS</Link>
             </div>
           </SwiperSlide>
           {/* Slide Item */}
@@ -46,7 +46,7 @@ export default function Slider1() {
             <div className="content-box">
               <span className="sub-title" data-animation-in="fadeInUp" data-delay-in="0.1">unique place and luxury hotel</span>
               <h1 data-animation-in="fadeInUp" data-delay-in="0.3">LUXURY HERITAG <br/>EXPERIENCE</h1>
-              <Link href="/page-about" className="btn" data-animation-in="fadeInUp" data-delay-in="0.5">OUR ROOMS</Link>
+              <Link href="/our-rooms" className="btn" data-animation-in="fadeInUp" data-delay-in="0.5">OUR ROOMS</Link>
             </div>
           </SwiperSlide>
           {/*slider item 3*/}
@@ -55,7 +55,7 @@ export default function Slider1() {
             <div className="content-box">
               <span className="sub-title" data-animation-in="fadeInUp" data-delay-in="0.1">unique place and luxury hotel</span>
               <h1 data-animation-in="fadeInUp" data-delay-in="0.3">LUXURY HERITAG <br/>EXPERIENCE</h1>
-              <Link href="/page-about" className="btn" data-animation-in="fadeInUp" data-delay-in="0.5">OUR ROOMS</Link>
+              <Link href="/our-rooms" className="btn" data-animation-in="fadeInUp" data-delay-in="0.5">OUR ROOMS</Link>
             </div>
           </SwiperSlide>
           <div className="owl-nav" style={{zIndex:"999"}}>

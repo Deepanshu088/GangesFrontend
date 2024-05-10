@@ -6,7 +6,7 @@ export default function pagemd() {
   return (
     <>
       <Layout headerStyle={2}>
-      <PageTitle pageName="MD Message" />
+      <PageTitle pageName="Message from MD's desk" />
       <Md/>
       </Layout>
     </>

@@ -7,17 +7,13 @@ import NavLinks from './NavLinks';
 import LogoDark from '../../public/images/icons/Logo-Black.png';
 
 const Header1 = ({ handleMobileMenu, searchToggle, handleToggle, scroll }) => {
-
-
-
     return (
         <>
-
                 <header className={`main-header header-style-one ${scroll ? "fixed-header" : ""} ${searchToggle ? "moblie-search-active" : ""}`} style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)', margin:0 }}>
                 <div className="auto-container">
                     <div className="main-box">
                     <div className="logo-box">
-                        <div className="logo">
+                        <div className="logo w-full my-auto">
                         <Image src={LogoDark} alt="Hoexr" title="Hoexr" /></div>
                         
                     </div>
@@ -27,7 +23,7 @@ const Header1 = ({ handleMobileMenu, searchToggle, handleToggle, scroll }) => {
                         </nav>
                     </div>
                     <div className="outer-box">
-                    <a href="https://staahmax.staah.net/be/indexpack?propertyId=MTA5OQ&individual=true&roomTypeId=100333" title="Book Now" className="header-btn">Book Now</a>
+                    <a href="https://staahmax.staah.net/be/indexpackdetail?propertyId=MTA5OQ==&individual=true" title="Book Now" className="header-btn">Book Now</a>
                         <div className="mobile-nav-toggler" onClick={handleMobileMenu}><span className="icon lnr-icon-bars" /></div>
                     </div>
                     </div>

@@ -14,7 +14,7 @@ export default function MD() {
                             <div className="inner-column">
                                 <div className="sec-title">
                                     <span className="sub-title">PALACE ON GANGES</span>
-                                    <h2>MD Message</h2>
+                                    <div className='text-5xl font-gilda text-black'>Message from MD's desk</div>
                                     <div className="text"> It is with great pleasure and pride that I extend a warm welcome to each and every one of you to our esteemed heritage hotel. As you step through our doors, you are not only entering a place of historical significance but also a sanctuary of unparalleled hospitality and service.<br /><br />
                                         At the Palace on Ganges, we understand the importance of creating memorable experiences for our guests. Whether you are here for leisure or business, our commitment to providing you with the best-in-class service remains unwavering. From the moment you arrive until the time of your departure, our dedicated team is at your service to ensure that your stay exceeds all expectations.<br /><br />
                                         Nestled within the walls of this historic building are modern amenities and luxurious accommodations, meticulously designed to cater to every aspect of your stay to elevate your experience.<br /><br />

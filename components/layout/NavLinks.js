@@ -6,7 +6,7 @@ const NavLinks = ({ extraClassName }) => {
     <ul className={`navigation ${extraClassName}`}>
       <li className="current"><Link href="/">Home</Link></li>
       <li className="dropdown">
-        <Link href="#">Our Rooms</Link>
+        <Link href="/our-rooms">Our Rooms</Link>
         <ul>
           <li>
             <Link href="/page-groundfloor">Heritage Deluxe</Link>

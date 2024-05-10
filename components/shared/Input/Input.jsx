@@ -35,7 +35,7 @@ const Input = ({
             <div>
                 <span className="w-full p-input-icon-left">
                     <input
-                        className={`w-full text-base font-normal p-4 py-3 rounded-md bg-gray-100 border border-primaryBorderColor focus:border-primaryBorderColor ${
+                        className={`w-full text-base font-normal p-4 py-3   ${
                             isReadOnly && "bg-[#F3F4F6] text-[#333333]"
                         }`}
                         style={{width: "100%"}}
