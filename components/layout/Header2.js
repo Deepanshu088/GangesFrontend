@@ -9,36 +9,33 @@ import LogoDark from '../../public/images/icons/Logo-Black.png';
 const Header1 = ({ handleMobileMenu, searchToggle, handleSearch, scroll, isSearch }) => {
     return (
         <>
-                <header className={`main-header header-style-one ${scroll ? "fixed-header" : ""} ${searchToggle ? "moblie-search-active" : ""}`} style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)', marginTop:0 }}>
-                <div className="auto-container">
+            <header className={`main-header header-style-one ${scroll ? "fixed-header" : ""} ${searchToggle ? "moblie-search-active" : ""}`} style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)', marginTop: 0 }}>
+                <div className="container lg:max-w-full xl:max-w-[1536px] my-auto h-full">
                     <div className="header-top">
                         <div className="inner-box">
-                            
-                          
+
+
                         </div>
                     </div>
-                    <div className="main-box">
-                        <div className="logo-box">
-                            <div className="logo">
-                            <Image src={LogoDark} alt="Hoexr" title="Hoexr" /></div>
-                            
+                    <div className="main-box h-full px-8">
+                        <div className="logo-box h-full w-auto my-auto py-2">
+                            <img src="images/icons/Logo-Black.png" className='h-full w-full object-contain' />
                         </div>
                         <div className="nav-outer">
                             <nav className="nav main-menu">
-                                <NavLinks/>
+                                <NavLinks />
                             </nav>
                         </div>
                         <div className="outer-box">
-                        <a href="https://staahmax.staah.net/be/indexpackdetail?propertyId=MTA5OQ==&individual=true" title="Book Now" className="header-btn">Book Now</a>
-                        <div className="mobile-nav-toggler" onClick={handleMobileMenu}><span className="icon lnr-icon-bars" /></div>
-                    </div>
-                        <div className="outer-box">
-                            {/* Header Search */}
+                            <a href="https://staahmax.staah.net/be/indexpackdetail?propertyId=MTA5OQ==&individual=true" title="Book Now" className="header-btn">Book Now</a>
+                            <div className="mobile-nav-toggler" onClick={handleMobileMenu}><span className="icon lnr-icon-bars" /></div>
+                        </div>
+                        {/* <div className="outer-box">
                             <button className="search-btn" onClick={handleSearch}>
                                 <img src="images/icons/search.png" alt="" />
                             </button>
                             <div className="mobile-nav-toggler" onClick={handleMobileMenu}><span className="icon lnr-icon-bars" /></div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
                 <div className="mobile-menu">
@@ -93,14 +90,14 @@ const Header1 = ({ handleMobileMenu, searchToggle, handleSearch, scroll, isSearc
                     </div>
                 </div>
                 <div className={`sticky-header ${scroll ? "fixed-header animated slideInDown" : ""}`}>
-                    <div className="auto-container">
-                        <div className="inner-container">
-                            <div className="logo">
-                            <Image src={LogoDark} alt="Hoexr" title="Hoexr" width={180} height={80} />
+                    <div className="container my-auto h-full">
+                        <div className="inner-container h-full">
+                            <div className="logo-box h-full w-auto my-auto py-2">
+                                <img src="images/icons/Logo-Black.png" className='h-full w-full object-contain' />
                             </div>
                             <div className="nav-outer">
                                 <nav className="main-menu">
-                                    <div className="navbar-collapse show collapse clearfix">
+                                    <div className="">
                                         <NavLinks />
                                     </div>
                                 </nav>

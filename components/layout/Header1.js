@@ -9,23 +9,21 @@ import LogoDark from '../../public/images/icons/Logo-Black.png';
 const Header1 = ({ handleMobileMenu, searchToggle, handleToggle, scroll }) => {
     return (
         <>
-                <header className={`main-header header-style-one ${scroll ? "fixed-header" : ""} ${searchToggle ? "moblie-search-active" : ""}`} style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)', margin:0 }}>
-                <div className="auto-container">
-                    <div className="main-box">
-                    <div className="logo-box">
-                        <div className="logo w-full my-auto">
-                        <Image src={LogoDark} alt="Hoexr" title="Hoexr" /></div>
-                        
-                    </div>
-                    <div className="nav-outer">
-                        <nav className="nav main-menu">
-                            <NavLinks/>
-                        </nav>
-                    </div>
-                    <div className="outer-box">
-                    <a href="https://staahmax.staah.net/be/indexpackdetail?propertyId=MTA5OQ==&individual=true" title="Book Now" className="header-btn">Book Now</a>
-                        <div className="mobile-nav-toggler" onClick={handleMobileMenu}><span className="icon lnr-icon-bars" /></div>
-                    </div>
+            <header className={`main-header header-style-one ${scroll ? "fixed-header" : ""} ${searchToggle ? "moblie-search-active" : ""}`} style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)', margin: 0 }}>
+                <div className="container lg:max-w-full xl:max-w-[1536px] my-auto h-full">
+                    <div className="main-box h-full px-8 my-auto text-center align-baseline items-center">
+                        <div className="logo-box h-full w-auto my-auto py-2">
+                            <img src="images/icons/Logo-Black.png" className='h-full w-full object-contain' />
+                        </div>
+                        <div className="nav-outer mx-2 my-auto">
+                            <nav className="nav main-menu">
+                                <NavLinks />
+                            </nav>
+                        </div>
+                        <div className="outer-box">
+                            <a href="https://staahmax.staah.net/be/indexpackdetail?propertyId=MTA5OQ==&individual=true" title="Book Now" className="header-btn">Book Now</a>
+                            <div className="mobile-nav-toggler" onClick={handleMobileMenu}><span className="icon lnr-icon-bars" /></div>
+                        </div>
                     </div>
                 </div>
                 <div className="mobile-menu">
@@ -80,16 +78,14 @@ const Header1 = ({ handleMobileMenu, searchToggle, handleToggle, scroll }) => {
                     </div>
                 </div>
                 <div className={`sticky-header ${scroll ? "fixed-header animated slideInDown" : ""}`}>
-                    <div className="auto-container">
-                        <div className="inner-container">
-                            <div className="logo">
-                            <Image src={LogoDark} alt="Hoexr" title="Hoexr" />
+                    <div className="container my-auto h-full ">
+                        <div className="inner-container h-full">
+                            <div className="logo-box h-full w-auto my-auto p-2">
+                                <img src="images/icons/Logo-Black.png" className='h-full w-full object-contain' />
                             </div>
                             <div className="nav-outer">
                                 <nav className="main-menu">
-                                    <div className="navbar-collapse show collapse clearfix">
-                                        <NavLinks />
-                                    </div>
+                                    <NavLinks className="text-white" />
                                 </nav>
                                 <div className="mobile-nav-toggler" onClick={handleMobileMenu}><span className="icon lnr-icon-bars" /></div>
                             </div>

@@ -89,7 +89,10 @@ export default function ContactPage() {
             </div>
           </section>
           <section class="map-section">
-            <iframe class="map w-100"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7214.940620912657!2d83.0007435532886!3d25.28839807765231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e31edb80a9de3%3A0x614be1437579f848!2sPalace%20on%20Ganges-%20Varanasi!5e0!3m2!1sen!2sin!4v1710762308825!5m2!1sen!2sin" width="1500" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe class="map w-100"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7214.940620912657!2d83.0007435532886!3d25.28839807765231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e31edb80a9de3%3A0x614be1437579f848!2sPalace%20on%20Ganges-%20Varanasi!5e0!3m2!1sen!2sin!4v1710762308825!5m2!1sen!2sin" 
+              className='w-full h-[500px] border-0'
+              width="1500" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
           </section>
         </>
     )

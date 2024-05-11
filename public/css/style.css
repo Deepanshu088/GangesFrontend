@@ -35,7 +35,7 @@ License: copyright commercial
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Gilda+Display&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Gilda+Display&display=swap"); */
 @import url("animate.css");
 @import url("jquery.fancybox.min.css");
 @import url("linear.css");
@@ -43,6 +43,9 @@ License: copyright commercial
 @import url("flaticon.css");
 @import url("tm-bs-mp.css");
 @import url("tm-utility-classes.css");
+
+@import "primereact/resources/themes/lara-light-cyan/theme.css";
+
 :root {
   --theme-color-light: #ffffff;
   --theme-color-dark: #222222;
@@ -1435,7 +1438,7 @@ Main Header
   /* height: auto; */
   /* height: 100%; */
   /* width: 100%; */
-  width: 217px;
+  /* width: 217px; */
 }
 .main-header .main-box {
   position: relative;
@@ -1451,6 +1454,7 @@ Main Header
           align-items: center;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
+  justify-content: space-between;
 }
 .main-header .main-box .nav-outer {
   position: relative;
@@ -1461,6 +1465,8 @@ Main Header
 .main-menu {
   position: relative;
   margin: auto;
+  display: flex;
+  justify-content: space-evenly;
 }
 @media (max-width: 991.98px) {
   .main-menu {
@@ -1485,7 +1491,7 @@ Main Header
   position: relative;
   float: left;
   padding: 25px 0px;
-  margin-right: 35px;
+  /* margin-right: 35px; */
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
   font-family: var(--text-font2);
@@ -1534,7 +1540,8 @@ Main Header
 .main-menu .navigation > li.dropdown > a:after {
   font-family: "Font Awesome 6 Pro";
   content: "\f107";
-  position: absolute;
+  /* position: absolute; */
+  margin: auto 0 auto 4px;
   right: -20px;
   top: 5px;
   display: block;
@@ -1793,13 +1800,14 @@ Main Header
 .header-style-one {
   position: absolute;
   margin-top: 18px;
+  height: 100px;
 }
 /* .header-style-one .main-box {
   padding-bottom: 20px;
 } */
-.header-style-one .main-box .nav-outer {
+/* .header-style-one .main-box .nav-outer {
   margin-left: 113px;
-}
+} */
 .header-style-one .main-box .nav-outer .nav .navigation li a {
   color: var(--theme-color-light);
 }
@@ -2030,6 +2038,7 @@ Main Header
 .header-style-two .main-box {
   background-color: var(--theme-color-light);
   padding: 24px 36px 24px 40px;
+  height: 100px;
 }
 @media (max-width: 991.98px) {
   .header-style-two .main-box {
@@ -2166,6 +2175,7 @@ Main Header
 }
 .header-style-two .sticky-header {
   background-color: var(--theme-color-v2);
+  height: 100px;
   /*.main-menu .navigation > li.current > a,*/
 }
 .header-style-two .sticky-header .mobile-nav-toggler {
@@ -2272,10 +2282,10 @@ Main Header
 }
 
 @media only screen and (max-width: 1200px) {
-  .header-style-one .main-box .nav-outer {
+  /* .header-style-one .main-box .nav-outer {
     margin-left: 70px;
     margin-right: auto;
-  }
+  } */
   .header-style-two .main-box .nav-outer .nav .navigation li {
     margin-right: 26px;
   }
@@ -9453,6 +9463,37 @@ Sidebar
 # Booking Details Section
 --------------------------------------------------------------*/
 
+.cabbooking-booking-form {
+  background-color: #f9f9f9;
+  padding: 32px;
+  box-shadow: 0 0 11px rgba(33,33,33,.2);
+}
+
+.cabbooking-button1{
+  background-color:gray;
+  padding: 10px 30px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-right: 10px;
+  color: white;
+}
+
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.step.active {
+  opacity: 1;
+}
+
 .booking-details-section {
   background-color: #f9f9f9;
   padding: 0 auto;
@@ -9501,4 +9542,30 @@ Sidebar
 	min-height: 300px;
 	min-width: 700px;
 	    margin-left: -735px;
+}
+
+/*--------------------------------------------------------------
+# Prime React Stylings
+--------------------------------------------------------------*/
+
+/* Override border and outline styles for PrimeReact Calendar */
+.p-calendar .p-inputtext .p-button .p-calendar .p-component, .p-button:focus .p-calendar:focus .p-component:focus {
+  border: none !important;  /* Removes borders */
+  outline: none !important; /* Removes outline */
+}
+
+.p-button-icon-only .p-button-icon-only:focus  {
+  border: none !important;  /* Removes borders */
+  outline: none !important; /* Removes outline */
+  /* background-color: #0a267a; */
+}
+
+.p-calendar .p-button {
+  border: none !important; /* Optional: Removes borders from the calendar button if needed */
+  outline: none !important;
+}
+
+/* You might also want to address the focus styles specifically */
+.p-calendar .p-button:focus .p-inputtext:focus {
+  box-shadow: none !important; /* Removes focus box-shadow if there is any */
 }

@@ -1,40 +1,53 @@
 import React, { useState } from 'react';
+import DatePicker from '../shared/Input/DatePicker';
+import useForm from '@/hooks/useForm';
+import CounterInput from '../shared/Input/CounterInput';
 
 const Cabbooking = () => {
+  const { formValues, formErrors, onTextChange, onDateChange } = useForm({
+    plannedDate: '',
+    plannedTime: '',
+    city: '',
+    country: '',
+    numberOfAdults: null,
+    numberOfChild: null,
+    name: '',
+    email: '',
+    phone: ''
+  }, {});
+
   const [currentTab, setCurrentTab] = useState(0);
 
-  const nextPrev = (n) => {
-    const inputs = document.querySelectorAll('.cabbooking-tab.active input[required]');
-    let isValid = true;
-    inputs.forEach(input => {
-      if (!input.value.trim()) {
-        isValid = false;
-        input.classList.add('error');
-      } else {
-        input.classList.remove('error');
-      }
-    });
+  // const nextPrev = (n) => {
+  //   const inputs = document.querySelectorAll('.cabbooking-tab.active input[required]');
+  //   let isValid = true;
+  //   inputs.forEach(input => {
+  //     if (!input.value.trim()) {
+  //       isValid = false;
+  //       input.classList.add('error');
+  //     } else {
+  //       input.classList.remove('error');
+  //     }
+  //   });
 
-    if (!isValid) return;
+  //   if (!isValid) return;
 
-    setCurrentTab(currentTab + n);
-  };
+  //   setCurrentTab(currentTab + n);
+  // };
+  
+	const nextPrev = (n) => {
+		let newValue = ((currentTab + n)  > 0) ? currentTab + n : 0;
+		setCurrentTab(newValue);
+	};
 
   const handleInputChange = (event) => {
-    event.target.className = '';
+    // event.target.className = '';
   };
 
   return (
     <section className="cabbooking-booking pt-10 pb-10 p-relative fix" style={{ paddingTop: '20px', paddingBottom: '20px', position: 'relative' }}>
       <style>
         {`
-          .cabbooking-booking-form {
-            background-color: #f9f9f9;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-          }
-
           .cabbooking-input {
             width: calc(100% - 20px);
             padding: 10px;
@@ -61,14 +74,6 @@ const Cabbooking = () => {
           .cabbooking-button:hover {
             background-color: #ad9700;
           }
-          .cabbooking-button1{
-            background-color:gray;
-            padding: 10px 30px;
-            border: none;
-            cursor: pointer;
-            border-radius: 4px;
-            margin-right: 10px;
-          }
           .error {
             border: 1px solid red; /* Add red border to highlight error */
           }
@@ -78,24 +83,42 @@ const Cabbooking = () => {
         <div className="row align-items-center">
           <div className="col-lg-6 col-md-6 cabbooking-contact-bg02" style={{ paddingLeft: '20px' }}>
             <div className="section-title center-align">
-              <h4>Make Booking</h4>
             </div>
-            <h3>City Tour</h3>
+            <h2 className='mb-8'>City Tour</h2>
             <div className="w3layoutscontactagileits cabbooking-booking-form">
               <form id="cabbooking-regForm" action="/action_page.php">
                 <div className={`cabbooking-tab ${currentTab === 0 ? 'active' : ''}`} style={{ display: currentTab === 0 ? 'block' : 'none' }}>
-                  <p><input type="date" placeholder="Date" onInput={handleInputChange} name="date" className={`w-full text-base font-normal p-4 py-3 rounded-md bg-gray-100 border border-primaryBorderColor focus:border-primaryBorderColor`} style={{width: "100%"}}  required /></p>
-                  <p><input type="time" placeholder="Time" onInput={handleInputChange} name="time" className={`w-full text-base font-normal p-4 py-3 rounded-md bg-gray-100 border border-primaryBorderColor focus:border-primaryBorderColor`} style={{width: "100%"}}  required /></p>
-                  <p><input placeholder="Number of Adults" onInput={handleInputChange} name="numberOfAdults" className={`w-full text-base font-normal p-4 py-3 rounded-md bg-gray-100 border border-primaryBorderColor focus:border-primaryBorderColor`} style={{width: "100%"}}  required /></p>
-                  <p><input placeholder="Number of Child" onInput={handleInputChange} name="numberOfChild" className={`w-full text-base font-normal p-4 py-3 rounded-md bg-gray-100 border border-primaryBorderColor focus:border-primaryBorderColor`} style={{width: "100%"}}  required /></p>
+                  <DatePicker id="plannedDate" name="plannedDate" placeholder="Select Date" errorMessage="This field is required."
+                    value={formValues.plannedDate}
+                    onChange={onDateChange}
+                  />
+
+                  <DatePicker id="plannedTime" name="plannedTime" placeholder="Select Time" errorMessage="This field is required."
+                    value={formValues.plannedTime} onChange={onDateChange} timeOnly
+                  />
+
+                  <CounterInput id="numberOfAdults" name="numberOfAdults" placeholder="Number of Adults" type='number' errorMessage="This field is required."
+                    value={formValues.numberOfAdults}
+                    onChange={onTextChange}
+                  // validator={["PHONE_NUMBER"]}
+                  // isError={showFormErrors && formErrors.phoneNumber}
+                  />
+
+                  <CounterInput id="numberOfChild" name="numberOfChild" placeholder="Number of Children" type='number' errorMessage="This field is required."
+                    value={formValues.numberOfChild}
+                    onChange={onTextChange}
+                  // validator={["PHONE_NUMBER"]}
+                  // isError={showFormErrors && formErrors.phoneNumber}
+                  />
+
                   <div style={{ textAlign: 'right' }}>
                     <button type="button" id="cabbooking-nextBtn" onClick={() => nextPrev(1)} className="cabbooking-button">Next</button>
                   </div>
                 </div>
                 <div className={`cabbooking-tab ${currentTab === 1 ? 'active' : ''}`} style={{ display: currentTab === 1 ? 'block' : 'none' }}>
-                  <p><input placeholder="Your Name" onInput={handleInputChange} name="name" className={`w-full text-base font-normal p-4 py-3 rounded-md bg-gray-100 border border-primaryBorderColor focus:border-primaryBorderColor`} style={{width: "100%"}}  required /></p>
-                  <p><input placeholder="E-mail..." onInput={handleInputChange} name="email" className={`w-full text-base font-normal p-4 py-3 rounded-md bg-gray-100 border border-primaryBorderColor focus:border-primaryBorderColor`} style={{width: "100%"}}  required /></p>
-                  <p><input placeholder="Phone..." onInput={handleInputChange} name="phone" className={`w-full text-base font-normal p-4 py-3 rounded-md bg-gray-100 border border-primaryBorderColor focus:border-primaryBorderColor`} style={{width: "100%"}}  required /></p>
+                  <p><input placeholder="Your Name" onInput={handleInputChange} name="name" className="form-control bg-white rounded-none border border-[#adadad]" required /></p>
+                  <p><input placeholder="E-mail..." onInput={handleInputChange} name="email" className="form-control bg-white rounded-none border border-[#adadad]" required /></p>
+                  <p><input placeholder="Phone..." onInput={handleInputChange} name="phone" className="form-control bg-white rounded-none border border-[#adadad]" required /></p>
                   <div style={{ overflow: 'auto' }}>
                     <div style={{ float: 'left' }}>
                       <button type="button" id="cabbooking-prevBtn" onClick={() => nextPrev(-1)} className="cabbooking-button1">Previous</button>
@@ -106,8 +129,8 @@ const Cabbooking = () => {
                   </div>
                 </div>
                 <div style={{ textAlign: 'center', marginTop: '40px' }}>
-                  <span className={`cabbooking-step ${currentTab === 0 ? 'active' : ''}`}></span>
-                  <span className={`cabbooking-step ${currentTab === 1 ? 'active' : ''}`}></span>
+                  <span className={`step ${currentTab === 0 ? 'active' : ''}`}></span>
+                  <span className={`step ${currentTab === 1 ? 'active' : ''}`}></span>
                 </div>
               </form>
             </div>

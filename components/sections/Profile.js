@@ -3,7 +3,7 @@ import ModalVideo from 'react-modal-video';
 
 export default function Profile() {
 	const [isOpen, setOpen] = useState(false);
-	const [showPopup, setShowPopup] = useState(true);
+	const [showPopup, setShowPopup] = useState(false);
 	const [hoveredCity, setHoveredCityDetails] = useState({});
 	const placesList = {
 		groundFloor: [
@@ -104,7 +104,7 @@ export default function Profile() {
 					<div className="absolute bottom-0 p-8 w-2/5 border border-black mb-20 ml-10">
 						<div className="flex justify-start">
 							<div className="w-1/2">
-								<img src="images/resource/room-1.jpg" alt="Product" className='w-auto h-full object-cover' />
+								<img src="images/room-4.jpg" alt="Product" className='w-auto h-full object-cover' />
 							</div>
 							<div className="ml-8">
 								<div className="product-details">
@@ -145,9 +145,8 @@ export default function Profile() {
 										Hotel Palace on Ganges has coined all distinct cultures of India and accordingly altogether forty two rooms under one Grand Heritage Hotel roof are designed and dedicated to each of those provincial cultures.<br /><br /> </div>
 									<div className="healthy-food">
 										<div className="food-list">
-											<h4 className="title">Restaurant</h4>
 											<ul>
-												<span>Ground floor</span>
+												<span className="whitespace-nowrap underline text-black mb-20">Ground floor</span>
 												{
 													placesList.groundFloor.map(item => <li key={item.url} onMouseEnter={() => onMouseEnterHandler(item)} onMouseLeave={() => onMouseLeaveHandler(item)}>
 														<i className="fa-regular fa-square-check"></i>
@@ -158,7 +157,7 @@ export default function Profile() {
 										</div>
 										<div className="food-list two">
 											<ul>
-												<span>First floor</span>
+												<span className="whitespace-nowrap underline text-black">First floor</span>
 												{
 													placesList.firstFloor.map(item => <li key={item.url} onMouseEnter={() => onMouseEnterHandler(item)} onMouseLeave={() => onMouseLeaveHandler(item)}>
 														<i className="fa-regular fa-square-check"></i>
@@ -170,7 +169,7 @@ export default function Profile() {
 
 										<div className="food-list two">
 											<ul>
-												<span>Second floor</span>
+												<span className="whitespace-nowrap underline text-black">Second floor</span>
 												{
 													placesList.secondFloor.map(item => <li key={item.url} onMouseEnter={() => onMouseEnterHandler(item)} onMouseLeave={() => onMouseLeaveHandler(item)}>
 														<i className="fa-regular fa-square-check"></i>
@@ -183,7 +182,7 @@ export default function Profile() {
 										</div>
 										<div className="food-list two">
 											<ul>
-												<span>Third floor</span>
+												<span className="whitespace-nowrap underline text-black">Third floor</span>
 
 												{
 													placesList.thirdFloor.map(item => <li key={item.url} onMouseEnter={() => onMouseEnterHandler(item)} onMouseLeave={() => onMouseLeaveHandler(item)}>

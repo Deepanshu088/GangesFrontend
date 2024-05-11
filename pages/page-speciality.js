@@ -6,7 +6,7 @@ export default function pagespeciality() {
   return (
     <>
       <Layout headerStyle={2}>
-      <PageTitle pageName="speciality" />
+      <PageTitle pageName="Speciality" />
       <SPECIALITY/>
       </Layout>
     </>

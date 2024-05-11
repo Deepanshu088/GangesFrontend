@@ -25,7 +25,7 @@ export default function Testimonial2() {
 ];
     return (
         <>
-            <section className="client-section pb-80">
+            <section className="client-section">
                 <div className="bg bg-image" style={{ backgroundImage: 'url(images/background/3.jpg)' }}></div>
                 <div className="auto-container">
                     <div className="sec-title light text-center wow fadeInUp">
