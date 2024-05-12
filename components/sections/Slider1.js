@@ -33,7 +33,7 @@ export default function Slider1() {
         <Swiper {...swiperOptions} className="banner-slider owl-carousel owl-theme default-navs">
           {/* Slide Item */}
           <SwiperSlide className="banner-slide slide-item">
-            <figure className="image"><img src="images/banner/banner-3.jpg" alt=""/></figure>
+            <figure className="image"><img src="images/banner/banner-6.jpg" alt=""/></figure>
             <div className="content-box">
               <span className="sub-title" data-animation-in="fadeInUp" data-delay-in="0.1">unique place and luxury hotel</span>
               <h1 data-animation-in="fadeInUp" data-delay-in="0.3">LUXURY HERITAGE <br/>EXPERIENCE</h1>
@@ -50,7 +50,7 @@ export default function Slider1() {
             </div>
           </SwiperSlide>
           <SwiperSlide className="banner-slide slide-item">
-            <figure className="image"><img src="images/banner/banner-6.jpg" alt=""/></figure>
+            <figure className="image"><img src="images/banner/banner-5.jpg" alt=""/></figure>
             <div className="content-box">
               <span className="sub-title" data-animation-in="fadeInUp" data-delay-in="0.1">unique place and luxury hotel</span>
               <h1 data-animation-in="fadeInUp" data-delay-in="0.3">LUXURY HERITAG <br/>EXPERIENCE</h1>
