@@ -4759,6 +4759,7 @@ Section Title
 .room-block .inner-box .box-caption .bx-links li {
   display: inline-block;
   margin-right: 11px;
+  color: white;
 }
 .room-block .inner-box .box-caption .bx-links li:last-child {
   margin-right: 0;

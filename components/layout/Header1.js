@@ -13,7 +13,7 @@ const Header1 = ({ handleMobileMenu, searchToggle, handleToggle, scroll }) => {
                 <div className="container lg:max-w-full xl:max-w-[1536px] my-auto h-full">
                     <div className="main-box h-full px-8 my-auto text-center align-baseline items-center">
                         <div className="logo-box h-full w-auto my-auto py-2">
-                            <Link href="/"><img src="images/icons/Logo-Black.png" className='h-full w-full object-contain'/></Link>
+                            <Link href="/"><img src="/images/icons/Logo-Black.png" className='h-full w-full object-contain'/></Link>
                         </div>
                         <div className="nav-outer mx-2 my-auto">
                             <nav className="nav main-menu">
@@ -81,7 +81,7 @@ const Header1 = ({ handleMobileMenu, searchToggle, handleToggle, scroll }) => {
                     <div className="container my-auto h-full ">
                         <div className="inner-container h-full">
                             <div className="logo-box h-full w-auto my-auto p-2">
-                            <Link href="/"><img src="images/icons/Logo-Black.png" className='h-full w-full object-contain'/></Link>
+                            <Link href="/"><img src="/images/icons/Logo-Black.png" className='h-full w-full object-contain'/></Link>
                             </div>
                             <div className="nav-outer">
                                 <nav className="main-menu">

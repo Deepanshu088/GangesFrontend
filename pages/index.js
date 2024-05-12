@@ -11,19 +11,19 @@ import Team from "@/components/sections/Team"
 import Testimonial1 from "@/components/sections/Testimonial1"
 import Video from "@/components/sections/Video"
 export default function Home() {
-  return (
-    <>
-    <Layout>
-    <Slider1 />
-    <About1 addClass={"pt-0"} />
-    <Rooms />
-    <Services />
-    <Video />
-    <Features />
-    <Testimonial1 />
-    <Form />
-    <News1 />
-    </Layout>
-    </>
-  )
+	return (
+		<>
+			<Layout>
+				<Slider1 />
+				<About1 addClass={"pt-0"} />
+				<Rooms />
+				<Services />
+				<Video />
+				<Features />
+				<Testimonial1 />
+				<Form />
+				<News1 />
+			</Layout>
+		</>
+	)
 }
