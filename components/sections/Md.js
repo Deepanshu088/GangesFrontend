@@ -33,7 +33,7 @@ export default function MD() {
                         <div className="image-column col-xl-6 col-lg-6">
                             <div class="inner-column wow fadeInLeft">
                                 <figure class="image-1 overlay-anim wow fadeInUp"><img src="images/resource/about1-1.jpg" alt="" /></figure>
-                                <figure class="image-2 overlay-anim wow fadeInLeft"><img src="images/md.png" height="250px;" width="250px" alt="" /></figure>
+                                <figure class="image-2 overlay-anim wow fadeInLeft"><img src="images/profileImages/md1.jpg" height="250px;" width="250px" alt="" /></figure>
                                 <figure class="image-4 overlay-anim wow fadeInLeft"><img src="images/resource/icon-1.png" alt="" /></figure>
                                 <figure class="image-5 bounce-y overlay-anim wow fadeInLeft"><img src="images/resource/icon-6.png" alt="" /></figure>
                                 <div class="btn-box">

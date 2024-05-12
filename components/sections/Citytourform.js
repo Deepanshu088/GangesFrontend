@@ -137,7 +137,7 @@ const Cabbooking = () => {
           </div>
           <div className="col-lg-6 col-md-6">
             <div className="booking-img">
-              <img src="images/boat6.jpg" alt="img" style={{ width: '100%', height: 'auto' }} />
+              <img src="images/facilities/cityTour/cityTour1.jpg" alt="img" style={{ width: '100%', height: 'auto' }} />
             </div>
           </div>
         </div>

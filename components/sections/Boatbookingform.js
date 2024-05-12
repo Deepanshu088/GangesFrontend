@@ -41,7 +41,7 @@ const Cabbooking = () => {
 	// };
 
 	const nextPrev = (n) => {
-		let newValue = ((currentTab + n)  > 0) ? currentTab + n : 0;
+		let newValue = ((currentTab + n) > 0) ? currentTab + n : 0;
 		setCurrentTab(newValue);
 	};
 
@@ -130,7 +130,7 @@ const Cabbooking = () => {
 					</div>
 					<div className="col-lg-6 col-md-6">
 						<div className="booking-img">
-							<img src="images/boat6.jpg" alt="img" style={{ width: '100%', height: 'auto' }} />
+							<img src="images/facilities/boat/boat2.jpg" alt="" className='h-full w-auto object-cover' />
 						</div>
 					</div>
 				</div>

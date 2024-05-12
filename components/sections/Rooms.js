@@ -58,7 +58,7 @@ export default function Rooms() {
               <div className="room-block col-lg-3 col-md-6 col-sm-12">
                 <div className="inner-box wow fadeIn" data-wow-delay="300ms">
                   <div className="image-box">
-                    <figure className="image-2 overlay-anim"><img src="images/room-3.jpg" alt=""/></figure>
+                    <figure className="image-2 overlay-anim"><img src="images/rooms/roomPortrait2.jpg" alt=""/></figure>
                   </div>
                   <div className="content-box">
                     <h6 className="title"><Link href="/room-details">Heritage Royal</Link></h6>
@@ -100,7 +100,7 @@ export default function Rooms() {
               <div className="room-block col-lg-3 col-md-6 col-sm-12">
                   <div className="inner-box wow fadeIn" data-wow-delay="500ms">
                     <div className="image-box">
-                      <figure className="image-2 overlay-anim"><img src="images/room-5.jpg" alt=""/></figure>
+                      <figure className="image-2 overlay-anim"><img src="images/rooms/roomPortrait1.jpg" alt=""/></figure>
                     </div>
                     <div className="content-box">
                       <h6 className="title"><Link href="/room-details">Traditional Heritage Rooms</Link></h6>

@@ -61,7 +61,7 @@ export default function ContactPage() {
                         </div>
                         <div class="text">
                           <h6>Have any question?</h6>
-                          <a href="tel:980089850"> +91-7408423504, 7408423511,9984826656, 9198113594, 8765817841</a>
+                          <a href="tel:+91-7408423504"> 7408423504, 7408423511,9984826656, 9198113594, 8765817841</a>
                         </div>
                       </li>
                       <li>

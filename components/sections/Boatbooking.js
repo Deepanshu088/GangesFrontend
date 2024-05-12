@@ -7,8 +7,8 @@ export default function Boatbooking() {
 				<div className="row">
 					<div className="image-side col-xl-4 col-lg-4">
 						<div className="inner-column">
-							<div className="imagecorner">
-								<figure className="new-image wow fadeInUp"><img src="images/boat5.jpg" alt="" /></figure>
+							<div className="h-full">
+								<figure className=""><img src="images/facilities/boat/boat1.jpg" alt="" className='h-full w-auto object-cover' /></figure>
 							</div>
 							<div className="new-quote-box">
 								<div className="new-icon-box"><i className="flaticon-quotation"></i></div>
