@@ -13,7 +13,7 @@ const Header1 = ({ handleMobileMenu, searchToggle, handleToggle, scroll }) => {
                 <div className="container lg:max-w-full xl:max-w-[1536px] my-auto h-full">
                     <div className="main-box h-full px-8 my-auto text-center align-baseline items-center">
                         <div className="logo-box h-full w-auto my-auto py-2">
-                            <img src="images/icons/Logo-Black.png" className='h-full w-full object-contain' />
+                            <Link href="/"><img src="images/icons/Logo-Black.png" className='h-full w-full object-contain'/></Link>
                         </div>
                         <div className="nav-outer mx-2 my-auto">
                             <nav className="nav main-menu">
@@ -29,11 +29,11 @@ const Header1 = ({ handleMobileMenu, searchToggle, handleToggle, scroll }) => {
                 <div className="mobile-menu">
                     <div className="menu-backdrop" onClick={handleMobileMenu} />
                     <nav className="menu-box">
-                        <div className="upper-box">
-                            <div className="nav-logo"><Link href="/"><Image src={LogoDark} title='Soluris' alt="" /></Link></div>
+                        <div className="upper-box flex justify-between">
+                            <div className="nav-logo text-left"><Link href="/"><Image src={LogoDark} title='Soluris' alt="" className='w-full h-auto object-contain' /></Link></div>
                             <div className="close-btn" onClick={handleMobileMenu}><i className="icon fa fa-times" /></div>
                         </div>
-                        <MobileMenu />
+                        <MobileMenu handleMobileMenu={handleMobileMenu} />
                         <ul className="contact-list-one">
                             <li>
                                 <div className="contact-info-box">
@@ -81,7 +81,7 @@ const Header1 = ({ handleMobileMenu, searchToggle, handleToggle, scroll }) => {
                     <div className="container my-auto h-full ">
                         <div className="inner-container h-full">
                             <div className="logo-box h-full w-auto my-auto p-2">
-                                <img src="images/icons/Logo-Black.png" className='h-full w-full object-contain' />
+                            <Link href="/"><img src="images/icons/Logo-Black.png" className='h-full w-full object-contain'/></Link>
                             </div>
                             <div className="nav-outer">
                                 <nav className="main-menu">

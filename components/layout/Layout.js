@@ -12,7 +12,7 @@ export default function Layout({ headerStyle, handleRemove, footerStyle, headTit
     // Moblile Menu
     const [isMobileMenu, setMobileMenu] = useState(false)
     const handleMobileMenu = () => {
-        setMobileMenu(!isMobileMenu)
+        setMobileMenu(state => !state)
         !isMobileMenu ? document.body.classList.add("mobile-menu-visible") : document.body.classList.remove("mobile-menu-visible")
     }
 

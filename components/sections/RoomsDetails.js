@@ -19,7 +19,7 @@ export default function RoomDetails() {
                   <p className="text">Experience comfort and convenience in our luxurious heritage rooms. Each room is meticulously designed to offer relaxation and modern amenities, including plush bedding, a spacious work desk, and a flat-screen TV. Stay connected with high-speed Wi-Fi or unwind in the luxurious en-suite bathroom with complimentary toiletries. Enjoy a fresh cup of coffee from the in-room coffee maker or a drink from the minibar. For added convenience, our rooms offer a safe for your valuables and 24-hour room service. Whether you're traveling for business or pleasure, our rooms provide a sanctuary of comfort and style.</p>
                   <div className="row justify-content-center">
                     <div className="col-xl-12">
-                      <div className="room-details__content-right mb-40 mt-20">
+                      <div className="room-details__content-right mt-5">
                         <div className="room-details__details-box">
                           <div className="row">
                             <div className="col-6 col-md-3">
@@ -40,42 +40,42 @@ export default function RoomDetails() {
                     </div>
                   </div>
                 </div>
-                <div className="mt-40">
+                <div className="mt-16 mb-10">
                   <h4>Room Facilities</h4>
-                  <div className="row room-facility-list mb-40">
+                  <div className="row room-facility-list">
                     <div className="col-sm-6 col-xl-4">
                       <div className="list-one d-flex align-items-center me-sm-4 mb-3">
-                        <div className="icon text-theme-color1 mr-10 flex-shrink-0"><i className="far fa-air-conditioner"></i></div>
-                        <h6 className="title m-0">Air Conditionar</h6>
+                        <div className="icon text-theme-color1 mr-3 flex-shrink-0"><i className="far fa-air-conditioner"></i></div>
+                        <h6 className="title my-auto">Air Conditionar</h6>
                       </div>
                     </div>
                     <div className="col-sm-6 col-xl-4">
                       <div className="list-one d-flex align-items-center me-sm-4 mb-3">
-                        <div className="icon text-theme-color1 mr-10 flex-shrink-0"><i className="far fa-parking"></i></div>
-                        <h6 className="title m-0">Paid Parking</h6>
+                        <div className="icon text-theme-color1 mr-3 flex-shrink-0"><i className="far fa-parking"></i></div>
+                        <h6 className="title my-auto">Paid Parking</h6>
                       </div>
                     </div>
                     <div className="col-sm-6 col-xl-4">
                       <div className="list-one d-flex align-items-center me-sm-4 mb-3">
-                        <div className="icon text-theme-color1 mr-10 flex-shrink-0"><i className="far fa-shield-check"></i></div>
-                        <h6 className="title m-0">Security</h6>
+                        <div className="icon text-theme-color1 mr-3 flex-shrink-0"><i className="far fa-shield-check"></i></div>
+                        <h6 className="title my-auto">Security</h6>
                       </div>
                     </div>
                     <div className="col-sm-6 col-xl-4">
                       <div className="list-one d-flex align-items-center me-sm-4 mb-3">
-                        <div className="icon text-theme-color1 mr-10 flex-shrink-0"><i className="fas fa-wifi"></i></div>
-                        <h6 className="title m-0">Free WI Fi</h6>
+                        <div className="icon text-theme-color1 mr-3 flex-shrink-0"><i className="fas fa-wifi"></i></div>
+                        <h6 className="title my-auto">Free WI Fi</h6>
                       </div>
                     </div>
                     <div className="col-sm-6 col-xl-4">
                       <div className="list-one d-flex align-items-center me-sm-4 mb-3">
-                        <div className="icon text-theme-color1 mr-10 flex-shrink-0"><i className="far fa-water"></i></div>
-                        <h6 className="title m-0">Ganga View</h6>
+                        <div className="icon text-theme-color1 mr-3 flex-shrink-0"><i className="far fa-water"></i></div>
+                        <h6 className="title my-auto">Ganga View</h6>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="d-sm-flex align-items-sm-center justify-content-sm-between pt-40 pb-40 border-top">
+                <div className="d-sm-flex align-items-sm-center justify-content-sm-between py-10 border-top">
                   <h6 className="my-sm-0">Share Details</h6>
                   <div className="blog-details__social-list"> <Link href="news-details"><i className="fab fa-twitter"></i></Link> <Link href="news-details"><i className="fab fa-facebook"></i></Link> <Link href="news-details"><i className="fab fa-pinterest-p"></i></Link> <Link href="news-details"><i className="fab fa-instagram"></i></Link> </div>
                 </div>

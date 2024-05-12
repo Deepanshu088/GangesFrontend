@@ -52,7 +52,7 @@ export default function ContactPage() {
                     <div class="sec-title">
                       <span class="sub-title before-none">Need any help?</span>
                       <h2>Get in touch with us</h2>
-                      <div class="text">Lorem ipsum is simply free text available dolor sit amet consectetur notted adipisicing elit sed do eiusmod tempor incididunt simply dolore magna.</div>
+                      {/* <div class="text">Lorem ipsum is simply free text available dolor sit amet consectetur notted adipisicing elit sed do eiusmod tempor incididunt simply dolore magna.</div> */}
                     </div>
                     <ul class="list-unstyled contact-details__info">
                       <li>
@@ -61,7 +61,7 @@ export default function ContactPage() {
                         </div>
                         <div class="text">
                           <h6>Have any question?</h6>
-                          <a href="tel:980089850"><span>Free</span> +91-7408423504, 7408423511,9984826656, 9198113594, 8765817841</a>
+                          <a href="tel:980089850"> +91-7408423504, 7408423511,9984826656, 9198113594, 8765817841</a>
                         </div>
                       </li>
                       <li>

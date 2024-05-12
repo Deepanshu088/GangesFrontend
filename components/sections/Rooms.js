@@ -61,7 +61,7 @@ export default function Rooms() {
                     <figure className="image-2 overlay-anim"><img src="images/room-3.jpg" alt=""/></figure>
                   </div>
                   <div className="content-box">
-                    <h6 className="title"><Link href="/room-details">Royal Heritage</Link></h6>
+                    <h6 className="title"><Link href="/room-details">Heritage Royal</Link></h6>
                     <span className="price">₹10000  / NIGHT</span>
                   </div>
                   <div className="box-caption">
@@ -82,7 +82,7 @@ export default function Rooms() {
                     <figure className="image-2 overlay-anim"><img src="images/room-4.jpg" alt=""/></figure>
                   </div>
                   <div className="content-box">
-                    <h6 className="title"><Link href="/room-details">Deluxe Heritage</Link></h6>
+                    <h6 className="title"><Link href="/room-details">Ganga River View</Link></h6>
                     <span className="price">₹10000  / NIGHT</span>
                   </div>
                   <div className="box-caption">

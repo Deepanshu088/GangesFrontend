@@ -37,7 +37,7 @@ export default function About1() {
                                 <div className="contact-info">
                                     <div className="icon-box"><i className="flaticon-customer-service"></i></div>
                                     <a href="https://staahmax.staah.net/be/indexpackdetail?propertyId=MTA5OQ==&individual=true" className='whitespace-nowrap'>Book Now</a>
-                                    <h4 className="title">+91-7408423504 <br/>+91-7408423511</h4>
+                                    <h4 className="title"><a href='tel:+91-7408423504'>+91-7408423504</a> <br/><a href='tel:+91-7408423511'>+91-7408423511</a></h4>
                                 </div>
                                 </div>
                             </div>
