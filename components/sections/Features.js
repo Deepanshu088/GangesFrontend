@@ -46,7 +46,7 @@ export default function Features() {
               <div className="image-column col-lg-4">
                 <div className="inner-column">
                   <div className="image-box">
-                    <figure className="image overlay-anim"><img src="images/boating.jpg" alt=""/></figure>
+                    <figure className="image overlay-anim"><img src="images/facilities/boat/boat2.jpg" alt=""/></figure>
                   </div>
                 </div>
               </div>
