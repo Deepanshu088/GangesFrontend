@@ -44,11 +44,11 @@ export default function MobileMenu({ handleMobileMenu }) {
                     <div className="dropdown-btn" onClick={() => handleClick(3)}><i className="fa fa-angle-down"/></div>
                 </li>
                 <li className="dropdown"><Link href="/page-about" onClick={() => handleMobileMenu()}>About</Link>
-                    <ul style={{ display: `${isActive.key == 3 ? "block" : "none"}` }}>
+                    <ul style={{ display: `${isActive.key == 4 ? "block" : "none"}` }}>
                         <li><Link onClick={() => handleMobileMenu()} href="/page-md">MD Message</Link></li>
                         <li><Link onClick={() => handleMobileMenu()} href="/page-profile">Profile</Link></li>
                     </ul>
-                    <div className="dropdown-btn" onClick={() => handleClick(3)}><i className="fa fa-angle-down"/></div>
+                    <div className="dropdown-btn" onClick={() => handleClick(4)}><i className="fa fa-angle-down"/></div>
                 </li>
                 <li><Link onClick={() => handleMobileMenu()} href="/page-speciality">Specility</Link></li>
                 <li><Link onClick={() => handleMobileMenu()} href="/page-gallery">Gallary</Link></li>

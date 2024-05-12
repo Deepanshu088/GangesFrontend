@@ -1,3 +1,4 @@
+import FloorRooms from "@/components/FloorRooms"
 import Layout from "@/components/layout/Layout"
 import PageTitle from "@/components/sections/PageTitle"
 import Thirdfloor from "@/components/sections/Thirdfloor"
@@ -7,7 +8,8 @@ export default function pagegroundfloor() {
     <>
       <Layout headerStyle={2}>
       <PageTitle pageName="Ganga River View ( Third Floor )" />
-      <Thirdfloor/>
+      {/* <Thirdfloor/> */}
+      <FloorRooms floor={3} />
       </Layout>
     </>
   )
