@@ -35,11 +35,12 @@ export default function MobileMenu({ handleMobileMenu }) {
                     </ul>
                     <div className="dropdown-btn" onClick={() => handleClick(2)}><i className="fa fa-angle-down"/></div>
                 </li>
-                <li className="dropdown"><Link href="#">Facilities</Link>
+                <li className="dropdown"><Link href="/page-facilities">Facilities</Link>
                     <ul style={{ display: `${isActive.key == 3 ? "block" : "none"}` }}>
                         <li><Link onClick={() => handleMobileMenu()} href="/page-cabbooking">Cab Booking</Link></li>
                         <li><Link onClick={() => handleMobileMenu()} href="/page-boatbooking">Boat Booking</Link></li>
                         <li><Link onClick={() => handleMobileMenu()} href="/page-citytour">City Tour</Link></li>
+                        <li><Link onClick={() => handleMobileMenu()} href="/page-restaurant">Restaurant</Link></li>
                     </ul>
                     <div className="dropdown-btn" onClick={() => handleClick(3)}><i className="fa fa-angle-down"/></div>
                 </li>

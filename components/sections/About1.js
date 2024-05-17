@@ -15,8 +15,7 @@ export default function About1() {
                                 <div className="sec-title">
                                 <span className="sub-title">PALACE ON GANGES</span>
                                 <h2>Most Booked & Rated <br/>Hotel in Varanasi.</h2>
-                                <div className="text">Welcome to Hotel Palace on Ganges, where the essence of India's rich cultural tapestry comes alive. As you step into our heritage abode, you embark on a journey through time, experiencing the vibrant diversity that defines Varanasi, the spiritual heart of our nation.
-                                    For over two millennia, Varanasi has been a melting pot of cultures, drawing pilgrims and travelers from every corner of India. It is here that the threads of our cultural heritage intertwine, creating a tapestry of traditions that is as awe-inspiring as it is timeless.</div>
+                                <div className="text">Welcome to the Palace on Ganges, an exquisite fusion of traditional elegance and contemporary luxury located at the heart of Varanasi’s spiritual landscape, near the famous Assi Ghat. Our hotel embodies the essence of Varanasi’s rich cultural tapestry and spiritual ethos, offering a uniquely immersive experience to discerning travellers from around the globe. With bespoke accommodations and thoughtful amenities, we ensure that every moment spent here resonates with comfort and serenity. Each of our 24 rooms is a testament to the diverse cultural influences that have shaped various parts of India over millennia. </div>
                                 </div>
                                 <div className="outer-box">
                                 <div className="info-block">

@@ -116,7 +116,7 @@ export default function Profile() {
 									<div className="icon-box"><i className="flaticon-quotation"></i></div>
 									<div className="text">Great hospitality is the key to Pride of Britain’s longstanding reputation for excellence.</div>
 								</div>
-							</div>
+							</div><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 							{
 								showPopup &&
 								<div className="absolute p-8 border border-black w-2/5 mt-20 left-10 ">
@@ -141,10 +141,11 @@ export default function Profile() {
 							<div className="inner-column">
 								<div className="sec-title">
 									<h2>Profile</h2>
-									<div className="text"> Kashi, Benaras or Varanasi is the oldest living city in the History of Mankind. This City is acknowledged as the cultural Capital of the Oriental part of the Globe. This is treated as an embodied divine. India, the nation with diversified culture has one unity or Common that is Varanasi where cultures from all the walks of this Country Congregated and accepted this City as their spiritual DESTINY.<br /><br />
-										For more than two thousand years, people have been coming from different states of India to Varanasi with their Cultural heritage & lineage. This amalgamation of Oriental Cultures and life styles of west made this colossal city a panorama.<br /><br />
-										Hotel Palace on Ganges has coined all distinct cultures of India and accordingly altogether forty two rooms under one Grand Heritage Hotel roof are designed and dedicated to each of those provincial cultures.<br /><br />
-										Hotel Palace on Ganges has coined all distinct cultures of India and accordingly altogether forty two rooms under one Grand Heritage Hotel roof are designed and dedicated to each of those provincial cultures.<br /><br /> </div>
+									<div className="text"> Varanasi, historically known as Kashi or Banaras, is heralded as the oldest continuously inhabited city in human history. This venerable city is esteemed not only as the cultural capital of the Eastern world but also as a pivotal spiritual haven that draws seekers and devotees from across the globe. Recognized for its profound spiritual influence, Varanasi has been a destination where diverse cultures from all corners of India and beyond have converged, seeking enlightenment and spiritual fulfilment.<br/><br/>
+For over two millennia, Varanasi has been a melting pot of cultures, where individuals from different regions of India have brought their unique cultural heritages and lineages. This rich influx of cultural traditions, combined with the city’s indigenous spiritual and cultural practices, has woven a vibrant tapestry that enhances its historical and contemporary allure. The synthesis of Eastern traditions with influences from various global cultures has transformed Varanasi into a city that not only embodies a rich historical narrative but also displays a dynamic cultural panorama. <br/><br/>
+The Hotel Palace on Ganges stands as a testament to this cultural synthesis. Situated at the heart of this ancient city, the hotel embraces the spirit of Varanasi and all over India by dedicating each of its twenty-four rooms to distinct cultural themes reflective of India’s diverse regional traditions. Each room serves as a cultural alcove, offering guests an intimate experience with the aesthetic and spiritual heritage specific to each Indian province represented. From the architectural nuances to the decorative motifs and the curated artworks, the rooms are designed to offer guests more than just a place to stay—they provide a deep, immersive journey into the cultural soul of India.<br/><br/>
+In preserving and showcasing such a broad spectrum of Indian cultural heritage under one roof, the Hotel Palace on Ganges not only honours the legacy of Varanasi as a centre of spiritual and cultural convergence but also enhances the cultural appreciation of its guests, making each stay a unique exploration of India’s rich cultural mosaic. Thus, the hotel not only offers world-class hospitality but also serves as a living museum of cultural heritage, enriching the travel experience of its guests with depth and authenticity. <br/><br/>
+</div></div>
 									<div className="healthy-food flex justify-start flex-wrap md:flex-nowrap 	">
 										<div className="food-list mb-10 mr-8">
 											<ul>
@@ -197,7 +198,7 @@ export default function Profile() {
 										</div>
 
 									</div>
-								</div>
+								
 							</div>
 						</div>
 					</div>

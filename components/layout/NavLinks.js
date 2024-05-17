@@ -24,7 +24,7 @@ const NavLinks = ({ extraClassName }) => {
       </li>
 
       <li className="dropdown">
-        <Link className="text-sm" href="#">Facilities</Link>
+        <Link className="text-sm" href="/page-facilities">Facilities</Link>
         <ul>
           <li>
             <Link className="text-sm" href="/page-cabbooking">Cab Booking</Link>
@@ -34,6 +34,9 @@ const NavLinks = ({ extraClassName }) => {
           </li>
           <li>
             <Link className="text-sm" href="/page-citytour">City Tour</Link>
+          </li>
+          <li>
+            <Link className="text-sm" href="/page-restaurant">Restaurant</Link>
           </li>
         </ul>
       </li>

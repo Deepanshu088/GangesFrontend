@@ -16,7 +16,7 @@ export default function Assam() {
               <div className="room-details__left">
                 <div className="wrapper">
                   <h3>Description of Room</h3>
-                  <p className="text">Assam is a state in northeastern India known for its wildlife, archeological sites and tea plantations.</p>
+                  <p className="text">Assam  assamis a state in northeastern India known for its wildlife, archeological sites and tea plantations.</p>
                   <div className="row justify-content-center">
                     <div className="col-xl-12">
                       <div className="room-details__content-right mb-40 mt-20">

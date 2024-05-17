@@ -61,21 +61,20 @@ function Citytour() {
                             <div className="new-sec-title">
                                 <span className="new-sub-title"></span>
                                 <h3>Our Exclusive City Tour</h3>
-                                <div className="new-text">Step into the vibrant pulse of City and uncover its hidden treasures with our
-                                    captivating City Tour.
-
-                                    Whether you're a history buff, a culinary explorer, or simply seeking to soak in the sights and sounds
-                                    of this bustling metropolis, our expertly curated tour promises an unforgettable journey through the
-                                    city's rich tapestry of culture, history, and flavors.</div>
+                                <div className="new-text">Dive into the heart of Varanasi with our Exclusive City Tour, a carefully planned adventure that promises to reveal the layers of history, culture, and vibrancy that pulse through this ancient city. Whether your interest lies in exploring historic sites, sampling local cuisines, or simply experiencing the day-to-day life of Varanasi, our tour is crafted to provide a comprehensive and unforgettable journey.</div>
                                 <div className="new-healthy-food mt-4">
                                     <div className="new-food-list">
-                                        <ul>
-                                            <li><i className="fa-regular fa-square-check mr-4 mb-2"></i>Unveil the Stories Behind the Landmarks</li>
-                                            <li><i className="fa-regular fa-square-check mr-4 mb-2"></i>Explore Like a Local, with Locals</li>
-                                            <li><i className="fa-regular fa-square-check mr-4 mb-2"></i>Tailored Experiences to Suit Your Style</li>
-                                        </ul>
+                                    <ul>
+											<li><i className="fa-regular fa-square-check mr-4 mb-2"></i><strong style={{ color: 'black', fontSize:'18px' }}>Unveil the Stories Behind the Landmarks</strong></li>
+											<span>Our city tours are more than just sightseeing. Each landmark has a story, and our knowledgeable guides are passionate about bringing these tales to life. From the sacred ghats along the Ganges to the narrow lanes dotted with centuries-old temples, our tours offer deep insights into the significance of each site, enriching your understanding of Varanasi's spiritual and historical importance.</span><br/><br/>
+											<li><i className="fa-regular fa-square-check mr-4 mb-2"></i><strong style={{ color: 'black', fontSize:'18px' }}>Explore Like a Local, with Locals</strong></li>
+											<span>Immerse yourself in the true essence of Varanasi by touring with local guides. Our guides are residents who share their own stories and secrets of the city, offering a more intimate and personal view of their hometown. This approach allows you to experience Varanasi not as a tourist, but as an honoured guest, welcomed into the heart of the community.</span><br/><br/>
+											<li><i className="fa-regular fa-square-check mr-4 mb-2"></i><strong style={{ color: 'black', fontSize:'18px' }}>Tailored Experiences to Suit Your Style</strong></li>
+											<span>Recognizing that each traveller’s interests are unique, we offer customized tours that cater to your specific preferences. Whether you're looking to focus on spiritual practices, architectural beauty, culinary delights, or photographic opportunities, we can adjust the itinerary to suit your personal interests, ensuring a tour that is as rewarding as it is personal.</span><br></br><br></br>
+										</ul>
                                     </div>
                                 </div>
+                                <div className="new-text">Join us on our Exclusive City Tour and let us show you the Varanasi that only locals know. This experience is designed to be a deep dive into the city's culture, history, and everyday life, promising not just memories but a truly transformative experience.</div>
                             </div>
                         </div>
                     </div>

@@ -36,7 +36,7 @@ export default function firstfloor() {
         </div>
         <div className="content-box">
           <h6 className="title" style={{ marginRight: '30px' }}><Link href="/page-karnatakaroom">Karnataka Room</Link></h6>
-          <span className="price" style={{ marginRight: '30px' }}>₹10000  / NIGHT</span>
+          <span className="price" style={{ marginRight: '30px' }}></span>
         </div>
         <div className="box-caption">
         <Link href="/room-details" title="" className="book-btn" style={{ fontSize: '12px' }}>book now</Link>
@@ -57,7 +57,7 @@ export default function firstfloor() {
         </div>
         <div className="content-box">
           <h6 className="title" style={{ marginRight: '30px' }}><Link href="/page-kashmirroom">Kashmir Room</Link></h6>
-          <span className="price" style={{ marginRight: '30px' }}>₹10000  / NIGHT</span>
+          <span className="price" style={{ marginRight: '30px' }}></span>
         </div>
         <div className="box-caption">
         <Link href="/room-details" title="" className="book-btn" style={{ fontSize: '12px' }}>book now</Link>
@@ -78,7 +78,7 @@ export default function firstfloor() {
         </div>
         <div className="content-box">
           <h6 className="title" style={{ marginRight: '30px' }}><Link href="/page-goaroom">Goa Room</Link></h6>
-          <span className="price" style={{ marginRight: '30px' }}>₹10000  / NIGHT</span>
+          <span className="price" style={{ marginRight: '30px' }}></span>
         </div>
         <div className="box-caption">
         <Link href="/room-details" title="" className="book-btn" style={{ fontSize: '12px' }}>book now</Link>
@@ -98,7 +98,7 @@ export default function firstfloor() {
         </div>
         <div className="content-box">
           <h6 className="title" style={{ marginRight: '30px' }}><Link href="/page-sanchiroom">Sanchi Room</Link></h6>
-          <span className="price" style={{ marginRight: '30px' }}>₹10000  / NIGHT</span>
+          <span className="price" style={{ marginRight: '30px' }}></span>
         </div>
         <div className="box-caption">
         <Link href="/room-details" title="" className="book-btn" style={{ fontSize: '12px' }}>book now</Link>
@@ -119,7 +119,7 @@ export default function firstfloor() {
         </div>
         <div className="content-box">
           <h6 className="title" style={{ marginRight: '30px' }}><Link href="/page-rajputhana">Rajputhana Room</Link></h6>
-          <span className="price" style={{ marginRight: '30px' }}>₹10000  / NIGHT</span>
+          <span className="price" style={{ marginRight: '30px' }}></span>
         </div>
         <div className="box-caption">
         <Link href="/room-details" title="" className="book-btn" style={{ fontSize: '12px' }}>book now</Link>
@@ -140,7 +140,7 @@ export default function firstfloor() {
         </div>
         <div className="content-box">
           <h6 className="title" style={{ marginRight: '30px' }}><Link href="/page-madhuroom">Madhubani Room</Link></h6>
-          <span className="price" style={{ marginRight: '30px' }}>₹10000  / NIGHT</span>
+          <span className="price" style={{ marginRight: '30px' }}></span>
         </div>
         <div className="box-caption">
         <Link href="/room-details" title="" className="book-btn" style={{ fontSize: '12px' }}>book now</Link>
@@ -161,7 +161,7 @@ export default function firstfloor() {
         </div>
         <div className="content-box">
           <h6 className="title" style={{ marginRight: '30px' }}><Link href="/room-details">Rajputana Room</Link></h6>
-          <span className="price" style={{ marginRight: '30px' }}>₹10000  / NIGHT</span>
+          <span className="price" style={{ marginRight: '30px' }}></span>
         </div>
         <div className="box-caption">
         <Link href="/room-details" title="" className="book-btn" style={{ fontSize: '12px' }}>book now</Link>
