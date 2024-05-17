@@ -6434,11 +6434,11 @@ Section Title
     margin-top: 29px;
   }
 }
-@media (max-width: 575.98px) {
+/* @media (max-width: 575.98px) {
   .food-section .content-column .inner-column .food-list.two {
     display: none;
   }
-}
+} */
 .food-section .content-column .inner-column .healthy-food {
   display: -webkit-box;
   display: -ms-flexbox;

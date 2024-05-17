@@ -4,13 +4,13 @@ import Firstfloor from "@/components/sections/Firstfloor"
 import FloorRooms from "@/components/FloorRooms"
 
 export default function pagegroundfloor() {
-  return (
-    <>
-      <Layout headerStyle={2}>
-      <PageTitle pageName="Heritage Luxury ( First Floor )" />
-      {/* <Firstfloor/> */}
-      <FloorRooms floor={1} />
-      </Layout>
-    </>
-  )
+	return (
+		<>
+			<Layout headerStyle={2}>
+				<PageTitle pageName="Heritage Luxury ( First Floor )" />
+				{/* <Firstfloor/> */}
+				<FloorRooms floor={1} />
+			</Layout>
+		</>
+	)
 }

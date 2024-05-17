@@ -1,9 +1,10 @@
+import { FirstFloorRooms, GroundFloorRooms, SecondFloorRooms, ThirdFloorRooms } from '@/constants/RoomDetailConstants';
 import React, { useState } from 'react';
 import ModalVideo from 'react-modal-video';
 
 export default function Profile() {
 	const [isOpen, setOpen] = useState(false);
-	const [showPopup, setShowPopup] = useState(false);
+	const [showPopup, setShowPopup] = useState(true);
 	const [hoveredCity, setHoveredCityDetails] = useState({});
 	const placesList = {
 		groundFloor: [
@@ -99,25 +100,7 @@ export default function Profile() {
 	return (
 		<>
 			<section className="food-section pt-0">
-				{
-					showPopup &&
-					<div className="absolute bottom-0 p-8 w-2/5 border border-black mb-20 ml-10">
-						<div className="flex justify-start">
-							<div className="w-1/2">
-								<img src="images/room-4.jpg" alt="Product" className='w-auto h-full object-cover' />
-							</div>
-							<div className="ml-8">
-								<div className="product-details">
-									<h4 className="product-name"><strong>{hoveredCity.title}</strong></h4>
-									<h2 className="product-content"><p>It's home to diverse indigenous tribes, with festivals and markets celebrating the different tribes' culture</p></h2>
-									<button className='bg-[#aa8453] p-4 w-full hover:text-black'>
-										<a href="https://staahmax.staah.net/be/indexpack?propertyId=MTA5OQ&individual=true&roomTypeId=100333" className="text-white hover:text-black">MAKE RESERVATION</a>
-									</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				}
+
 				<div className="auto-container">
 					<div className="row">
 						<div className="image-column col-xl-4 col-lg-4">
@@ -134,6 +117,25 @@ export default function Profile() {
 									<div className="text">Great hospitality is the key to Pride of Britain’s longstanding reputation for excellence.</div>
 								</div>
 							</div>
+							{
+								showPopup &&
+								<div className="absolute p-8 border border-black w-2/5 mt-20 left-10 ">
+									<div className="flex justify-start">
+										<div className="w-1/2">
+											<img src={hoveredCity.coverPhoto} alt="Product" className='w-full h-full object-cover max-h-72' />
+										</div>
+										<div className="ml-8 w-1/2">
+											<div className="product-details">
+												<h4 className="product-name"><strong>{hoveredCity.title}</strong></h4>
+												<h2 className="product-content"><p>{hoveredCity.shortDescription || "It's home to diverse indigenous tribes, with festivals and markets celebrating the different tribes' culture"}</p></h2>
+												<button className='bg-[#aa8453] p-4 w-full hover:text-black'>
+													<a href="https://staahmax.staah.net/be/indexpack?propertyId=MTA5OQ&individual=true&roomTypeId=100333" className="text-white hover:text-black">MAKE RESERVATION</a>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							}
 						</div>
 						<div className="content-column col-xl-8">
 							<div className="inner-column">
@@ -143,37 +145,37 @@ export default function Profile() {
 										For more than two thousand years, people have been coming from different states of India to Varanasi with their Cultural heritage & lineage. This amalgamation of Oriental Cultures and life styles of west made this colossal city a panorama.<br /><br />
 										Hotel Palace on Ganges has coined all distinct cultures of India and accordingly altogether forty two rooms under one Grand Heritage Hotel roof are designed and dedicated to each of those provincial cultures.<br /><br />
 										Hotel Palace on Ganges has coined all distinct cultures of India and accordingly altogether forty two rooms under one Grand Heritage Hotel roof are designed and dedicated to each of those provincial cultures.<br /><br /> </div>
-									<div className="healthy-food">
-										<div className="food-list">
+									<div className="healthy-food flex justify-start flex-wrap md:flex-nowrap 	">
+										<div className="food-list mb-10 mr-8">
 											<ul>
 												<span className="whitespace-nowrap underline text-black mb-20">Ground floor</span>
 												{
-													placesList.groundFloor.map(item => <li key={item.url} onMouseEnter={() => onMouseEnterHandler(item)} onMouseLeave={() => onMouseLeaveHandler(item)}>
+													GroundFloorRooms.map(item => <li key={item.url} onMouseEnter={() => onMouseEnterHandler(item)} onMouseLeave={() => onMouseLeaveHandler(item)}>
 														<i className="fa-regular fa-square-check"></i>
-														<a href={item.url}>{item.title}</a>
+														<a href={`/room-details/${item.roomId}`} className='whitespace-nowrap'>{item.name}</a>
 													</li>)
 												}
 											</ul>
 										</div>
-										<div className="food-list two">
+										<div className="food-list two mb-10 mr-8">
 											<ul>
 												<span className="whitespace-nowrap underline text-black">First floor</span>
 												{
-													placesList.firstFloor.map(item => <li key={item.url} onMouseEnter={() => onMouseEnterHandler(item)} onMouseLeave={() => onMouseLeaveHandler(item)}>
+													FirstFloorRooms.map(item => <li key={item.url} onMouseEnter={() => onMouseEnterHandler(item)} onMouseLeave={() => onMouseLeaveHandler(item)}>
 														<i className="fa-regular fa-square-check"></i>
-														<a href={item.url}>{item.title}</a>
+														<a href={`/room-details/${item.roomId}`} className='whitespace-nowrap'>{item.name}</a>
 													</li>)
 												}
 											</ul>
 										</div>
 
-										<div className="food-list two">
+										<div className="food-list two mb-10 mr-8">
 											<ul>
 												<span className="whitespace-nowrap underline text-black">Second floor</span>
 												{
-													placesList.secondFloor.map(item => <li key={item.url} onMouseEnter={() => onMouseEnterHandler(item)} onMouseLeave={() => onMouseLeaveHandler(item)}>
+													SecondFloorRooms.map(item => <li key={item.url} onMouseEnter={() => onMouseEnterHandler(item)} onMouseLeave={() => onMouseLeaveHandler(item)}>
 														<i className="fa-regular fa-square-check"></i>
-														<a href={item.url}>{item.title}</a>
+														<a href={`/room-details/${item.roomId}`} className='whitespace-nowrap'>{item.name}</a>
 													</li>)
 												}
 
@@ -185,9 +187,9 @@ export default function Profile() {
 												<span className="whitespace-nowrap underline text-black">Third floor</span>
 
 												{
-													placesList.thirdFloor.map(item => <li key={item.url} onMouseEnter={() => onMouseEnterHandler(item)} onMouseLeave={() => onMouseLeaveHandler(item)}>
+													ThirdFloorRooms.map(item => <li key={item.url} onMouseEnter={() => onMouseEnterHandler(item)} onMouseLeave={() => onMouseLeaveHandler(item)}>
 														<i className="fa-regular fa-square-check"></i>
-														<a href={item.url}>{item.title}</a>
+														<a href={`/room-details/${item.roomId}`} className='whitespace-nowrap'>{item.name}</a>
 													</li>)
 												}
 
