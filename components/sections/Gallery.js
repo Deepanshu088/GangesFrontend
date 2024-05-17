@@ -6,32 +6,32 @@ export default function Gallery() {
 
   const imagesByCategory = {
     all: [
-      "images/DSC_2491.JPG", "images/DSC_2492.JPG", "images/DSC_2494.JPG",
-      "images/DSC_2495.JPG", "images/DSC_2496.JPG", "images/DSC_2497.JPG",
-      "images/DSC_2499.JPG", "images/DSC_2501.JPG", "images/DSC_2503.JPG",
-      "images/DSC_2505.JPG", "images/DSC_2508.JPG", "images/DSC_2487.JPG",
-      "images/DSC_2510.JPG", "images/a1.Jpg", "images/a2.Jpg", "images/v1.Jpg",
-      "images/v2.Jpg", "images/v3.Jpg", "images/v4.Jpg", "images/v5.Jpg",
-      "images/v6.Jpg", "images/p2.Jpg", "images/p3.Jpg", "images/p4.Jpg",
-      "images/p5.Jpg", "images/p6.Jpg", "images/p7.Jpg", "images/p8.Jpg",
-      "images/p9.Jpg"
+      "images/DSC_2491.jpg", "images/DSC_2492.jpg", "images/DSC_2494.jpg",
+      "images/DSC_2495.jpg", "images/DSC_2496.jpg", "images/DSC_2497.jpg",
+      "images/DSC_2499.jpg", "images/DSC_2501.jpg", "images/DSC_2503.jpg",
+      "images/DSC_2505.jpg", "images/DSC_2508.jpg", "images/DSC_2487.jpg",
+      "images/DSC_2510.jpg", "images/a1.jpg", "images/a2.jpg", "images/v1.jpg",
+      "images/v2.jpg", "images/v3.jpg", "images/v4.jpg", "images/v5.jpg",
+      "images/v6.jpg", "images/p2.jpg", "images/p3.jpg", "images/p4.jpg",
+      "images/p5.jpg", "images/p6.jpg", "images/p7.jpg", "images/p8.jpg",
+      "images/p9.jpg"
     ],
     rooms: [
-      "images/DSC_2491.JPG", "images/DSC_2492.JPG", "images/DSC_2494.JPG",
-      "images/DSC_2495.JPG", "images/DSC_2496.JPG", "images/DSC_2497.JPG",
-      "images/DSC_2499.JPG", "images/DSC_2501.JPG", "images/DSC_2503.JPG",
-      "images/DSC_2505.JPG", "images/DSC_2508.JPG", "images/DSC_2487.JPG",
-      "images/DSC_2510.JPG"
+      "images/DSC_2491.jpg", "images/DSC_2492.jpg", "images/DSC_2494.jpg",
+      "images/DSC_2495.jpg", "images/DSC_2496.jpg", "images/DSC_2497.jpg",
+      "images/DSC_2499.jpg", "images/DSC_2501.jpg", "images/DSC_2503.jpg",
+      "images/DSC_2505.jpg", "images/DSC_2508.jpg", "images/DSC_2487.jpg",
+      "images/DSC_2510.jpg"
     ],
-    gangaAarti: ["images/a1.Jpg", "images/a2.Jpg"],
+    gangaAarti: ["images/a1.jpg", "images/a2.jpg"],
     varanasiCity: [
-      "images/v1.Jpg", "images/v2.Jpg", "images/v3.Jpg",
-      "images/v4.Jpg", "images/v5.Jpg", "images/v6.Jpg"
+      "images/v1.jpg", "images/v2.jpg", "images/v3.jpg",
+      "images/v4.jpg", "images/v5.jpg", "images/v6.jpg"
     ],
     palaceOnGanges: [
-      "images/p2.Jpg", "images/p3.Jpg", "images/p4.Jpg",
-      "images/p5.Jpg", "images/p6.Jpg", "images/p7.Jpg",
-      "images/p8.Jpg", "images/p9.Jpg"
+      "images/p2.jpg", "images/p3.jpg", "images/p4.jpg",
+      "images/p5.jpg", "images/p6.jpg", "images/p7.jpg",
+      "images/p8.jpg", "images/p9.jpg"
     ]
   };
 
