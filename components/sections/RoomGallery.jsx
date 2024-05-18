@@ -47,11 +47,11 @@ const RoomGallery = ({ data }) => {
         <div className="mb-4">
             <img src={data[selectedIndex]} className="w-full max-h-[70vh] object-cover" onClick={() => setSlideShowMode(state => !state)} />
         </div>
-        <div className="flex justify-start flex-wrap">
+        <div className="flex justify-start overflow-x-auto no-scrollbar">
             {
-                data.map((item, index) => index != selectedIndex && <div className="mr-4 mb-4" onClick={() => changeSelectedIndex(index)}>
-                    <img src={item} className="w-full h-[100px] object-cover" />
-                </div>)
+                data.map((item, index) => index != selectedIndex && 
+                    <img src={item} className="h-[70px] w-full mr-4 last:mr-0  md:w-full md:h-[100px] object-cover" onClick={() => changeSelectedIndex(index)} />
+                )
             }
         </div>
     </div>
