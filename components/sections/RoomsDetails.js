@@ -1,5 +1,8 @@
 import Link from 'next/link';
 import React from 'react';
+import RoomGallery from './RoomGallery';
+
+const listOfImages = ["/images/room-1.jpg", "/images/rooms/room4.jpg", "/images/room-3.jpg", "/images/rooms/room1.jpg", "/images/rooms/room3.jpg"]
 
 export default function RoomDetails({ roomDetail }) {
 	const { name, longDescription, floor, coverPhoto, isBreakfast, isDinner, isRiverView, isWifi, isTelevision, isAirConditioned, isParking, customerRating, luxuryCategory, regularPrice } = roomDetail;
@@ -11,9 +14,7 @@ export default function RoomDetails({ roomDetail }) {
 					<div className="row">
 						<div className="col-xl-8 col-lg-7">
 							<div className="testimonial-block-home5 mb-50">
-								<div className="inner-box">
-									<div className="image-box"><figure className="image"><img className="w-full h-auto max-h-[50vh] object-cover" src={coverPhoto} alt="" /></figure></div>
-								</div>
+								<RoomGallery data={listOfImages} />
 							</div>
 							<div className="room-details__left">
 								<div className="wrapper">
