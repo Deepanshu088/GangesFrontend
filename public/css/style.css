@@ -8893,6 +8893,8 @@ Sidebar
 @media only screen and (max-width: 767px) {
   .sidebar__post .sidebar__post-list li {
     padding: 16px 0;
+    display: flex;
+    justify-content: center;
   }
 }
 .sidebar__post .sidebar__post-list li:hover {
@@ -8904,13 +8906,15 @@ Sidebar
 }
 .sidebar__post .sidebar__post-list .sidebar__post-image {
   margin-right: 20px;
-  -webkit-box-flex: 70px;
+  /* -webkit-box-flex: 70px;
       -ms-flex: 70px 0 0px;
-          flex: 70px 0 0;
+          flex: 70px 0 0; */
 }
 .sidebar__post .sidebar__post-list .sidebar__post-image > img {
-  width: 80px;
-  border-radius: 10px;
+  width: 120px;
+  object-fit: cover;
+  height: 70px;
+  /* border-radius: 10px; */
 }
 .sidebar__post .sidebar__post-list .sidebar__post-content {
   position: relative;

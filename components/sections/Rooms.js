@@ -16,7 +16,7 @@ export default function Rooms() {
 						<div className="room-block col-lg-6 col-md-6 col-sm-12">
 							<div className="inner-box wow fadeIn">
 								<div className="image-box">
-									<figure className="image-2 overlay-anim"><img src="images/room-1.jpg" alt="" /></figure>
+									<figure className="image-2 overlay-anim"><img src="images/room-1.jpg" alt="" className="md:h-[360px] max-h-[400px] w-full object-cover"/></figure>
 								</div>
 								<div className="content-box">
 									<h6 className="title"><Link href="/page-groundfloor">Heritage Deluxe</Link></h6>
@@ -37,7 +37,7 @@ export default function Rooms() {
 						<div className="room-block col-lg-6 col-md-6 col-sm-12">
 							<div className="inner-box wow fadeIn" data-wow-delay="200ms">
 								<div className="image-box">
-									<figure className="image-2 overlay-anim"><img src="images/room-2.jpg" alt="" /></figure>
+									<figure className="image-2 overlay-anim"><img src="images/room-2.jpg" alt="" className="md:h-[360px] max-h-[400px] w-full object-cover"/></figure>
 								</div>
 								<div className="content-box">
 									<h6 className="title"><Link href="/page-firstfloor">Heritage luxury</Link></h6>
@@ -58,7 +58,7 @@ export default function Rooms() {
 						<div className="room-block col-lg-3 col-md-6 col-sm-12">
 							<div className="inner-box wow fadeIn" data-wow-delay="300ms">
 								<div className="image-box">
-									<figure className="image-2 overlay-anim"><img src="images/rooms/roomPortrait2.jpg" alt="" /></figure>
+									<figure className="image-2 overlay-anim"><img src="images/rooms/roomPortrait2.jpg" alt="" className="md:h-[360px] max-h-[400px] w-full object-cover"/></figure>
 								</div>
 								<div className="content-box">
 									<h6 className="title"><Link href="/page-secondfloor">Heritage Royal</Link></h6>
@@ -79,7 +79,7 @@ export default function Rooms() {
 						<div className="room-block col-lg-6 col-md-6 col-sm-12">
 							<div className="inner-box large-style wow fadeIn" data-wow-delay="400ms">
 								<div className="image-box">
-									<figure className="image-2 overlay-anim"><img src="images/room-4.jpg" alt="" /></figure>
+									<figure className="image-2 overlay-anim"><img src="images/room-4.jpg" alt="" className="md:h-[360px] max-h-[400px] w-full object-cover"/></figure>
 								</div>
 								<div className="content-box">
 									<h6 className="title"><Link href="/page-thirdfloor">Ganga River View</Link></h6>
@@ -100,7 +100,7 @@ export default function Rooms() {
 						<div className="room-block col-lg-3 col-md-6 col-sm-12">
 							<div className="inner-box wow fadeIn" data-wow-delay="500ms">
 								<div className="image-box">
-									<figure className="image-2 overlay-anim"><img src="images/rooms/roomPortrait1.jpg" alt="" /></figure>
+									<figure className="image-2 overlay-anim"><img src="images/rooms/roomPortrait1.jpg" alt="" className="md:h-[360px] max-h-[400px] w-full object-cover"/></figure>
 								</div>
 								<div className="content-box">
 									<h6 className="title"><Link href="/page-thirdfloor">Traditional Heritage Rooms</Link></h6>

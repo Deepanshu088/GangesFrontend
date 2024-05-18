@@ -15,7 +15,7 @@ export default function firstfloor() {
         </div>
         <div className="content-box">
         <h6 className="title" style={{ marginRight: '30px' }}><Link href="/page-avadhroom">Avadh Room</Link></h6>
-        <span className="price" style={{ marginRight: '30px' }}>₹10000  / NIGHT</span>
+        {/* <span className="price" style={{ marginRight: '30px' }}>₹10000  / NIGHT</span> */}
         </div>
         <div className="box-caption">
         <Link href="/room-details" title="" className="book-btn" style={{ fontSize: '12px' }}>book now</Link>

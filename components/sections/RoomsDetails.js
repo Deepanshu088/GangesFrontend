@@ -108,20 +108,28 @@ export default function RoomDetails({ roomDetail }) {
 										<li>
 											<div className="sidebar__post-image"> <img src="/images/room-1.jpg" alt="" /> </div>
 											<div className="sidebar__post-content">
-												<h3> <span className="sidebar__post-content-meta"><i className="far fa-door-open"></i>Heritage Luxury</span> <Link href="">₹10000 / NIGHT</Link>
+												<h3> 
+													<span className="sidebar__post-content-meta"><i className="far fa-door-open"></i>Heritage Luxury</span> 
+													{/* <Link href="">₹10000 / NIGHT</Link> */}
 												</h3>
 											</div>
 										</li>
 										<li>
 											<div className="sidebar__post-image"> <img src="/images/room-2.jpg" alt="" /> </div>
 											<div className="sidebar__post-content">
-												<h3> <span className="sidebar__post-content-meta"><i className="far fa-door-open"></i>Heritage Luxury</span> <Link href="">₹10000 / NIGHT</Link> </h3>
+												<h3>
+													<span className="sidebar__post-content-meta"><i className="far fa-door-open"></i>Heritage Luxury</span>
+													{/* <Link href="">₹10000 / NIGHT</Link> */}
+												</h3>
 											</div>
 										</li>
 										<li>
 											<div className="sidebar__post-image"> <img src="/images/room-3.jpg" alt="" /> </div>
 											<div className="sidebar__post-content">
-												<h3> <span className="sidebar__post-content-meta"><i className="far fa-door-open"></i>Heritage Luxury</span> <Link href="">₹10000 / NIGHT</Link> </h3>
+												<h3>
+													<span className="sidebar__post-content-meta"><i className="far fa-door-open"></i>Heritage Luxury</span>
+													{/* <Link href="">₹10000 / NIGHT</Link> */}
+												</h3>
 											</div>
 										</li>
 									</ul>

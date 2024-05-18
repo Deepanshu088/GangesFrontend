@@ -20,7 +20,7 @@ const FloorRooms = ({ floor }) => {
                             </div>
                             <div className="content-box">
                                 <h6 className="title" style={{ marginRight: '30px' }}><Link href={`/room-details/${item.roomId}`}>{item.name}</Link></h6>
-                                <span className="price" style={{ marginRight: '30px' }}>₹10000 / NIGHT</span>
+                                {/* <span className="price" style={{ marginRight: '30px' }}>₹10000 / NIGHT</span> */}
                             </div>
                             <div className="box-caption">
                                 <Link href="https://staahmax.staah.net/be/indexpack?propertyId=MTA5OQ&individual=true&roomTypeId=100333" title="" className="book-btn" style={{ fontSize: '12px' }}>book now</Link>

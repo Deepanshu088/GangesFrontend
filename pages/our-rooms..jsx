@@ -40,7 +40,7 @@ const OurRooms = () => {
                                         </div>
                                         <div class="content-box">
                                             <h6 class="title"><a href={`/room-details/${item.roomId}`}>{item.name}</a></h6>
-                                            <span class="price">₹10000 / NIGHT</span>
+                                            {/* <span class="price">₹10000 / NIGHT</span> */}
                                         </div>
                                         <div class="box-caption">
                                             <a href="https://staahmax.staah.net/be/indexpack?propertyId=MTA5OQ&individual=true&roomTypeId=100333"
@@ -80,7 +80,7 @@ const OurRooms = () => {
                                         <div class="content-box">
                                             <h6 class="title"><a href={`/room-details/${item.roomId}`}>{item.name}</a></h6>
 
-                                            <span class="price">₹10000 / NIGHT</span>
+                                            {/* <span class="price">₹10000 / NIGHT</span> */}
                                         </div>
                                         <div class="box-caption">
 
@@ -122,7 +122,7 @@ const OurRooms = () => {
                                         <div class="content-box">
                                             <h6 class="title"><a href={`/room-details/${item.roomId}`}>{item.name}</a></h6>
 
-                                            <span class="price">₹10000 / NIGHT</span>
+                                            {/* <span class="price">₹10000 / NIGHT</span> */}
                                         </div>
                                         <div class="box-caption">
 
@@ -164,7 +164,7 @@ const OurRooms = () => {
                                         <div class="content-box">
                                             <h6 class="title"><a href={`/room-details/${item.roomId}`}>{item.name}</a></h6>
 
-                                            <span class="price">₹10000 / NIGHT</span>
+                                            {/* <span class="price">₹10000 / NIGHT</span> */}
                                         </div>
                                         <div class="box-caption">
 
