@@ -72,7 +72,7 @@ In preserving and showcasing such a broad spectrum of Indian cultural heritage u
 									<div className="healthy-food flex justify-start flex-wrap md:flex-nowrap 	">
 										<div className="food-list mb-10 mr-8">
 											<ul>
-												<span className="whitespace-nowrap underline text-black mb-20">Ground floor</span>
+												<span className="whitespace-nowrap underline text-black mb-20">Lower Floor</span>
 												{
 													GroundFloorRooms.map(item => <li key={item.url} onMouseEnter={() => onMouseEnterHandler(item)} onMouseLeave={() => onMouseLeaveHandler(item)}>
 														<i className="fa-regular fa-square-check"></i>
@@ -83,16 +83,16 @@ In preserving and showcasing such a broad spectrum of Indian cultural heritage u
 										</div>
 										<div className="food-list two mb-10 mr-8">
 											<ul>
-												<span className="whitespace-nowrap underline text-black">First floor</span>
+												<span className="whitespace-nowrap underline text-black">Upper Floor</span>
 												{
-													FirstFloorRooms.map(item => <li key={item.url} onMouseEnter={() => onMouseEnterHandler(item)} onMouseLeave={() => onMouseLeaveHandler(item)}>
+													[...FirstFloorRooms, ...SecondFloorRooms].map(item => <li key={item.url} onMouseEnter={() => onMouseEnterHandler(item)} onMouseLeave={() => onMouseLeaveHandler(item)}>
 														<i className="fa-regular fa-square-check"></i>
 														<a href={`/room-details/${item.roomId}`} className='whitespace-nowrap'>{item.name}</a>
 													</li>)
 												}
 											</ul>
 										</div>
-
+{/* 
 										<div className="food-list two mb-10 mr-8">
 											<ul>
 												<span className="whitespace-nowrap underline text-black">Second floor</span>
@@ -102,13 +102,13 @@ In preserving and showcasing such a broad spectrum of Indian cultural heritage u
 														<a href={`/room-details/${item.roomId}`} className='whitespace-nowrap'>{item.name}</a>
 													</li>)
 												}
-
-
 											</ul>
-										</div>
+										</div> */}
+
+
 										<div className="food-list two">
 											<ul>
-												<span className="whitespace-nowrap underline text-black">Third floor</span>
+												<span className="whitespace-nowrap underline text-black">Ganges Luxury</span>
 
 												{
 													ThirdFloorRooms.map(item => <li key={item.url} onMouseEnter={() => onMouseEnterHandler(item)} onMouseLeave={() => onMouseLeaveHandler(item)}>

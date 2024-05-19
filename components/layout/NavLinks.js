@@ -9,16 +9,16 @@ const NavLinks = ({ extraClassName }) => {
         <Link className="text-sm" href="/our-rooms">Our Rooms</Link>
         <ul>
           <li>
-            <Link className="text-sm" href="/page-groundfloor">Heritage Deluxe</Link>
+            <Link className="text-sm" href="/page-groundfloor">Lower Floor</Link>
           </li>
           <li>
-            <Link className="text-sm" href="/page-firstfloor">Heritage Luxury</Link>
+            <Link className="text-sm" href="/page-firstfloor">Upper Floor</Link>
           </li>
-          <li>
+          {/* <li>
             <Link className="text-sm" href="/page-secondfloor">Heritage Royal</Link>
-          </li>
+          </li> */}
           <li>
-            <Link className="text-sm" href="/page-thirdfloor">Ganga River View</Link>
+            <Link className="text-sm" href="/page-thirdfloor">Ganges Luxury</Link>
           </li>
         </ul>
       </li>
@@ -33,7 +33,7 @@ const NavLinks = ({ extraClassName }) => {
             <Link className="text-sm" href="/page-boatbooking">Boat Booking</Link>
           </li>
           <li>
-            <Link className="text-sm" href="/page-citytour">City Tour</Link>
+            <Link className="text-sm" href="/page-citytour">Guided Tour</Link>
           </li>
           <li>
             <Link className="text-sm" href="/page-restaurant">Restaurant</Link>

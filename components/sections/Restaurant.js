@@ -17,7 +17,7 @@ export default function Restaurant() {
                     <a onClick={() => setOpen(true)} className="play-now-two"><i className="icon fa fa-play" aria-hidden="true"></i><span className="ripple"></span></a>
                     <div className="quote-box">
                       <div className="icon-box"><i className="flaticon-quotation"></i></div>
-                      <div className="text">Great hospitality is the key to Pride of Britain’s longstanding reputation for excellence.</div>
+                      {/* <div className="text">Great hospitality is the key to Pride of Britain’s longstanding reputation for excellence.</div> */}
                     </div>
                   </div>
                 </div>

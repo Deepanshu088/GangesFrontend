@@ -49,7 +49,7 @@ export default function Form() {
                       <i className="fa fa-angle-down"></i>
                     </div>
                     <div className="form-submit">
-                      <button type="submit"><a href="https://staahmax.staah.net/be/indexpackdetail?propertyId=MTA5OQ==&individual=true" className='text-white' >BOOK NOW</a></button>
+                      <button><a href="https://staahmax.staah.net/be/indexpackdetail?propertyId=MTA5OQ==&individual=true" className='text-white' >BOOK NOW</a></button>
                     </div>
                   </form>
                 </div>

@@ -28,10 +28,10 @@ export default function MobileMenu({ handleMobileMenu }) {
                 </li>
                 <li className="dropdown"><Link href="/our-rooms" onClick={() => handleMobileMenu()}>Our Rooms</Link>
                     <ul style={{ display: `${isActive.key == 2 ? "block" : "none"}` }}>
-                        <li><Link onClick={() => handleMobileMenu()} href="/page-groundfloor">Heritage Deluxe</Link></li>
-                        <li><Link onClick={() => handleMobileMenu()} href="/page-firstfloor">Heritage Luxury</Link></li>
-                        <li><Link onClick={() => handleMobileMenu()} href="/page-secondfloor">Heritage Royal</Link></li>
-                        <li><Link onClick={() => handleMobileMenu()} href="/page-thirdfloor">Ganga River View</Link></li>
+                        <li><Link onClick={() => handleMobileMenu()} href="/page-groundfloor">Lower Floor</Link></li>
+                        <li><Link onClick={() => handleMobileMenu()} href="/page-firstfloor">Upper Floor</Link></li>
+                        {/* <li><Link onClick={() => handleMobileMenu()} href="/page-secondfloor">Heritage Royal</Link></li> */}
+                        <li><Link onClick={() => handleMobileMenu()} href="/page-thirdfloor">Ganges Luxury</Link></li>
                     </ul>
                     <div className="dropdown-btn" onClick={() => handleClick(2)}><i className="fa fa-angle-down"/></div>
                 </li>
@@ -39,7 +39,7 @@ export default function MobileMenu({ handleMobileMenu }) {
                     <ul style={{ display: `${isActive.key == 3 ? "block" : "none"}` }}>
                         <li><Link onClick={() => handleMobileMenu()} href="/page-cabbooking">Cab Booking</Link></li>
                         <li><Link onClick={() => handleMobileMenu()} href="/page-boatbooking">Boat Booking</Link></li>
-                        <li><Link onClick={() => handleMobileMenu()} href="/page-citytour">City Tour</Link></li>
+                        <li><Link onClick={() => handleMobileMenu()} href="/page-citytour">Guided Tour</Link></li>
                         <li><Link onClick={() => handleMobileMenu()} href="/page-restaurant">Restaurant</Link></li>
                     </ul>
                     <div className="dropdown-btn" onClick={() => handleClick(3)}><i className="fa fa-angle-down"/></div>

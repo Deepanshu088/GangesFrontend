@@ -7,7 +7,7 @@ export default function pagegroundfloor() {
   return (
     <>
       <Layout headerStyle={2}>
-      <PageTitle pageName="Ganga River View ( Third Floor )" />
+      <PageTitle pageName="Ganges Luxury" />
       {/* <Thirdfloor/> */}
       <FloorRooms floor={3} />
       </Layout>

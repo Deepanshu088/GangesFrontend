@@ -27,7 +27,7 @@ const OurRooms = () => {
                 <div class="md:mx-10 lg:mx-[5vw] m-auto">
                     <div class="row">
                         <div class="sec-title">
-                            <h2>Ganga River View (Third Floor)<br /></h2><br/>
+                            <h2>GANGES LUXURY<br /></h2><br/>
                             <div className="new-text">Designed for spiritual seekers and nature lovers, the Ganga River View rooms offer a tranquil retreat. These rooms feature direct views of the sacred Ganges River, allowing guests to observe the spiritual rituals and daily life of Varanasi from a peaceful vantage point. The soothing sounds of the river and the serene views provide a perfect backdrop for meditation or relaxation. The decor is subtly crafted to complement the natural beauty outside, with touches of local craftsmanship that enhance the spiritual experience.</div>
                         </div>
 
@@ -62,7 +62,7 @@ const OurRooms = () => {
             </section>
 
 
-            <section class="rooms-section pb-20">
+            {/* <section class="rooms-section pb-20">
                 <div class="md:mx-10 lg:mx-[5vw] m-auto">
                     <div class="row">
                         <div class="sec-title">
@@ -80,7 +80,7 @@ const OurRooms = () => {
                                         <div class="content-box">
                                             <h6 class="title"><a href={`/room-details/${item.roomId}`}>{item.name}</a></h6>
 
-                                            {/* <span class="price">₹10000 / NIGHT</span> */}
+                                            <span class="price">₹10000 / NIGHT</span>
                                         </div>
                                         <div class="box-caption">
 
@@ -101,19 +101,19 @@ const OurRooms = () => {
 
                     </div>
                 </div>
-            </section>
+            </section> */}
 
 
             <section class="rooms-section pb-100">
                 <div class="md:mx-10 lg:mx-[5vw] m-auto">
                     <div class="row">
                         <div class="sec-title">
-                            <h2>Heritage luxury (Upper Level)<br />
+                            <h2>UPPER FLOOR HERITAGE DELUXE<br />
                             </h2><br/>
                             <div className="new-text">The Upper Level rooms are again a nod to India's regal past, embodying a more spacious and luxurious environment. The rooms feature intricate carvings and lush textiles reminiscent of the country's royal history. Each piece in the room—from the plush bedding to the ornate decorations—is chosen to reflect the grandeur of bygone eras. Equipped with the latest technological amenities, these rooms offer a royal retreat perfect for those who appreciate the finer things in life while soaking in the historical ambiance.</div>
                         </div>
                         {
-                            FirstFloorRooms.map(item =>
+                            [  ...FirstFloorRooms, ...SecondFloorRooms ].map(item =>
                                 <div class="room-block col-lg-4 col-md-4">
                                     <div class="inner-box wow fadeIn">
                                         <div class="image-box">
@@ -149,13 +149,13 @@ const OurRooms = () => {
                 <div class="md:mx-10 lg:mx-[5vw] m-auto">
                     <div class="row">
                         <div class="sec-title">
-                            <h2>Heritage luxury (Lower Level)<br />
+                            <h2>LOWER FLOOR HERITAGE DELUXE<br />
                             </h2><br/>
                             <div className="new-text">Our lower level rooms are designed to be a gateway to the traditional artistry of states accross India. Decorated with local handicrafts of several states of India, textiles, and artworks, these rooms provide a warm and inviting ambiance. The furnishings, while comfortable and contemporary, complement the aesthetic of the rich cultural motifs, ensuring a restful and visually appealing environment. Ideal for travellers looking to absorb the Indian culture, these rooms also come equipped with all modern amenities necessary for comfort kiand convenience.</div>
                         </div>
 
                         {
-                            SecondFloorRooms.map(item =>
+                            GroundFloorRooms.map(item =>
                                 <div class="room-block col-lg-4 col-md-4">
                                     <div class="inner-box wow fadeIn">
                                         <div class="image-box">
