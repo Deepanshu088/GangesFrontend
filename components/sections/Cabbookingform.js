@@ -83,7 +83,7 @@ const Cabbooking = () => {
 				<div className="row align-items-center">
 					<div className="col-lg-6 col-md-6 cabbooking-contact-bg02" style={{ paddingLeft: '20px' }}>
 						<div className="section-title center-align">
-							<h2>Book A Cab</h2>
+							<h2>Book a Cab</h2>
 						</div>
 						<p>To reserve the ride, please complete and submit the booking form.</p>
 						<div className="w3layoutscontactagileits cabbooking-booking-form">

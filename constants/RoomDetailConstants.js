@@ -134,7 +134,7 @@ export const GroundFloorRooms = [
 
 export const FirstFloorRooms = [
     {
-        name: "Avadh Room",
+        name: "Colonial Room",
         roomId: "101",
         // searchTags: []
         floor: 1,
@@ -245,6 +245,27 @@ export const FirstFloorRooms = [
         discount: 0
     },
     {
+        name: "Rajasthan Room",
+        roomId: "102",
+        floor: 1,
+        noOfBeds: 3,
+        coverPhoto: "/images/rooms/room2.jpg",
+        gallery: ["/images/rooms/room2.jpg"],
+        shortDescription: "",
+        longDescription: "Rajasthan",
+        isBreakfast: true,
+        isDinner: true,
+        isRiverView: false,
+        isWifi: true,
+        isTelevision: true,
+        isAirConditioned: true,
+        isParking: false,
+        customerRating: 8,
+        luxuryCategory: "luxury",
+        regularPrice: 10000,
+        discount: 0
+    },
+    {
         name: "Rajputhana  Room",
         roomId: "106",
         floor: 1,
@@ -285,28 +306,7 @@ export const FirstFloorRooms = [
         luxuryCategory: "luxury",
         regularPrice: 10000,
         discount: 0
-    },
-    {
-        name: "Karnataka Room",
-        roomId: "102",
-        floor: 1,
-        noOfBeds: 3,
-        coverPhoto: "/images/rooms/room2.jpg",
-        gallery: ["/images/rooms/room2.jpg"],
-        shortDescription: "",
-        longDescription: "Karnataka",
-        isBreakfast: true,
-        isDinner: true,
-        isRiverView: false,
-        isWifi: true,
-        isTelevision: true,
-        isAirConditioned: true,
-        isParking: false,
-        customerRating: 8,
-        luxuryCategory: "luxury",
-        regularPrice: 10000,
-        discount: 0
-    },
+    }
 ];
 
 export const SecondFloorRooms = [

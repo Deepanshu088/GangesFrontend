@@ -1,4 +1,5 @@
 import React from 'react';
+import DatePicker from '../shared/Input/DatePicker';
 
 export default function Form() {
     
@@ -14,36 +15,41 @@ export default function Form() {
                     <h2>Hotel Booking </h2>
                   </div>
                   <form className="bk-form">
-                    fdsf
-                    <div class="frm-field">
-                        <input type="text" name="check-in" class="date-pick" placeholder="Check out" />
+                    {/* <div class="frm-field">
+                        <input type="text" name="check-in" class="date-pick" placeholder="Check in" />
                         <img src="images/icons/mail.png" alt />
                     </div>
 
                     <div className="frm-field">
-                      <input type="text" name="check-in" className="date-pick" placeholder="Check out" />
+                      <input type="text" name="check-out" className="date-pick" placeholder="Check out" />
                       <img src="images/icons/mail.png" alt="" />
-                    </div>
+                    </div> */}
+
+                    <DatePicker id="checkIn" name="checkIn" placeholder="Check in" errorMessage="This field is required." />
+                    
+                    <DatePicker id="checkOut" name="checkOut" placeholder="Check out" errorMessage="This field is required." />
                     <div className="frm-field">
-                      <select>
+                      <select placeholder="Adult">
                         <option>Adult</option>
-                        <option>Adult</option>
-                        <option>Adult</option>
-                        <option>Adult</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
                       </select>
                       <i className="fa fa-angle-down"></i>
                     </div>
                     <div className="frm-field">
                       <select>
                         <option>Children</option>
-                        <option>Children</option>
-                        <option>Children</option>
-                        <option>Children</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
                       </select>
                       <i className="fa fa-angle-down"></i>
                     </div>
                     <div className="form-submit">
-                      <button type="submit">Book Now</button>
+                      <button><a href="https://staahmax.staah.net/be/indexpackdetail?propertyId=MTA5OQ==&individual=true" className='text-white' >BOOK NOW</a></button>
                     </div>
                   </form>
                 </div>

@@ -2976,6 +2976,7 @@ Section Title
   margin-bottom: 30px;
   display: inline-block;
   margin-top: 70px;
+  text-shadow: 0px 1px 13px rgba(128, 0, 0, 1);
 }
 @media (max-width: 575.98px) {
   .banner-section .content-box .sub-title {
@@ -3000,6 +3001,7 @@ Section Title
   text-transform: uppercase;
   font-size: 56px;
   margin-bottom: 42px;
+  text-shadow: 0px 1px 13px rgba(128, 0, 0, 1);
 }
 @media (max-width: 767.98px) {
   .banner-section .content-box h1 {
@@ -4817,6 +4819,11 @@ Section Title
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
+
+.room-block .inner-box .content-box {
+  text-shadow: 0px 1px 13px rgb(0, 0, 0);
+}
+
 .room-block .inner-box:hover .box-caption {
   opacity: 1;
   visibility: visible;
@@ -9783,6 +9790,10 @@ Sidebar
   border: none !important; /* Removes borders */
   outline: none !important; /* Removes outline */
   /* background-color: #0a267a; */
+}
+
+.p-button-icon-only {
+  margin-right: 20px;
 }
 
 .p-calendar .p-button {

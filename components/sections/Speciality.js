@@ -21,7 +21,7 @@ export default function SPECIALITY() {
                 <a onClick={() => setOpen(true)} className="play-now-two"><i className="icon fa fa-play" aria-hidden="true"></i><span className="ripple"></span></a>
                 <div className="quote-box">
                   <div className="icon-box"><i className="flaticon-quotation"></i></div>
-                  <div className="text">Great hospitality is the key to Pride of Britain’s longstanding reputation for excellence.</div>
+                  {/* <div className="text">Great hospitality is the key to Pride of Britain’s longstanding reputation for excellence.</div> */}
                 </div>
               </div>
             </div>
@@ -77,7 +77,7 @@ function Services() {
     },
     {
       icon: "far fa-water",
-      title: " River Ganges View",
+      title: "River Ganga View",
       subtitile: "Immerse yourself in the spiritual heart of Varanasi with our rooms offering unobstructed views of the Ganges River. These rooms provide a serene space to witness the vibrant cultural activities and rituals performed on the ghats. It is an ideal spot for meditation or simply to relax and absorb the sacred atmosphere, making your stay truly transformative."
     },
     {

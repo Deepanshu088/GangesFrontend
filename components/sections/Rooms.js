@@ -19,11 +19,11 @@ export default function Rooms({homeRoomImgs}) {
 									<figure className="image-2 overlay-anim"><img src="images/room-1.jpg" alt="" className="md:h-[360px] max-h-[400px] w-full object-cover"/></figure>
 								</div>
 								<div className="content-box">
-									<h6 className="title"><Link href="/page-groundfloor">Heritage Deluxe</Link></h6>
+									<h6 className="title"><Link href="/page-groundfloor">Lower Floor</Link></h6>
 									{/* <span className="price">₹10000  / NIGHT</span> */}
 								</div>
 								<div className="box-caption">
-									<Link href="/page-groundfloor" title="" className="book-btn">book now</Link>
+									<Link href="https://staahmax.staah.net/be/indexpackdetail?propertyId=MTA5OQ==&individual=true" title="" className="book-btn">book now</Link>
 									<ul className="bx-links">
 										<li><i className="fa fa-wifi"></i></li>
 										<li><i className="fa fa-bed"></i></li>
@@ -40,11 +40,11 @@ export default function Rooms({homeRoomImgs}) {
 									<figure className="image-2 overlay-anim"><img src="images/room-2.jpg" alt="" className="md:h-[360px] max-h-[400px] w-full object-cover"/></figure>
 								</div>
 								<div className="content-box">
-									<h6 className="title"><Link href="/page-firstfloor">Heritage luxury</Link></h6>
+									<h6 className="title"><Link href="/page-firstfloor">Upper Floor</Link></h6>
 									{/* <span className="price">₹10000  / NIGHT</span> */}
 								</div>
 								<div className="box-caption">
-									<Link href="/page-firstfloor" title="" className="book-btn">book now</Link>
+									<Link href="https://staahmax.staah.net/be/indexpackdetail?propertyId=MTA5OQ==&individual=true" title="" className="book-btn">book now</Link>
 									<ul className="bx-links">
 										<li><i className="fa fa-wifi"></i></li>
 										<li><i className="fa fa-bed"></i></li>
@@ -61,11 +61,11 @@ export default function Rooms({homeRoomImgs}) {
 									<figure className="image-2 overlay-anim"><img src="images/rooms/roomPortrait2.jpg" alt="" className="md:h-[360px] max-h-[400px] w-full object-cover"/></figure>
 								</div>
 								<div className="content-box">
-									<h6 className="title"><Link href="/page-groundfloor">Heritage Delux</Link></h6>
+									<h6 className="title"><Link href="/page-groundfloor">Lower Floor</Link></h6>
 									{/* <span className="price">₹10000  / NIGHT</span> */}
 								</div>
 								<div className="box-caption">
-									<Link href="/page-secondfloor" title="" className="book-btn">book now</Link>
+									<Link href="https://staahmax.staah.net/be/indexpackdetail?propertyId=MTA5OQ==&individual=true" title="" className="book-btn">book now</Link>
 									<ul className="bx-links">
 										<li><i className="fa fa-wifi"></i></li>
 										<li><i className="fa fa-bed"></i></li>
@@ -82,11 +82,11 @@ export default function Rooms({homeRoomImgs}) {
 									<figure className="image-2 overlay-anim"><img src="images/room-4.jpg" alt="" className="md:h-[360px] max-h-[400px] w-full object-cover"/></figure>
 								</div>
 								<div className="content-box">
-									<h6 className="title"><Link href="/page-thirdfloor">Ganga River View</Link></h6>
+									<h6 className="title"><Link href="/page-thirdfloor">Ganges Luxury</Link></h6>
 									{/* <span className="price">₹10000  / NIGHT</span> */}
 								</div>
 								<div className="box-caption">
-									<Link href="/page-thirdfloor" title="" className="book-btn">book now</Link>
+									<Link href="https://staahmax.staah.net/be/indexpackdetail?propertyId=MTA5OQ==&individual=true" title="" className="book-btn">book now</Link>
 									<ul className="bx-links">
 										<li><i className="fa fa-wifi"></i></li>
 										<li><i className="fa fa-bed"></i></li>
@@ -103,11 +103,11 @@ export default function Rooms({homeRoomImgs}) {
 									<figure className="image-2 overlay-anim"><img src="images/rooms/roomPortrait1.jpg" alt="" className="md:h-[360px] max-h-[400px] w-full object-cover"/></figure>
 								</div>
 								<div className="content-box">
-									<h6 className="title"><Link href="/page-thirdfloor">Ganga River View</Link></h6>
+									<h6 className="title"><Link href="/page-thirdfloor">Ganges Luxury</Link></h6>
 									{/* <span className="price">₹10000  / NIGHT</span> */}
 								</div>
 								<div className="box-caption">
-									<Link href="/page-thirdfloor" title="" className="book-btn">book now</Link>
+									<Link href="https://staahmax.staah.net/be/indexpackdetail?propertyId=MTA5OQ==&individual=true" title="" className="book-btn">book now</Link>
 									<ul className="bx-links">
 										<li><i className="fa fa-wifi"></i></li>
 										<li><i className="fa fa-bed"></i></li>
