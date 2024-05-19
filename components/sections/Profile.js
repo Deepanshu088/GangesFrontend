@@ -137,8 +137,7 @@ export default function Profile() {
 						</div>
 					</div>
 				</div>
-			</div>
-		</section >
+			</section >
 			<ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="FEGSV2bMNxA" onClose={() => setOpen(false)} />
 		</>
 	)

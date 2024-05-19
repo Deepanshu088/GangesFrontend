@@ -15,6 +15,8 @@ const OurRooms = () => {
 		dispatch(fetchAllRooms(apiService))
 	}, [])
 
+    const upperFloor = [  ...firstFloor, ...secondFloor ];
+
     return <div>
         <Layout>
 
@@ -133,7 +135,7 @@ const OurRooms = () => {
                             <div className="new-text">The Upper Level rooms are again a nod to India's regal past, embodying a more spacious and luxurious environment. The rooms feature intricate carvings and lush textiles reminiscent of the country's royal history. Each piece in the room—from the plush bedding to the ornate decorations—is chosen to reflect the grandeur of bygone eras. Equipped with the latest technological amenities, these rooms offer a royal retreat perfect for those who appreciate the finer things in life while soaking in the historical ambiance.</div>
                         </div>
                         {
-                            [  ...firstFloor, ...secondFloor ].map(item =>
+                            upperFloor && upperFloor.length > 0 ? upperFloor.map(item =>
                                 <div class="room-block col-lg-4 col-md-4">
                                     <div class="inner-box wow fadeIn">
                                         <div class="image-box">
@@ -179,7 +181,7 @@ const OurRooms = () => {
                         </div>
 
                         {
-                            groundFloor.map(item =>
+                            groundFloor && groundFloor.length > 0 ? groundFloor.map(item =>
                                 <div class="room-block col-lg-4 col-md-4">
                                     <div class="inner-box wow fadeIn">
                                         <div class="image-box">
