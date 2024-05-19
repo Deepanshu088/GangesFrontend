@@ -43,7 +43,7 @@ const NavLinks = ({ extraClassName }) => {
       <li className="dropdown">
         <Link className="text-sm" href="/page-about">About</Link>
         <ul>
-          <li> <Link className="text-sm" href="/page-md">MD Message</Link> </li>
+          <li> <Link className="text-sm" href="/page-md">Director's Message</Link> </li>
           <li><Link className="text-sm" href="/page-profile">Profile</Link></li>
         </ul>
       </li>

@@ -14,31 +14,32 @@ export default function Form() {
                     <h2>Hotel Booking </h2>
                   </div>
                   <form className="bk-form">
-                    fdsf
                     <div class="frm-field">
-                        <input type="text" name="check-in" class="date-pick" placeholder="Check out" />
+                        <input type="text" name="check-in" class="date-pick" placeholder="Check in" />
                         <img src="images/icons/mail.png" alt />
                     </div>
 
                     <div className="frm-field">
-                      <input type="text" name="check-in" className="date-pick" placeholder="Check out" />
+                      <input type="text" name="check-out" className="date-pick" placeholder="Check out" />
                       <img src="images/icons/mail.png" alt="" />
                     </div>
                     <div className="frm-field">
-                      <select>
+                      <select placeholder="Adult">
                         <option>Adult</option>
-                        <option>Adult</option>
-                        <option>Adult</option>
-                        <option>Adult</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
                       </select>
                       <i className="fa fa-angle-down"></i>
                     </div>
                     <div className="frm-field">
                       <select>
                         <option>Children</option>
-                        <option>Children</option>
-                        <option>Children</option>
-                        <option>Children</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
                       </select>
                       <i className="fa fa-angle-down"></i>
                     </div>

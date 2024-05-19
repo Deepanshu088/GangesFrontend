@@ -21,7 +21,7 @@ export default function Features() {
                     <div className="sec-title">
                       <span className="sub-title">Divine Tour</span>
                       <h2>The Restaurant</h2>
-                      <div className="text">Indulge in a culinary journey at our restaurant, where every dish is a masterpiece of flavor and presentation. Our chefs skillfully blend local ingredients with global influences to create a menu that delights the senses. Enjoy impeccable service and a warm ambiance that sets the stage for a memorable dining experience..</div>
+                      <div className="text">Step into a world of culinary delight at our restaurant, where exceptional food meets unparalleled hospitality. At our pure Vegetarian restaurant, every dish is an art form, blending traditional local flavours with exciting global influences to create a menu that both surprises and satisfies.Our skilled chefs focus on the freshest ingredients, delivering a menu that not only excites the palate but also supports health and well-being.</div>
                     </div>
                     <Link href="/our-rooms" className="theme-btn btn-style-one read-more">MAKE BOOKING</Link>
                     <figure className="image-2"><img src="images/resource/icon.png" alt=""/></figure>
@@ -36,7 +36,7 @@ export default function Features() {
                     <div className="sec-title">
                       <span className="sub-title">DISCOVER</span>
                       <h2>Boating Facilities</h2>
-                      <div className="text">Immerse yourself in the spiritual aura of Varanasi with our boating facility on the Ganges. Sail along the sacred river, witnessing ancient ghats and colorful ceremonies. Our boats offer a unique perspective of this holy city, creating unforgettable memories of your Varanasi experience.</div>
+                      <div className="text">Embark on a captivating journey across the glistening waters that frame our breath-taking hotel with our custom-designed Boat Booking Service. Whether you are drawn to the quietude of a sunset sail, eager to explore the lesser-known treasures of the River Ganges or looking to indulge in the luxury of a private yacht excursion, our service is meticulously designed to meet every nautical whim.</div>
                     </div>
                     <Link href="/page-boatbooking" className="theme-btn btn-style-one read-more">Discover More</Link>
                     <figure className="image-2"><img src="images/resource/icon-2.png" alt=""/></figure>

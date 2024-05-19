@@ -45,7 +45,7 @@ function Services() {
     },
     {
       icon: "far fa-water",
-      title: " River Ganges View",
+      title: "River Ganga View",
       subtitile: "Immerse yourself in the spiritual heart of Varanasi with our rooms offering unobstructed views of the Ganges River. These rooms provide a serene space to witness the vibrant cultural activities and rituals performed on the ghats. It is an ideal spot for meditation or simply to relax and absorb the sacred atmosphere, making your stay truly transformative."
     },
     {

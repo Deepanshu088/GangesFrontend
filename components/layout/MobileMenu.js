@@ -46,15 +46,15 @@ export default function MobileMenu({ handleMobileMenu }) {
                 </li>
                 <li className="dropdown"><Link href="/page-about" onClick={() => handleMobileMenu()}>About</Link>
                     <ul style={{ display: `${isActive.key == 4 ? "block" : "none"}` }}>
-                        <li><Link onClick={() => handleMobileMenu()} href="/page-md">MD Message</Link></li>
+                        <li><Link onClick={() => handleMobileMenu()} href="/page-md">Director's Message</Link></li>
                         <li><Link onClick={() => handleMobileMenu()} href="/page-profile">Profile</Link></li>
                     </ul>
                     <div className="dropdown-btn" onClick={() => handleClick(4)}><i className="fa fa-angle-down"/></div>
                 </li>
-                <li><Link onClick={() => handleMobileMenu()} href="/page-speciality">Specility</Link></li>
-                <li><Link onClick={() => handleMobileMenu()} href="/page-gallery">Gallary</Link></li>
+                <li><Link onClick={() => handleMobileMenu()} href="/page-speciality">Speciality</Link></li>
+                <li><Link onClick={() => handleMobileMenu()} href="/page-gallery">Gallery</Link></li>
                 <li><Link onClick={() => handleMobileMenu()} href="/page-contact">Contact</Link></li>
-                <li><Link onClick={() => handleMobileMenu()} href="/page-avalability">Check Avalability</Link></li>
+                <li><Link onClick={() => handleMobileMenu()} href="https://staahmax.staah.net/be/indexpackdetail?propertyId=MTA5OQ==&individual=true">Check Avalability</Link></li>
                 
             </ul>
         </>
