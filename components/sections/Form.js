@@ -1,4 +1,5 @@
 import React from 'react';
+import DatePicker from '../shared/Input/DatePicker';
 
 export default function Form() {
     
@@ -14,7 +15,7 @@ export default function Form() {
                     <h2>Hotel Booking </h2>
                   </div>
                   <form className="bk-form">
-                    <div class="frm-field">
+                    {/* <div class="frm-field">
                         <input type="text" name="check-in" class="date-pick" placeholder="Check in" />
                         <img src="images/icons/mail.png" alt />
                     </div>
@@ -22,7 +23,11 @@ export default function Form() {
                     <div className="frm-field">
                       <input type="text" name="check-out" className="date-pick" placeholder="Check out" />
                       <img src="images/icons/mail.png" alt="" />
-                    </div>
+                    </div> */}
+
+                    <DatePicker id="checkIn" name="checkIn" placeholder="Check in" errorMessage="This field is required." />
+                    
+                    <DatePicker id="checkOut" name="checkOut" placeholder="Check out" errorMessage="This field is required." />
                     <div className="frm-field">
                       <select placeholder="Adult">
                         <option>Adult</option>
@@ -44,7 +49,7 @@ export default function Form() {
                       <i className="fa fa-angle-down"></i>
                     </div>
                     <div className="form-submit">
-                      <button type="submit">Book Now</button>
+                      <button type="submit"><a href="https://staahmax.staah.net/be/indexpackdetail?propertyId=MTA5OQ==&individual=true" className='text-white' >BOOK NOW</a></button>
                     </div>
                   </form>
                 </div>

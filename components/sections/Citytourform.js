@@ -84,7 +84,7 @@ const Cabbooking = () => {
           <div className="col-lg-6 col-md-6 cabbooking-contact-bg02" style={{ paddingLeft: '20px' }}>
             <div className="section-title center-align">
             </div>
-            <h2 className='mb-8'>City Tour</h2>
+            <h2 className='mb-8'>Guided Tour</h2>
             <div className="w3layoutscontactagileits cabbooking-booking-form">
               <form id="cabbooking-regForm" action="/action_page.php">
                 <div className={`cabbooking-tab ${currentTab === 0 ? 'active' : ''}`} style={{ display: currentTab === 0 ? 'block' : 'none' }}>

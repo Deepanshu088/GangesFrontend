@@ -23,7 +23,7 @@ export default function Rooms() {
 									{/* <span className="price">₹10000  / NIGHT</span> */}
 								</div>
 								<div className="box-caption">
-									<Link href="/https://staahmax.staah.net/be/indexpackdetail?propertyId=MTA5OQ==&individual=true" title="" className="book-btn">book now</Link>
+									<Link href="https://staahmax.staah.net/be/indexpackdetail?propertyId=MTA5OQ==&individual=true" title="" className="book-btn">book now</Link>
 									<ul className="bx-links">
 										<li><i className="fa fa-wifi"></i></li>
 										<li><i className="fa fa-bed"></i></li>
@@ -44,7 +44,7 @@ export default function Rooms() {
 									{/* <span className="price">₹10000  / NIGHT</span> */}
 								</div>
 								<div className="box-caption">
-									<Link href="/https://staahmax.staah.net/be/indexpackdetail?propertyId=MTA5OQ==&individual=true" title="" className="book-btn">book now</Link>
+									<Link href="https://staahmax.staah.net/be/indexpackdetail?propertyId=MTA5OQ==&individual=true" title="" className="book-btn">book now</Link>
 									<ul className="bx-links">
 										<li><i className="fa fa-wifi"></i></li>
 										<li><i className="fa fa-bed"></i></li>
@@ -65,7 +65,7 @@ export default function Rooms() {
 									{/* <span className="price">₹10000  / NIGHT</span> */}
 								</div>
 								<div className="box-caption">
-									<Link href="/https://staahmax.staah.net/be/indexpackdetail?propertyId=MTA5OQ==&individual=true" title="" className="book-btn">book now</Link>
+									<Link href="https://staahmax.staah.net/be/indexpackdetail?propertyId=MTA5OQ==&individual=true" title="" className="book-btn">book now</Link>
 									<ul className="bx-links">
 										<li><i className="fa fa-wifi"></i></li>
 										<li><i className="fa fa-bed"></i></li>
@@ -86,7 +86,7 @@ export default function Rooms() {
 									{/* <span className="price">₹10000  / NIGHT</span> */}
 								</div>
 								<div className="box-caption">
-									<Link href="/https://staahmax.staah.net/be/indexpackdetail?propertyId=MTA5OQ==&individual=true" title="" className="book-btn">book now</Link>
+									<Link href="https://staahmax.staah.net/be/indexpackdetail?propertyId=MTA5OQ==&individual=true" title="" className="book-btn">book now</Link>
 									<ul className="bx-links">
 										<li><i className="fa fa-wifi"></i></li>
 										<li><i className="fa fa-bed"></i></li>
@@ -107,7 +107,7 @@ export default function Rooms() {
 									{/* <span className="price">₹10000  / NIGHT</span> */}
 								</div>
 								<div className="box-caption">
-									<Link href="/https://staahmax.staah.net/be/indexpackdetail?propertyId=MTA5OQ==&individual=true" title="" className="book-btn">book now</Link>
+									<Link href="https://staahmax.staah.net/be/indexpackdetail?propertyId=MTA5OQ==&individual=true" title="" className="book-btn">book now</Link>
 									<ul className="bx-links">
 										<li><i className="fa fa-wifi"></i></li>
 										<li><i className="fa fa-bed"></i></li>

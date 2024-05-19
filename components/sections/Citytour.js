@@ -60,7 +60,7 @@ function Citytour() {
                         <div className="inner-column pl-8 pt-6">
                             <div className="new-sec-title">
                                 <span className="new-sub-title"></span>
-                                <h3>Our Exclusive City Tour</h3>
+                                <h3>Our Exclusive Guided Tour</h3>
                                 <div className="new-text">Dive into the heart of Varanasi with our Exclusive City Tour, a carefully planned adventure that promises to reveal the layers of history, culture, and vibrancy that pulse through this ancient city. Whether your interest lies in exploring historic sites, sampling local cuisines, or simply experiencing the day-to-day life of Varanasi, our tour is crafted to provide a comprehensive and unforgettable journey.</div>
                                 <div className="new-healthy-food mt-4">
                                     <div className="new-food-list">

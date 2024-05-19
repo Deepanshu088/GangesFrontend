@@ -6,87 +6,6 @@ export default function Profile() {
 	const [isOpen, setOpen] = useState(false);
 	const [showPopup, setShowPopup] = useState(true);
 	const [hoveredCity, setHoveredCityDetails] = useState({});
-	const placesList = {
-		groundFloor: [
-			{ title: "Avadh", url: "/page-avadhroom" },
-			{
-				title: "Nagaland",
-				url: "/page-nagalandroom"
-			}, {
-				title: "Maharashtra",
-				url: "/page-maharashroom"
-			}, {
-				title: "Himachal",
-				url: "/page-himachalroom"
-			}, {
-				title: "Sakkim",
-				url: "/page-sakkimroom"
-			}, {
-				title: "Bengal",
-				url: "/page-bengalroom"
-			}
-		],
-		firstFloor: [
-			{
-				title: "Colonial",
-				url: "/page-colonialroom"
-			}, {
-				title: "Karnataka",
-				url: "/page-karnatakaroom"
-			}, {
-				title: "Kashmir",
-				url: "/page-kashmirroom"
-			}, {
-				title: "Goa",
-				url: "/page-goaroom"
-			}, {
-				title: "Sanchi",
-				url: "/page-sanchirrom"
-			}, {
-				title: "Rajasthan",
-				url: "/page-rajputhana"
-			}, {
-				title: "Madhubani",
-				url: "/page-madhuroom"
-			}
-		],
-		secondFloor: [
-			{
-				title: "Colonial",
-				url: "/page-colonialroom"
-			}, {
-				title: "Tamil",
-				url: "/page-tamilnadu"
-			}, {
-				title: "Orissa",
-				url: "/page-orissaroom"
-			}, {
-				title: "Assam",
-				url: "/page-assam"
-			}, {
-				title: "Kerala",
-				url: "/page-kerala"
-			}, {
-				title: "Jodhpur",
-				url: "/page-jodhpur"
-			}, {
-				title: "Gujarat",
-				url: "/page-gujarat"
-			}, {
-				title: "Punjab",
-				url: "/page-punjab"
-			}
-		],
-		thirdFloor: [
-			{
-				title: "Ganges view I",
-				url: "/page-ganga"
-			}, {
-				title: "Ganges view II",
-				url: "/page-ganga"
-			}
-		]
-	}
 
 	const onMouseEnterHandler = (item) => {
 		setShowPopup(true);
@@ -114,7 +33,7 @@ export default function Profile() {
 								<a onClick={() => setOpen(true)} className="play-now-two"><i className="icon fa fa-play" aria-hidden="true"></i><span className="ripple"></span></a>
 								<div className="quote-box">
 									<div className="icon-box"><i className="flaticon-quotation"></i></div>
-									<div className="text">Great hospitality is the key to Pride of Britain’s longstanding reputation for excellence.</div>
+									{/* <div className="text">Great hospitality is the key to Pride of Palace on Ganges longstanding reputation for excellence.</div> */}
 								</div>
 							</div><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 							{
@@ -126,7 +45,7 @@ export default function Profile() {
 										</div>
 										<div className="ml-8 w-1/2">
 											<div className="product-details">
-												<h4 className="product-name"><strong>{hoveredCity.title}</strong></h4>
+												<h4 className="product-name"><strong>{hoveredCity.name}</strong></h4>
 												<h2 className="product-content"><p>{hoveredCity.shortDescription || "It's home to diverse indigenous tribes, with festivals and markets celebrating the different tribes' culture"}</p></h2>
 												<button className='bg-[#aa8453] p-4 w-full hover:text-black'>
 													<a href="https://staahmax.staah.net/be/indexpack?propertyId=MTA5OQ&individual=true&roomTypeId=100333" className="text-white hover:text-black">MAKE RESERVATION</a>
@@ -146,6 +65,10 @@ For over two millennia, Varanasi has been a melting pot of cultures, where indiv
 The Hotel Palace on Ganges stands as a testament to this cultural synthesis. Situated at the heart of this ancient city, the hotel embraces the spirit of Varanasi and all over India by dedicating each of its twenty-four rooms to distinct cultural themes reflective of India’s diverse regional traditions. Each room serves as a cultural alcove, offering guests an intimate experience with the aesthetic and spiritual heritage specific to each Indian province represented. From the architectural nuances to the decorative motifs and the curated artworks, the rooms are designed to offer guests more than just a place to stay—they provide a deep, immersive journey into the cultural soul of India.<br/><br/>
 In preserving and showcasing such a broad spectrum of Indian cultural heritage under one roof, the Hotel Palace on Ganges not only honours the legacy of Varanasi as a centre of spiritual and cultural convergence but also enhances the cultural appreciation of its guests, making each stay a unique exploration of India’s rich cultural mosaic. Thus, the hotel not only offers world-class hospitality but also serves as a living museum of cultural heritage, enriching the travel experience of its guests with depth and authenticity. <br/><br/>
 </div></div>
+
+									<div className='text-2xl mb-6 font-gilda'>
+										<a href='/our-rooms'>Our Rooms</a>
+									</div>
 									<div className="healthy-food flex justify-start flex-wrap md:flex-nowrap 	">
 										<div className="food-list mb-10 mr-8">
 											<ul>

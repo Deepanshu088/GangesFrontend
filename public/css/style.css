@@ -9785,6 +9785,10 @@ Sidebar
   /* background-color: #0a267a; */
 }
 
+.p-button-icon-only {
+  margin-right: 20px;
+}
+
 .p-calendar .p-button {
   border: none !important; /* Optional: Removes borders from the calendar button if needed */
   outline: none !important;

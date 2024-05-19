@@ -10,7 +10,7 @@ export default function pagecitytour() {
   return (
     <>
       <Layout headerStyle={2}>
-      <PageTitle pageName="City Tour" />
+      <PageTitle pageName="Guided Tour" />
       <Citytourform/>
       <Citytour/>
       <Testimonial3 />
