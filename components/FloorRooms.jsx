@@ -1,13 +1,27 @@
+import useHttp from "@/hooks/useHttp";
+import { fetchAllRooms } from "@/redux/slices/roomSlice";
 import Link from "next/link";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
-const { FirstFloorRooms, GroundFloorRooms, SecondFloorRooms, ThirdFloorRooms } = require("@/constants/RoomDetailConstants")
 
 const FloorRooms = ({ floor }) => {
-    let roomsList = [...GroundFloorRooms, ...FirstFloorRooms, ...SecondFloorRooms, ...ThirdFloorRooms];
+	const { groundFloor, firstFloor, secondFloor, thirdFloor } = useSelector(state => state.room);
+    const dispatch = useDispatch();
+    const { apiService } = useHttp();
+    
+	useEffect(() => {
+		dispatch(fetchAllRooms(apiService))
+	}, [])
+    
+    let roomsList = [...groundFloor, ...firstFloor, ...secondFloor, ...thirdFloor];
     roomsList = roomsList.filter(item => item.floor == floor);
 
-    console.log(roomsList);
-
+    if(!roomsList || !(roomsList.length > 0)) {
+        return  <div className="m-auto text-center font-bold text-3xl bg-orange-200 py-6 rounded-lg">
+            No Rooms Found.
+        </div>
+    }
 
     return <div className="md:mx-10 lg:mx-[5vw] m-auto mt-20">
         <div className="row">
@@ -16,7 +30,7 @@ const FloorRooms = ({ floor }) => {
                     <div className="room-block col-lg-6 col-md-6 col-sm-15">
                         <div className="inner-box wow fadeIn">
                             <div className="image-box">
-                                <figure class="image-2 overlay-anim"><img src={item.coverPhoto} alt="" className="lg:h-[60vh] w-full object-cover" /></figure>
+                                <figure class="image-2 overlay-anim"><img src={`${process.env.NEXT_PUBLIC_BASE_URL}/${item.gallery[0]}`} alt="" className="lg:h-[60vh] w-full object-cover" /></figure>
                             </div>
                             <div className="content-box">
                                 <h6 className="title" style={{ marginRight: '30px' }}><Link href={`/room-details/${item.roomId}`}>{item.name}</Link></h6>

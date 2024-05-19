@@ -10,13 +10,17 @@ import Slider1 from "@/components/sections/Slider1"
 import Team from "@/components/sections/Team"
 import Testimonial1 from "@/components/sections/Testimonial1"
 import Video from "@/components/sections/Video"
+import { useSelector } from "react-redux"
+
 export default function Home() {
+	const { bannerImgs, homeRoomImgs, mdProfileImg } = useSelector(state => state.settings);
+
 	return (
 		<>
 			<Layout>
-				<Slider1 />
+				<Slider1 bannerImgs={bannerImgs} />
 				<About1 addClass={"pt-0"} />
-				<Rooms />
+				<Rooms homeRoomImgs={homeRoomImgs} />
 				<Services />
 				<Video />
 				<Features />

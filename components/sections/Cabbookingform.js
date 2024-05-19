@@ -3,6 +3,7 @@ import Input from '../shared/Input/Input';
 import DatePicker from '../shared/Input/DatePicker';
 import useForm from '@/hooks/useForm';
 import CounterInput from '../shared/Input/CounterInput';
+import useHttp from '@/hooks/useHttp';
 
 const INITIAL_FORM_STATE = {
 	pickupPoint: "",
@@ -16,6 +17,7 @@ const INITIAL_FORM_STATE = {
 const Cabbooking = () => {
 	const [currentTab, setCurrentTab] = useState(0);
 	const { formValues, formErrors, onTextChange, onDateChange } = useForm(INITIAL_FORM_STATE, {});
+	const { isLoading, apiService, error, clearError } = useHttp();
 
 	const nextPrev = (n) => {
 		let newValue = ((currentTab + n)  > 0) ? currentTab + n : 0;
@@ -25,6 +27,14 @@ const Cabbooking = () => {
 	const handleInputChange = (event) => {
 		event.target.className = '';
 	};
+
+	const onSubmitHandler = () => {
+		try {
+			console.log(formValues);
+		} catch (e) {
+			console.log(e);
+		}
+	}
 
 	return (
 		<section className="cabbooking-booking pt-10 pb-10 p-relative fix" style={{ paddingTop: '120px', paddingBottom: '120px', position: 'relative' }}>
@@ -123,6 +133,7 @@ const Cabbooking = () => {
 										/>
 
 										<div style={{ textAlign: 'right' }}>
+
 											<button type="button" id="cabbooking-nextBtn" onClick={() => nextPrev(1)} className="cabbooking-button">Next</button>
 										</div>
 									</div>
@@ -138,7 +149,7 @@ const Cabbooking = () => {
 												<button type="button" id="cabbooking-prevBtn" onClick={() => nextPrev(-1)} className="cabbooking-button1">Previous</button>
 											</div>
 											<div style={{ float: 'right' }}>
-												<button type="submit" id="cabbooking-submitBtn" className="cabbooking-button">Submit</button>
+												<button type="submit" id="cabbooking-submitBtn" className="cabbooking-button" onClick={onSubmitHandler}>Submit</button>
 											</div>
 										</div>
 									</div>

@@ -4,8 +4,10 @@ import RoomGallery from './RoomGallery';
 
 const listOfImages = ["/images/room-1.jpg", "/images/rooms/room4.jpg", "/images/room-3.jpg", "/images/rooms/room1.jpg", "/images/rooms/room3.jpg"]
 
-export default function RoomDetails({ roomDetail }) {
-	const { name, longDescription, floor, coverPhoto, isBreakfast, isDinner, isRiverView, isWifi, isTelevision, isAirConditioned, isParking, customerRating, luxuryCategory, regularPrice } = roomDetail;
+export default function RoomDetails({ roomDetail = {} }) {
+	const { name, longDescription, floor, noOfBeds, isBreakfast, gallery = [], isDinner, isRiverView, isWifi, isTelevision, isAirConditioned, isParking, customerRating, luxuryCategory, regularPrice } = roomDetail;
+
+	const galleryURLs = gallery.map(item => process.env.NEXT_PUBLIC_BASE_URL + "/" + item);
 
 	return (
 		<>
@@ -14,16 +16,16 @@ export default function RoomDetails({ roomDetail }) {
 					<div className="row">
 						<div className="col-xl-8 col-lg-7">
 							<div className="testimonial-block-home5 mb-50">
-								<RoomGallery data={listOfImages} />
+								<RoomGallery data={galleryURLs} />
 							</div>
 							<div className="room-details__left">
 								<div className="wrapper">
 									<h3>Description of Room</h3>
 									{
 										longDescription ?
-										<p className="text">{longDescription}</p>
-										:
-										<p className="text">Experience comfort and convenience in our luxurious heritage rooms. Each room is meticulously designed to offer relaxation and modern amenities, including plush bedding, a spacious work desk, and a flat-screen TV. Stay connected with high-speed Wi-Fi or unwind in the luxurious en-suite bathroom with complimentary toiletries. Enjoy a fresh cup of coffee from the in-room coffee maker or a drink from the minibar. For added convenience, our rooms offer a safe for your valuables and 24-hour room service. Whether you're traveling for business or pleasure, our rooms provide a sanctuary of comfort and style.</p>
+											<p className="text">{longDescription}</p>
+											:
+											<p className="text">Experience comfort and convenience in our luxurious heritage rooms. Each room is meticulously designed to offer relaxation and modern amenities, including plush bedding, a spacious work desk, and a flat-screen TV. Stay connected with high-speed Wi-Fi or unwind in the luxurious en-suite bathroom with complimentary toiletries. Enjoy a fresh cup of coffee from the in-room coffee maker or a drink from the minibar. For added convenience, our rooms offer a safe for your valuables and 24-hour room service. Whether you're traveling for business or pleasure, our rooms provide a sanctuary of comfort and style.</p>
 									}
 									<div className="row justify-content-center">
 										<div className="col-xl-12">
@@ -32,7 +34,7 @@ export default function RoomDetails({ roomDetail }) {
 													<div className="row">
 														<div className="col-6 col-md-3">
 															<p className="text mb-0">Rooms Bed</p>
-															<h6>2 Single Bed</h6>
+															<h6>{noOfBeds} Single Bed</h6>
 														</div>
 														{
 															floor === 3 &&
@@ -49,31 +51,55 @@ export default function RoomDetails({ roomDetail }) {
 								</div>
 								<div className="mt-16 mb-10">
 									<h4>Room Facilities</h4>
-									<div className="row room-facility-list">
-										<div className="col-sm-6 col-xl-4">
-											<div className="list-one d-flex align-items-center me-sm-4 mb-3">
-												<div className="icon text-theme-color1 mr-3 flex-shrink-0"><i className="far fa-air-conditioner"></i></div>
-												<h6 className="title my-auto">Air Conditionar</h6>
+									<div className="row room-facility-list whitespace-nowrap">
+										{
+											isAirConditioned &&
+											<div className="col-sm-6 col-xl-4">
+												<div className="list-one d-flex align-items-center me-sm-4 mb-3">
+													<div className="icon text-theme-color1 mr-3 flex-shrink-0"><i className="far fa-air-conditioner"></i></div>
+													<h6 className="title my-auto">Air Conditionar</h6>
+												</div>
 											</div>
-										</div>
+										}
+										{
+											isBreakfast &&
+											<div className="col-sm-6 col-xl-4">
+												<div className="list-one d-flex align-items-center me-sm-4 mb-3">
+													<div className="icon text-theme-color1 mr-3 flex-shrink-0"><i className="far fa-air-conditioner"></i></div>
+													<h6 className="title my-auto">Breakfast Available</h6>
+												</div>
+											</div>
+										}
+										{
+											isDinner &&
+											<div className="col-sm-6 col-xl-4">
+												<div className="list-one d-flex align-items-center me-sm-4 mb-3">
+													<div className="icon text-theme-color1 mr-3 flex-shrink-0"><i className="far fa-air-conditioner"></i></div>
+													<h6 className="title my-auto">Dinner Available</h6>
+												</div>
+											</div>
+										}
 										<div className="col-sm-6 col-xl-4">
 											<div className="list-one d-flex align-items-center me-sm-4 mb-3">
 												<div className="icon text-theme-color1 mr-3 flex-shrink-0"><i className="far fa-parking"></i></div>
-												<h6 className="title my-auto">Paid Parking</h6>
+												<h6 className="title my-auto">{isParking ? "Free" : "Paid"} Parking</h6>
 											</div>
 										</div>
-										<div className="col-sm-6 col-xl-4">
+										{/* <div className="col-sm-6 col-xl-4">
 											<div className="list-one d-flex align-items-center me-sm-4 mb-3">
 												<div className="icon text-theme-color1 mr-3 flex-shrink-0"><i className="far fa-shield-check"></i></div>
 												<h6 className="title my-auto">Security</h6>
 											</div>
-										</div>
-										<div className="col-sm-6 col-xl-4">
-											<div className="list-one d-flex align-items-center me-sm-4 mb-3">
-												<div className="icon text-theme-color1 mr-3 flex-shrink-0"><i className="fas fa-wifi"></i></div>
-												<h6 className="title my-auto">Free WI Fi</h6>
+										</div> */}
+										{
+											isWifi &&
+											<div className="col-sm-6 col-xl-4">
+												<div className="list-one d-flex align-items-center me-sm-4 mb-3">
+													<div className="icon text-theme-color1 mr-3 flex-shrink-0"><i className="fas fa-wifi"></i></div>
+													<h6 className="title my-auto">Free WI Fi</h6>
+												</div>
 											</div>
-										</div>
+										}
 										{
 											floor === 3 &&
 											< div className="col-sm-6 col-xl-4">
@@ -108,8 +134,8 @@ export default function RoomDetails({ roomDetail }) {
 										<li>
 											<div className="sidebar__post-image"> <img src="/images/room-1.jpg" alt="" /> </div>
 											<div className="sidebar__post-content">
-												<h3> 
-													<span className="sidebar__post-content-meta"><i className="far fa-door-open"></i>Heritage Luxury</span> 
+												<h3>
+													<span className="sidebar__post-content-meta"><i className="far fa-door-open"></i>Heritage Luxury</span>
 													{/* <Link href="">₹10000 / NIGHT</Link> */}
 												</h3>
 											</div>

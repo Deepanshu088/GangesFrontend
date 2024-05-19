@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 
-export default function Rooms() {
+export default function Rooms({homeRoomImgs}) {
 
 	return (
 		<>
@@ -61,7 +61,7 @@ export default function Rooms() {
 									<figure className="image-2 overlay-anim"><img src="images/rooms/roomPortrait2.jpg" alt="" className="md:h-[360px] max-h-[400px] w-full object-cover"/></figure>
 								</div>
 								<div className="content-box">
-									<h6 className="title"><Link href="/page-secondfloor">Heritage Royal</Link></h6>
+									<h6 className="title"><Link href="/page-groundfloor">Heritage Delux</Link></h6>
 									{/* <span className="price">₹10000  / NIGHT</span> */}
 								</div>
 								<div className="box-caption">
@@ -103,7 +103,7 @@ export default function Rooms() {
 									<figure className="image-2 overlay-anim"><img src="images/rooms/roomPortrait1.jpg" alt="" className="md:h-[360px] max-h-[400px] w-full object-cover"/></figure>
 								</div>
 								<div className="content-box">
-									<h6 className="title"><Link href="/page-thirdfloor">Traditional Heritage Rooms</Link></h6>
+									<h6 className="title"><Link href="/page-thirdfloor">Ganga River View</Link></h6>
 									{/* <span className="price">₹10000  / NIGHT</span> */}
 								</div>
 								<div className="box-caption">

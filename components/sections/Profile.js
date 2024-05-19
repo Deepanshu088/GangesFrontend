@@ -1,92 +1,22 @@
 import { FirstFloorRooms, GroundFloorRooms, SecondFloorRooms, ThirdFloorRooms } from '@/constants/RoomDetailConstants';
-import React, { useState } from 'react';
+import useHttp from '@/hooks/useHttp';
+import { fetchAllRooms } from '@/redux/slices/roomSlice';
+import React, { useEffect, useState } from 'react';
 import ModalVideo from 'react-modal-video';
+import { useDispatch, useSelector } from 'react-redux';
 
 export default function Profile() {
 	const [isOpen, setOpen] = useState(false);
-	const [showPopup, setShowPopup] = useState(true);
+	const [showPopup, setShowPopup] = useState(false);
 	const [hoveredCity, setHoveredCityDetails] = useState({});
-	const placesList = {
-		groundFloor: [
-			{ title: "Avadh", url: "/page-avadhroom" },
-			{
-				title: "Nagaland",
-				url: "/page-nagalandroom"
-			}, {
-				title: "Maharashtra",
-				url: "/page-maharashroom"
-			}, {
-				title: "Himachal",
-				url: "/page-himachalroom"
-			}, {
-				title: "Sakkim",
-				url: "/page-sakkimroom"
-			}, {
-				title: "Bengal",
-				url: "/page-bengalroom"
-			}
-		],
-		firstFloor: [
-			{
-				title: "Colonial",
-				url: "/page-colonialroom"
-			}, {
-				title: "Karnataka",
-				url: "/page-karnatakaroom"
-			}, {
-				title: "Kashmir",
-				url: "/page-kashmirroom"
-			}, {
-				title: "Goa",
-				url: "/page-goaroom"
-			}, {
-				title: "Sanchi",
-				url: "/page-sanchirrom"
-			}, {
-				title: "Rajasthan",
-				url: "/page-rajputhana"
-			}, {
-				title: "Madhubani",
-				url: "/page-madhuroom"
-			}
-		],
-		secondFloor: [
-			{
-				title: "Colonial",
-				url: "/page-colonialroom"
-			}, {
-				title: "Tamil",
-				url: "/page-tamilnadu"
-			}, {
-				title: "Orissa",
-				url: "/page-orissaroom"
-			}, {
-				title: "Assam",
-				url: "/page-assam"
-			}, {
-				title: "Kerala",
-				url: "/page-kerala"
-			}, {
-				title: "Jodhpur",
-				url: "/page-jodhpur"
-			}, {
-				title: "Gujarat",
-				url: "/page-gujarat"
-			}, {
-				title: "Punjab",
-				url: "/page-punjab"
-			}
-		],
-		thirdFloor: [
-			{
-				title: "Ganges view I",
-				url: "/page-ganga"
-			}, {
-				title: "Ganges view II",
-				url: "/page-ganga"
-			}
-		]
-	}
+
+	const { groundFloor, firstFloor, secondFloor, thirdFloor } = useSelector(state => state.room);
+	const dispatch = useDispatch();
+	const { apiService } = useHttp();
+
+	useEffect(() => {
+		dispatch(fetchAllRooms(apiService))
+	}, [])
 
 	const onMouseEnterHandler = (item) => {
 		setShowPopup(true);
@@ -100,8 +30,7 @@ export default function Profile() {
 	return (
 		<>
 			<section className="food-section pt-0">
-
-				<div className="auto-container">
+				<div className="auto-container" onMouseLeave={onMouseLeaveHandler}>
 					<div className="row">
 						<div className="image-column col-xl-4 col-lg-4">
 							<div className="inner-column">
@@ -116,13 +45,13 @@ export default function Profile() {
 									<div className="icon-box"><i className="flaticon-quotation"></i></div>
 									<div className="text">Great hospitality is the key to Pride of Britain’s longstanding reputation for excellence.</div>
 								</div>
-							</div><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+							</div><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 							{
 								showPopup &&
-								<div className="absolute p-8 border border-black w-2/5 mt-20 left-10 ">
+								<div className="absolute p-8 border border-black w-2/5 mt-10 left-10 bottom-20 ">
 									<div className="flex justify-start">
 										<div className="w-1/2">
-											<img src={hoveredCity.coverPhoto} alt="Product" className='w-full h-full object-cover max-h-72' />
+											<img src={process.env.NEXT_PUBLIC_BASE_URL + "/" + hoveredCity.gallery?.[0]} alt="Product" className='w-full h-full object-cover max-h-72' />
 										</div>
 										<div className="ml-8 w-1/2">
 											<div className="product-details">
@@ -141,64 +70,64 @@ export default function Profile() {
 							<div className="inner-column">
 								<div className="sec-title">
 									<h2>Profile</h2>
-									<div className="text"> Varanasi, historically known as Kashi or Banaras, is heralded as the oldest continuously inhabited city in human history. This venerable city is esteemed not only as the cultural capital of the Eastern world but also as a pivotal spiritual haven that draws seekers and devotees from across the globe. Recognized for its profound spiritual influence, Varanasi has been a destination where diverse cultures from all corners of India and beyond have converged, seeking enlightenment and spiritual fulfilment.<br/><br/>
-For over two millennia, Varanasi has been a melting pot of cultures, where individuals from different regions of India have brought their unique cultural heritages and lineages. This rich influx of cultural traditions, combined with the city’s indigenous spiritual and cultural practices, has woven a vibrant tapestry that enhances its historical and contemporary allure. The synthesis of Eastern traditions with influences from various global cultures has transformed Varanasi into a city that not only embodies a rich historical narrative but also displays a dynamic cultural panorama. <br/><br/>
-The Hotel Palace on Ganges stands as a testament to this cultural synthesis. Situated at the heart of this ancient city, the hotel embraces the spirit of Varanasi and all over India by dedicating each of its twenty-four rooms to distinct cultural themes reflective of India’s diverse regional traditions. Each room serves as a cultural alcove, offering guests an intimate experience with the aesthetic and spiritual heritage specific to each Indian province represented. From the architectural nuances to the decorative motifs and the curated artworks, the rooms are designed to offer guests more than just a place to stay—they provide a deep, immersive journey into the cultural soul of India.<br/><br/>
-In preserving and showcasing such a broad spectrum of Indian cultural heritage under one roof, the Hotel Palace on Ganges not only honours the legacy of Varanasi as a centre of spiritual and cultural convergence but also enhances the cultural appreciation of its guests, making each stay a unique exploration of India’s rich cultural mosaic. Thus, the hotel not only offers world-class hospitality but also serves as a living museum of cultural heritage, enriching the travel experience of its guests with depth and authenticity. <br/><br/>
-</div></div>
-									<div className="healthy-food flex justify-start flex-wrap md:flex-nowrap 	">
-										<div className="food-list mb-10 mr-8">
-											<ul>
-												<span className="whitespace-nowrap underline text-black mb-20">Ground floor</span>
-												{
-													GroundFloorRooms.map(item => <li key={item.url} onMouseEnter={() => onMouseEnterHandler(item)} onMouseLeave={() => onMouseLeaveHandler(item)}>
-														<i className="fa-regular fa-square-check"></i>
-														<a href={`/room-details/${item.roomId}`} className='whitespace-nowrap'>{item.name}</a>
-													</li>)
-												}
-											</ul>
-										</div>
-										<div className="food-list two mb-10 mr-8">
-											<ul>
-												<span className="whitespace-nowrap underline text-black">First floor</span>
-												{
-													FirstFloorRooms.map(item => <li key={item.url} onMouseEnter={() => onMouseEnterHandler(item)} onMouseLeave={() => onMouseLeaveHandler(item)}>
-														<i className="fa-regular fa-square-check"></i>
-														<a href={`/room-details/${item.roomId}`} className='whitespace-nowrap'>{item.name}</a>
-													</li>)
-												}
-											</ul>
-										</div>
-
-										<div className="food-list two mb-10 mr-8">
-											<ul>
-												<span className="whitespace-nowrap underline text-black">Second floor</span>
-												{
-													SecondFloorRooms.map(item => <li key={item.url} onMouseEnter={() => onMouseEnterHandler(item)} onMouseLeave={() => onMouseLeaveHandler(item)}>
-														<i className="fa-regular fa-square-check"></i>
-														<a href={`/room-details/${item.roomId}`} className='whitespace-nowrap'>{item.name}</a>
-													</li>)
-												}
-
-
-											</ul>
-										</div>
-										<div className="food-list two">
-											<ul>
-												<span className="whitespace-nowrap underline text-black">Third floor</span>
-
-												{
-													ThirdFloorRooms.map(item => <li key={item.url} onMouseEnter={() => onMouseEnterHandler(item)} onMouseLeave={() => onMouseLeaveHandler(item)}>
-														<i className="fa-regular fa-square-check"></i>
-														<a href={`/room-details/${item.roomId}`} className='whitespace-nowrap'>{item.name}</a>
-													</li>)
-												}
-
-											</ul>
-										</div>
-
+									<div className="text"> Varanasi, historically known as Kashi or Banaras, is heralded as the oldest continuously inhabited city in human history. This venerable city is esteemed not only as the cultural capital of the Eastern world but also as a pivotal spiritual haven that draws seekers and devotees from across the globe. Recognized for its profound spiritual influence, Varanasi has been a destination where diverse cultures from all corners of India and beyond have converged, seeking enlightenment and spiritual fulfilment.<br /><br />
+										For over two millennia, Varanasi has been a melting pot of cultures, where individuals from different regions of India have brought their unique cultural heritages and lineages. This rich influx of cultural traditions, combined with the city’s indigenous spiritual and cultural practices, has woven a vibrant tapestry that enhances its historical and contemporary allure. The synthesis of Eastern traditions with influences from various global cultures has transformed Varanasi into a city that not only embodies a rich historical narrative but also displays a dynamic cultural panorama. <br /><br />
+										The Hotel Palace on Ganges stands as a testament to this cultural synthesis. Situated at the heart of this ancient city, the hotel embraces the spirit of Varanasi and all over India by dedicating each of its twenty-four rooms to distinct cultural themes reflective of India’s diverse regional traditions. Each room serves as a cultural alcove, offering guests an intimate experience with the aesthetic and spiritual heritage specific to each Indian province represented. From the architectural nuances to the decorative motifs and the curated artworks, the rooms are designed to offer guests more than just a place to stay—they provide a deep, immersive journey into the cultural soul of India.<br /><br />
+										In preserving and showcasing such a broad spectrum of Indian cultural heritage under one roof, the Hotel Palace on Ganges not only honours the legacy of Varanasi as a centre of spiritual and cultural convergence but also enhances the cultural appreciation of its guests, making each stay a unique exploration of India’s rich cultural mosaic. Thus, the hotel not only offers world-class hospitality but also serves as a living museum of cultural heritage, enriching the travel experience of its guests with depth and authenticity. <br /><br />
+									</div></div>
+								<div className="healthy-food flex justify-start flex-wrap md:flex-nowrap 	">
+									<div className="food-list mb-10 mr-8">
+										<ul>
+											<span className="whitespace-nowrap underline text-black mb-20">Ground floor</span>
+											{
+												groundFloor.map(item => <li key={item.url} onMouseEnter={() => onMouseEnterHandler(item)} >
+													<i className="fa-regular fa-square-check"></i>
+													<a href={`/room-details/${item.roomId}`} className='whitespace-nowrap'>{item.name}</a>
+												</li>)
+											}
+										</ul>
 									</div>
-								
+									<div className="food-list two mb-10 mr-8">
+										<ul>
+											<span className="whitespace-nowrap underline text-black">First floor</span>
+											{
+												firstFloor.map(item => <li key={item.url} onMouseEnter={() => onMouseEnterHandler(item)} >
+													<i className="fa-regular fa-square-check"></i>
+													<a href={`/room-details/${item.roomId}`} className='whitespace-nowrap'>{item.name}</a>
+												</li>)
+											}
+										</ul>
+									</div>
+
+									<div className="food-list two mb-10 mr-8">
+										<ul>
+											<span className="whitespace-nowrap underline text-black">Second floor</span>
+											{
+												secondFloor.map(item => <li key={item.url} onMouseEnter={() => onMouseEnterHandler(item)} >
+													<i className="fa-regular fa-square-check"></i>
+													<a href={`/room-details/${item.roomId}`} className='whitespace-nowrap'>{item.name}</a>
+												</li>)
+											}
+
+
+										</ul>
+									</div>
+									<div className="food-list two">
+										<ul>
+											<span className="whitespace-nowrap underline text-black">Third floor</span>
+
+											{
+												thirdFloor.map(item => <li key={item.url} onMouseEnter={() => onMouseEnterHandler(item)} >
+													<i className="fa-regular fa-square-check"></i>
+													<a href={`/room-details/${item.roomId}`} className='whitespace-nowrap'>{item.name}</a>
+												</li>)
+											}
+
+										</ul>
+									</div>
+
+								</div>
+
 							</div>
 						</div>
 					</div>

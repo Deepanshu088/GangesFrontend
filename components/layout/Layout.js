@@ -6,9 +6,17 @@ import Footer2 from './Footer2'
 import Header1 from "./Header1"
 import Header2 from './Header2'
 import PageHead from './PageHead'
+import { useDispatch, useSelector } from "react-redux"
+import { fetchSettings } from "@/redux/slices/settingSlice"
+import useHttp from "@/hooks/useHttp"
 
 export default function Layout({ headerStyle, handleRemove, footerStyle, headTitle, breadcrumbTitle, children }) {
     const [scroll, setScroll] = useState(0)
+    const dispatch = useDispatch();
+    const { isLoading, apiService } = useHttp();
+    console.log("lafyhoasfdoashjodfajsfosjaofi")
+    const settingss = useSelector(state => state.settings)
+    console.log(settingss);
     // Moblile Menu
     const [isMobileMenu, setMobileMenu] = useState(false)
     const handleMobileMenu = () => {
@@ -18,8 +26,9 @@ export default function Layout({ headerStyle, handleRemove, footerStyle, headTit
 
     const [isSearch, setSearch] = useState(false)
     const handleSearch = () => setSearch(!isSearch)
-    useEffect(() => {
 
+    useEffect(() => {
+        dispatch(fetchSettings(apiService));
         document.addEventListener("scroll", () => {
             const scrollCheck = window.scrollY > 100
             if (scrollCheck !== scroll) {
@@ -27,6 +36,7 @@ export default function Layout({ headerStyle, handleRemove, footerStyle, headTit
             }
         })
     }, [])
+
     return (
         <>
             <PageHead />

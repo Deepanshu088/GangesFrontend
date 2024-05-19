@@ -50,7 +50,9 @@ const RoomGallery = ({ data }) => {
         <div className="flex justify-start overflow-x-auto no-scrollbar">
             {
                 data.map((item, index) => index != selectedIndex && 
-                    <img src={item} className="h-[70px] w-full mr-4 last:mr-0  md:w-full md:h-[100px] object-cover" onClick={() => changeSelectedIndex(index)} />
+                    <div className="mr-4 last:mr-4 ">
+                        <img src={item} className="h-[70px] mr-4 last:mr-0 md:h-[100px] object-cover" onClick={() => changeSelectedIndex(index)} />
+                    </div>
                 )
             }
         </div>
