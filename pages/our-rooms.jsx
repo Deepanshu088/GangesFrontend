@@ -185,7 +185,7 @@ const OurRooms = () => {
                                 <div class="room-block col-lg-4 col-md-4">
                                     <div class="inner-box wow fadeIn">
                                         <div class="image-box">
-                                            <figure class="image-2 overlay-anim"><img src={item.coverPhoto} alt="" className="h-[50vh] md:h-[60vh] w-full object-cover" /></figure>
+                                            <figure class="image-2 overlay-anim"><img src={`${process.env.NEXT_PUBLIC_BASE_URL}/${item.gallery[0]}`} alt="" className="h-[50vh] md:h-[60vh] w-full object-cover" /></figure>
                                         </div>
                                         <div class="content-box">
                                             <h6 class="title"><a href={`/room-details/${item.roomId}`}>{item.name}</a></h6>
