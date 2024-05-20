@@ -52,8 +52,8 @@ const Header1 = ({ handleMobileMenu, searchToggle, handleToggle, scroll }) => {
                             <li>
                                 <div className="contact-info-box">
                                     <span className="icon lnr-icon-clock" />
-                                    <span className="title">Send Email</span>
-                                    Mon - Sat 8:00 - 6:30, Sunday - CLOSED
+                                    <span className="title">Open Timings</span>
+                                    Mon - Sun 24*7 <br/> 4:00 - 6:30
                                 </div>
                             </li>
                         </ul>
