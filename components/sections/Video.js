@@ -6,7 +6,7 @@ export default function Video() {
   return (
     <>
       <section className="video-section">
-        <div className="bg bg-image" style={{ backgroundImage: 'url(images/1.jpg)' }}></div>
+        <div className="bg bg-image" style={{ backgroundImage: 'url(/images/home/1.jpg)' }}></div>
         <div className="auto-container">
           <div className="row">
             <div className="content-column col-lg-9 col-md-12 col-sm-12">

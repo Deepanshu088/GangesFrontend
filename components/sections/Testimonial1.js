@@ -57,7 +57,7 @@ export default function Testimonial1() {
         <>
 
             <section className="testimonial-section">
-                <div className="bg bg-image" style={{ backgroundImage: 'url(images/background/testi-bg.jpg)' }}></div>
+                <div className="bg bg-image" style={{ backgroundImage: 'url(/images/home/testi-bg.jpg)' }}></div>
                 <div className="auto-container">
                     <div className="row">
                         {/* Title Column */}

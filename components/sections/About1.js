@@ -32,7 +32,7 @@ export default function About1() {
                                 </div>
                                 </div>
                                 <div className="btn-box">
-                                <a href="page-about.html" className="theme-btn btn-style-one"><span className="btn-title">Discover More</span></a>
+                                <a href="/our-rooms" className="theme-btn btn-style-one"><span className="btn-title">Discover More</span></a>
                                 <div className="contact-info">
                                     <div className="icon-box"><i className="flaticon-customer-service"></i></div>
                                     <a href="https://staahmax.staah.net/be/indexpackdetail?propertyId=MTA5OQ==&individual=true" className='whitespace-nowrap'>Book Now</a>
@@ -45,7 +45,7 @@ export default function About1() {
                         {/* Image Column */}
                         <div className="image-column col-xl-6 col-lg-6">
                             <div className="inner-column wow fadeInLeft">
-                                <figure className="image-1 overlay-anim wow fadeInUp"><img src="images/about1-1.jpg" alt=""/></figure>
+                                <figure className="image-1 overlay-anim wow fadeInUp"><img src="/images/home/about1-1.jpg" alt=""/></figure>
                                 <figure className="image-2 overlay-anim wow fadeInLeft"><img src="images/about1-2.jpg" alt=""/></figure>
                                 <div className="btn-box">
                                     <a onClick={() => setOpen(true)} className="play-now-two"><i className="icon fa fa-play" aria-hidden="true"></i><span className="ripple"></span></a>
