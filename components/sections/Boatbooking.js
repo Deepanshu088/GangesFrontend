@@ -8,7 +8,7 @@ export default function Boatbooking() {
 					<div className="image-side col-xl-4 col-lg-4">
 						<div className="inner-column">
 							<div className="h-full">
-								<figure className=""><img src="images/facilities/boat/boat1.jpg" alt="" className='h-full w-auto object-cover' /></figure>
+								<figure className=""><img src="/images/facilities/boat/boat3.jpg" alt="" className='h-full w-auto object-cover' /></figure>
 							</div>
 							<div className="new-quote-box">
 								<div className="new-icon-box"><i className="flaticon-quotation"></i></div>
