@@ -10,7 +10,6 @@ export default function pagegroundfloor() {
 				<PageTitle pageName="Upper Floor Heritage Deluxe" />
 				{/* <Firstfloor/> */}
 				<FloorRooms floor={1} />
-				<FloorRooms floor={2} />
 			</Layout>
 		</>
 	)

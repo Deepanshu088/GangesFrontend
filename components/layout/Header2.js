@@ -65,7 +65,7 @@ const Header1 = ({ handleMobileMenu, searchToggle, handleSearch, scroll, isSearc
                                 <div className="contact-info-box">
                                     <span className="icon lnr-icon-clock" />
                                     <span className="title">Open Timings</span>
-                                    Mon - Sun 24*7 <br/> 4:00 - 6:30
+                                    Mon - Sun &nbsp; &nbsp; &nbsp; 24  <i class="fa-solid fa-xmark"></i> 7
                                 </div>
                             </li>
                         </ul>

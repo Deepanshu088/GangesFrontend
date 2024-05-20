@@ -39,7 +39,7 @@ const RoomGallery = ({ data }) => {
                 </div>
                 <div className={`z-[2000] fixed m-auto text-center top-1/2 bg-white rounded-2xl -translate-y-1/2 shadow-modal inset-x-4 lg:inset-x-60 w-3/5  max-h-[70vh]`}>
                     <div className="text-center max-h-[90vh] m-auto text-black w-full relative">
-                        <img src={data[selectedIndex]} className="w-full object-cover max-h-[70vh]" />
+                        <img src={`${process.env.NEXT_PUBLIC_BASE_URL}/${data[selectedIndex]}`} className="w-full object-cover max-h-[70vh]" />
                     </div>
                 </div>
             </>

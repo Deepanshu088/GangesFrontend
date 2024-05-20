@@ -1,43 +1,78 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import Input from '../shared/Input/Input';
 import DatePicker from '../shared/Input/DatePicker';
 import useForm from '@/hooks/useForm';
 import CounterInput from '../shared/Input/CounterInput';
 import useHttp from '@/hooks/useHttp';
+import SpinningLoader from '../shared/Loader/SpinningLoader';
+// import Toast from '../shared/Toast/Toast';
 
-const INITIAL_FORM_STATE = {
+const INITIAL_FORM_VALUES = {
 	pickupPoint: "",
 	dropoffPoint: "",
 	plannedDate: "",
 	plannedTime: "",
 	numberOfAdults: null,
 	numberOfChild: null,
+	name: "",
+	email: "",
+	phoneNumber: "",
+}
+
+const INITIAL_FORM_ERRORS = {
+	pickupPoint: true,
+	dropoffPoint: true,
+	plannedDate: true,
+	plannedTime: true,
+	numberOfAdults: true,
+	numberOfChild: true,
+	name: true,
+	email: true,
+	phoneNumber: true
 }
 
 const Cabbooking = () => {
+    const [ toastDetails, setToastDetails ] = useState({
+		show: false,
+		type: "success",
+		title: "Success",
+		message: "",
+	});
+
 	const [currentTab, setCurrentTab] = useState(0);
-	const { formValues, formErrors, onTextChange, onDateChange } = useForm(INITIAL_FORM_STATE, {});
+	const { formValues, formErrors, onTextChange, onDateChange, showFormErrors, setShowFormErrors } = useForm(INITIAL_FORM_VALUES, INITIAL_FORM_ERRORS);
 	const { isLoading, apiService, error, clearError } = useHttp();
 
 	const nextPrev = (n) => {
-		let newValue = ((currentTab + n)  > 0) ? currentTab + n : 0;
+		let newValue = ((currentTab + n) > 0) ? currentTab + n : 0;
 		setCurrentTab(newValue);
 	};
 
-	const handleInputChange = (event) => {
-		event.target.className = '';
-	};
-
-	const onSubmitHandler = () => {
+	const onSubmitHandler = async (e) => {
+		e.preventDefault();
 		try {
 			console.log(formValues);
+			const isFormInvalid = Object.values(formErrors).reduce((a, b) => a || b, false);
+			console.log(formErrors);
+			console.log(isFormInvalid);
+			if (isFormInvalid) {
+				setShowFormErrors(true);
+				console.log("Invalid formmm")
+				return;
+			}
+
+			const response = await apiService("/enquiryForm/cab", "POST", formValues);
+			console.log(response);
+
 		} catch (e) {
 			console.log(e);
+			setToastDetails({ show: true, type: 'warning', title: 'Error', message: 'Something went wrong.' });
 		}
 	}
 
 	return (
 		<section className="cabbooking-booking pt-10 pb-10 p-relative fix" style={{ paddingTop: '120px', paddingBottom: '120px', position: 'relative' }}>
+			
 			<style>
 				{`
           .cabbooking-input {
@@ -79,6 +114,10 @@ const Cabbooking = () => {
           }
         `}
 			</style>
+			{/* {
+				toastDetails.show && 
+				<Toast  />
+			} */}
 			<div className="container">
 				<div className="row align-items-center">
 					<div className="col-lg-6 col-md-6 cabbooking-contact-bg02" style={{ paddingLeft: '20px' }}>
@@ -93,47 +132,33 @@ const Cabbooking = () => {
 									<div className={`cabbooking-tab ${currentTab === 0 ? 'active' : ''}`} style={{ display: currentTab === 0 ? 'block' : 'none' }}>
 										<Input id="pickupPoint" name="pickupPoint" placeholder="Enter Pick Up Point" errorMessage="This field is required."
 											onChange={onTextChange} value={formValues.pickupPoint}
-										// validator={["PHONE_NUMBER"]} label="Pick Up Point" isError={showFormErrors && formErrors.phoneNumber}
+											validator={["REQUIRE"]} isError={showFormErrors && formErrors.pickupPoint}
 										/>
 
-										<Input
-											id="dropoffPoint"
-											name="dropoffPoint"
-											placeholder="Enter Drop Off Point"
-											value={formValues.dropoffPoint
-											}
-											onChange={onTextChange}
-											// validator={["PHONE_NUMBER"]}
-											// label="Drop Off Point"
-											// isError={showFormErrors && formErrors.phoneNumber}
-											errorMessage="This field is required."
+										<Input id="dropoffPoint" name="dropoffPoint" placeholder="Enter Drop Off Point" errorMessage="This field is required."
+											value={formValues.dropoffPoint} onChange={onTextChange}
+											validator={["REQUIRE"]} isError={showFormErrors && formErrors.dropoffPoint}
 										/>
 
 										<DatePicker id="plannedDate" name="plannedDate" placeholder="Select Date" errorMessage="This field is required."
-											value={formValues.plannedDate}
-											onChange={onDateChange}
+											value={formValues.plannedDate} onChange={onDateChange} isError={showFormErrors && formErrors.plannedDate}
 										/>
 
 										<DatePicker id="plannedTime" name="plannedTime" placeholder="Select Time" errorMessage="This field is required."
-											value={formValues.plannedTime} onChange={onDateChange} timeOnly
+											value={formValues.plannedTime} onChange={onDateChange} timeOnly isError={showFormErrors && formErrors.plannedTime}
 										/>
 
 										<CounterInput id="numberOfAdults" name="numberOfAdults" placeholder="Number of Adults" type='number' errorMessage="This field is required."
-											value={formValues.numberOfAdults}
-											onChange={onTextChange}
-										// validator={["PHONE_NUMBER"]}
-										// isError={showFormErrors && formErrors.phoneNumber}
+											value={formValues.numberOfAdults} onChange={onTextChange}
+											isError={showFormErrors && formErrors.numberOfAdults}
 										/>
 
 										<CounterInput id="numberOfChild" name="numberOfChild" placeholder="Number of Children" type='number' errorMessage="This field is required."
-											value={formValues.numberOfChild}
-											onChange={onTextChange}
-										// validator={["PHONE_NUMBER"]}
-										// isError={showFormErrors && formErrors.phoneNumber}
+											value={formValues.numberOfChild} onChange={onTextChange}
+											isError={showFormErrors && formErrors.numberOfChild}
 										/>
 
 										<div style={{ textAlign: 'right' }}>
-
 											<button type="button" id="cabbooking-nextBtn" onClick={() => nextPrev(1)} className="cabbooking-button">Next</button>
 										</div>
 									</div>
@@ -141,15 +166,28 @@ const Cabbooking = () => {
 								{
 									currentTab === 1 &&
 									<div className={`cabbooking-tab ${currentTab === 1 ? 'active' : ''}`} style={{ display: currentTab === 1 ? 'block' : 'none' }}>
-										<p><input placeholder="Your Name" onInput={handleInputChange} name="name" className="form-control bg-white rounded-none border border-[#adadad]" required /></p>
-										<p><input placeholder="E-mail..." onInput={handleInputChange} name="email" className="form-control bg-white rounded-none border border-[#adadad]" required /></p>
-										<p><input placeholder="Phone..." onInput={handleInputChange} name="phone" className="form-control bg-white rounded-none border border-[#adadad]" required /></p>
-										<div style={{ overflow: 'auto' }}>
+
+										<Input id="name" name="name" placeholder="Enter Your Name" errorMessage="This field is required."
+											value={formValues.name} onChange={onTextChange}
+											validator={["REQUIRE"]} isError={showFormErrors && formErrors.name}
+										/>
+
+										<Input id="email" name="email" placeholder="example@example.com" errorMessage="This field is required."
+											value={formValues.email} onChange={onTextChange}
+											validator={["EMAIL"]} isError={showFormErrors && formErrors.email}
+										/>
+
+										<Input id="phoneNumber" name="phoneNumber" placeholder="Phone Number" errorMessage="This field is required."
+											value={formValues.phoneNumber} onChange={onTextChange}
+											validator={["PHONE_NUMBER"]} isError={showFormErrors && formErrors.phoneNumber}
+										/>
+										
+										<div style={{ width: "100%" }}>
 											<div style={{ float: 'left' }}>
-												<button type="button" id="cabbooking-prevBtn" onClick={() => nextPrev(-1)} className="cabbooking-button1">Previous</button>
+												<button type="button" id="cabbooking-prevBtn" onClick={() => nextPrev(-1)} className="cabbooking-button1 w-full">Previous</button>
 											</div>
 											<div style={{ float: 'right' }}>
-												<button type="submit" id="cabbooking-submitBtn" className="cabbooking-button" onClick={onSubmitHandler}>Submit</button>
+												<button type="submit" id="cabbooking-submitBtn" className="cabbooking-button w-full text-center" onClick={onSubmitHandler} disabled={isLoading}>{ isLoading ? <SpinningLoader /> : "Submit" }</button>
 											</div>
 										</div>
 									</div>

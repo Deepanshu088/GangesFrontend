@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 export default function Profile() {
 	const [isOpen, setOpen] = useState(false);
-	const [showPopup, setShowPopup] = useState(false);
+	const [showPopup, setShowPopup] = useState(true);
 	const [hoveredCity, setHoveredCityDetails] = useState({});
 
 	const { groundFloor, firstFloor, secondFloor, thirdFloor } = useSelector(state => state.room);
@@ -48,7 +48,7 @@ export default function Profile() {
 							</div><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 							{
 								showPopup &&
-								<div className="absolute p-8 border border-black w-2/5 mt-10 left-10 bottom-20 ">
+								<div className="absolute p-8 border border-black w-2/5 left-20">
 									<div className="flex justify-start">
 										<div className="w-1/2">
 											<img src={process.env.NEXT_PUBLIC_BASE_URL + "/" + hoveredCity.gallery?.[0]} alt="Product" className='w-full h-full object-cover max-h-72' />
