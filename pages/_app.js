@@ -10,6 +10,7 @@ import store, { persistor } from "@/redux/store";
 
 function MyApp({ Component, pageProps }) {
     // const [loading, setLoading] = useState(false);
+    const loading = false;
     // useEffect(() => {
     //     setLoading(true);
     //     setTimeout(() => {
