@@ -38,7 +38,7 @@ export default function Restaurant() {
 											<li><i className="fa-regular fa-square-check mr-4 mb-2"></i><strong style={{ color: 'black', fontSize:'18px' }}>Dedicated to Health and Comfort</strong></li>
 											<span>We believe that dining out should not compromise on health. That is why our menu includes a variety of healthy options, crafted using only the highest quality ingredients. Additionally, our comfortable seating arrangements ensure that your dining experience is relaxed and enjoyable.</span><br/><br/>
                       <li><i className="fa-regular fa-square-check mr-4 mb-2"></i><strong style={{ color: 'black', fontSize:'18px' }}>Enhanced with Modern Amenities</strong></li>
-											<span>Stay connected with complimentary high-speed Wi-Fi, making it easy to share your moments of joy or catch up on work. Our restaurant also boasts a spacious dining area, accommodating both intimate gatherings and larger parties with ease.</span><br/><br/>
+											<span>Stay connected with complimentary high-speed Wi-Fi, making it easy to share your moments of joy or catch up on work.</span><br/><br/>
                       <li><i className="fa-regular fa-square-check mr-4 mb-2"></i><strong style={{ color: 'black', fontSize:'18px' }}>A Broad Spectrum of Choices</strong></li>
 											<span>With a wide range of dishes available, every visit can be a new culinary adventure. Our menu is designed to cater to various dietary preferences and palates, ensuring there is something to tantalize everyone.</span><br/><br/>
 										</ul>
