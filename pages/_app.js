@@ -9,13 +9,13 @@ import { PersistGate } from "redux-persist/integration/react";
 import store, { persistor } from "@/redux/store";
 
 function MyApp({ Component, pageProps }) {
-    const [loading, setLoading] = useState(false);
-    useEffect(() => {
-        setLoading(true);
-        setTimeout(() => {
-            setLoading(false);
-        }, 2000);
-    }, []);
+    // const [loading, setLoading] = useState(false);
+    // useEffect(() => {
+    //     setLoading(true);
+    //     setTimeout(() => {
+    //         setLoading(false);
+    //     }, 2000);
+    // }, []);
     return <Provider store={store}>
         <PersistGate persistor={persistor}>
             {!loading ? (
