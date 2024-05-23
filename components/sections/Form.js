@@ -2,7 +2,10 @@ import React from 'react';
 import DatePicker from '../shared/Input/DatePicker';
 
 export default function Form() {
-    
+  const onSubmitHandler = (e) => {
+    e.preventDefault();
+  }
+
     return (
         <>
         <section className="booking-section">
@@ -14,7 +17,7 @@ export default function Form() {
                     <span className="sub-title">ROOMS & SUITES</span>
                     <h2>Hotel Booking </h2>
                   </div>
-                  <form className="bk-form">
+                  <form className="bk-form" onSubmit={onSubmitHandler}>
                     {/* <div class="frm-field">
                         <input type="text" name="check-in" class="date-pick" placeholder="Check in" />
                         <img src="images/icons/mail.png" alt />

@@ -9,10 +9,10 @@ const NavLinks = ({ extraClassName }) => {
         <Link className="text-sm" href="/our-rooms">Our Rooms</Link>
         <ul>
           <li>
-            <Link className="text-sm" href="/page-groundfloor">Lower Floor</Link>
+            <Link className="text-sm" href="/page-groundfloor">Lower Floor Heritage Deluxe</Link>
           </li>
           <li>
-            <Link className="text-sm" href="/page-firstfloor">Upper Floor</Link>
+            <Link className="text-sm" href="/page-firstfloor">Upper Floor Heritage Deluxe</Link>
           </li>
           {/* <li>
             <Link className="text-sm" href="/page-secondfloor">Heritage Royal</Link>

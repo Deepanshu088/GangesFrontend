@@ -1,12 +1,13 @@
 import Link from 'next/link';
 import React from 'react';
 
+// This one is the main one
 export default function Services() {
     const data = [
         {
             icon: "flaticon-bed-2",
             title: "Room Service",
-            subtitile: "Experience the epitome of convenience with our room service. Whether you're craving a late-night snack or a sumptuous breakfast in bed, our menu offers a wide range of local and international delicacies. Our prompt and discreet service ensures that your dining experience is both comfortable and enjoyable, without ever leaving the privacy of your room."
+            subtitile: "Experience the epitome of convenience with our room service untill 11:00 PM. Whether you're craving a snack or a sumptuous breakfast in bed, our menu offers a wide range of local and international delicacies. Our prompt and discreet service ensures that your dining experience is both comfortable and enjoyable, without ever leaving the privacy of your room."
         },
         {
             icon: "flaticon-car",
@@ -26,7 +27,7 @@ export default function Services() {
         {
             icon: "far fa-water",
             title: "River Ganga View",
-            subtitile: "Immerse yourself in the spiritual heart of Varanasi with our rooms offering unobstructed views of the Ganges River. These rooms provide a serene space to witness the vibrant cultural activities and rituals performed on the ghats. It is an ideal spot for meditation or simply to relax and absorb the sacred atmosphere, making your stay truly transformative."
+            subtitile: "Immerse yourself in the spiritual heart of Varanasi with our special Ganges Luxury rooms offering unobstructed views of the Ganges River. These rooms provide a serene space to witness the vibrant cultural activities and rituals performed on the ghats. It is an ideal spot for meditation or simply to relax and absorb the sacred atmosphere, making your stay truly transformative."
         },
         {
             icon: "flaticon-car",

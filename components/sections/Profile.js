@@ -82,7 +82,7 @@ export default function Profile() {
 								<div className="healthy-food flex justify-start flex-wrap md:flex-nowrap 	">
 									<div className="food-list mb-10 mr-8">
 										<ul>
-											<span className="whitespace-nowrap underline text-black mb-20">Lower Floor</span>
+											<span className="whitespace-nowrap underline text-black mb-20">Lower Floor Heritage Deluxe</span>
 											{
 												groundFloor.map(item => <li key={item.url} onMouseEnter={() => onMouseEnterHandler(item)} onMouseLeave={() => onMouseLeaveHandler(item)}>
 													<i className="fa-regular fa-square-check"></i>
@@ -93,7 +93,7 @@ export default function Profile() {
 									</div>
 									<div className="food-list two mb-10 mr-8">
 										<ul>
-											<span className="whitespace-nowrap underline text-black">Upper Floor</span>
+											<span className="whitespace-nowrap underline text-black">Upper Floor Heritage Deluxe </span>
 											{
 												[...firstFloor, ...secondFloor].map(item => <li key={item.url} onMouseEnter={() => onMouseEnterHandler(item)} onMouseLeave={() => onMouseLeaveHandler(item)}>
 													<i className="fa-regular fa-square-check"></i>
