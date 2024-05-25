@@ -14,9 +14,7 @@ export default function Layout({ headerStyle, handleRemove, footerStyle, headTit
     const [scroll, setScroll] = useState(0)
     const dispatch = useDispatch();
     const { isLoading, apiService } = useHttp();
-    console.log("lafyhoasfdoashjodfajsfosjaofi")
-    const settingss = useSelector(state => state.settings)
-    console.log(settingss);
+
     // Moblile Menu
     const [isMobileMenu, setMobileMenu] = useState(false)
     const handleMobileMenu = () => {

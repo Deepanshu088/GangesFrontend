@@ -11,8 +11,6 @@ const initialState = {
 export const fetchSettings = createAsyncThunk("fetchSettings", async (apiService) => {
     try {
         const response = await apiService("/content");
-        console.log("FEtchingngnngngngn setttgt")
-        console.log(response);
         return response;
     } catch (e) {
         console.log(e);

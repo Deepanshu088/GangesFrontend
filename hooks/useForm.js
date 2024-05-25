@@ -30,6 +30,10 @@ const useForm = (initialFormValues, initialFormErrors) => {
         ))
     }
 
+    const setFormErrorDetails = data => {
+        setFormErrors(data);
+    }
+
     return {
         formValues,
         formErrors,
@@ -38,7 +42,8 @@ const useForm = (initialFormValues, initialFormErrors) => {
         onTextChange,
         onRadioChange,
         onDateChange,
-        setFormDetails
+        setFormDetails,
+        setFormErrorDetails
     };
 };
 

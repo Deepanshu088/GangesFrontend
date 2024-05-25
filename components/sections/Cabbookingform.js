@@ -5,7 +5,7 @@ import useForm from '@/hooks/useForm';
 import CounterInput from '../shared/Input/CounterInput';
 import useHttp from '@/hooks/useHttp';
 import SpinningLoader from '../shared/Loader/SpinningLoader';
-// import Toast from '../shared/Toast/Toast';
+import Toast from '../shared/Toast/Toast';
 
 const INITIAL_FORM_VALUES = {
 	pickupPoint: "",
@@ -36,11 +36,11 @@ const Cabbooking = () => {
 		show: false,
 		type: "success",
 		title: "Success",
-		message: "",
+		message: "Successfully submitted the form.",
 	});
 
 	const [currentTab, setCurrentTab] = useState(0);
-	const { formValues, formErrors, onTextChange, onDateChange, showFormErrors, setShowFormErrors } = useForm(INITIAL_FORM_VALUES, INITIAL_FORM_ERRORS);
+	const { formValues, formErrors, onTextChange, onDateChange, showFormErrors, setShowFormErrors, setFormDetails, setFormErrorDetails } = useForm(INITIAL_FORM_VALUES, INITIAL_FORM_ERRORS);
 	const { isLoading, apiService, error, clearError } = useHttp();
 
 	const nextPrev = (n) => {
@@ -63,10 +63,12 @@ const Cabbooking = () => {
 
 			const response = await apiService("/enquiryForm/cab", "POST", formValues);
 			console.log(response);
-
+			setFormDetails(INITIAL_FORM_VALUES);
+			setFormErrorDetails(INITIAL_FORM_ERRORS);
+			setToastDetails({ show: true, type: 'success', title: 'Success', message: 'Form Submitted Successfully.' });
 		} catch (e) {
 			console.log(e);
-			setToastDetails({ show: true, type: 'warning', title: 'Error', message: 'Something went wrong.' });
+			setToastDetails({ show: true, type: 'error', title: 'Error', message: 'Something went wrong.' });
 		}
 	}
 
@@ -114,10 +116,12 @@ const Cabbooking = () => {
           }
         `}
 			</style>
-			{/* {
+
+			{
 				toastDetails.show && 
-				<Toast  />
-			} */}
+				<Toast show={toastDetails.show} type={toastDetails.type} title={toastDetails.title} message={toastDetails.message} setToastDetails={setToastDetails} />
+			}
+
 			<div className="container">
 				<div className="row align-items-center">
 					<div className="col-lg-6 col-md-6 cabbooking-contact-bg02" style={{ paddingLeft: '20px' }}>
@@ -177,7 +181,7 @@ const Cabbooking = () => {
 											validator={["EMAIL"]} isError={showFormErrors && formErrors.email}
 										/>
 
-										<Input id="phoneNumber" name="phoneNumber" placeholder="Phone Number" errorMessage="This field is required."
+										<Input id="phoneNumber" name="phoneNumber" placeholder="Phone Number" errorMessage="Please enter a valid number (10 digits)."
 											value={formValues.phoneNumber} onChange={onTextChange}
 											validator={["PHONE_NUMBER"]} isError={showFormErrors && formErrors.phoneNumber}
 										/>

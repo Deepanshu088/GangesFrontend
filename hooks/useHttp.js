@@ -19,8 +19,7 @@ const useHttp = () => {
     const apiService = useCallback(async (path, method, body, headers, isFileUpload = false) => {
         setIsLoading(true);
         const url = process.env.NEXT_PUBLIC_API_BASE_URL + path;
-        console.log("apiService");
-        console.log(process.env.NEXT_PUBLIC_API_BASE_URL),
+        console.log(url),
             console.log(path);
         try {
             let headerPayload = {
