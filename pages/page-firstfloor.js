@@ -7,7 +7,7 @@ export default function pagegroundfloor() {
 	return (
 		<>
 			<Layout headerStyle={2}>
-				<PageTitle pageName="Upper Floor Heritage Deluxe" />
+				<PageTitle pageName="Upper Level Heritage Deluxe" />
 				{/* <Firstfloor/> */}
 				<FloorRooms floor={1} />
 			</Layout>
