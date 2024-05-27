@@ -24,8 +24,8 @@ export default function FoodSection() {
                 <div className="content-column col-xl-8">
                   <div className="inner-column">
                     <div className="sec-title"> <span className="sub-title">EAT FROM THE LAND</span>
-                      <h2>Enjoy Food and Even<br/>
-                        Better Hospitality</h2>
+                      <h2>Enjoy Food and <br/>
+                        Best Hospitality</h2>
                       <div className="text">Embark on a culinary adventure at our restaurant, where each dish is crafted to perfection, combining local flavors with global inspiration. Our chefs are dedicated to creating a menu that tantalizes the taste buds and leaves a lasting impression. Experience exceptional service and a welcoming atmosphere that ensures an unforgettable dining experience. </div>
                       <div className="healthy-food">
                         <div className="food-list">

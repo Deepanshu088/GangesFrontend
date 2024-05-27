@@ -28,10 +28,10 @@ export default function MobileMenu({ handleMobileMenu }) {
                 </li>
                 <li className="dropdown"><Link href="/our-rooms" onClick={() => handleMobileMenu()}>Our Rooms</Link>
                     <ul style={{ display: `${isActive.key == 2 ? "block" : "none"}` }}>
-                        <li><Link onClick={() => handleMobileMenu()} href="/page-groundfloor">Lower Floor Heritage Deluxe</Link></li>
-                        <li><Link onClick={() => handleMobileMenu()} href="/page-firstfloor">Upper Floor Heritage Deluxe</Link></li>
+                        <li><Link onClick={() => handleMobileMenu()} href="/page-groundfloor">Lower Level Heritage Deluxe</Link></li>
+                        <li><Link onClick={() => handleMobileMenu()} href="/page-firstfloor">Upper Level Heritage Deluxe</Link></li>
                         {/* <li><Link onClick={() => handleMobileMenu()} href="/page-secondfloor">Heritage Royal</Link></li> */}
-                        <li><Link onClick={() => handleMobileMenu()} href="/page-thirdfloor">Ganges Luxury</Link></li>
+                        <li><Link onClick={() => handleMobileMenu()} href="/page-thirdfloor">Ganges View</Link></li>
                     </ul>
                     <div className="dropdown-btn" onClick={() => handleClick(2)}><i className="fa fa-angle-down"/></div>
                 </li>

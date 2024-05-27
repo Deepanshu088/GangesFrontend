@@ -24,8 +24,8 @@ export default function Restaurant() {
                 <div className="content-column col-xl-8">
                   <div className="inner-column">
                     <div className="sec-title"> <span className="sub-title">EAT FROM THE LAND</span>
-                      <h2>Enjoy Food and Even<br/>
-                        Better Hospitality</h2>
+                      <h2>Enjoy Food and <br/>
+                        Best Hospitality</h2>
                       <div className="text">Step into a world of culinary delight at our restaurant, where exceptional food meets unparalleled hospitality. At our pure Vegetarian restaurant, every dish is an art form, blending traditional local flavours with exciting global influences to create a menu that both surprises and satisfies.Our skilled chefs focus on the freshest ingredients, delivering a menu that not only excites the palate but also supports health and well-being. </div>
                       <div className="healthy-food">
                         <div className="food-list">

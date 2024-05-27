@@ -37,7 +37,9 @@ export default function SPECIALITY() {
                     <br /><br />
                     For over 3000 years, people have been coming from different parts of India, and even world, to Varanasi with their cultural lineage. This amalgamation of oriental cultures and western lifestyle has made the colossal city "a panorama".
                     <br /><br />
-                    Hotel Palace on Ganges has embraced all distinct cultures of India accordingly, altogether 24 rooms, under this Grand Heritage each room is designed and Dedicated to one of the provincial cultures. This vivid endeavor is to give a glimpse of the different cultures of India under one roof... which you may feel very strongly.
+                    <em>
+                    " Hotel Palace on Ganges has embraced all distinct cultures of India accordingly, altogether 24 rooms, under this Grand Heritage each room is designed and Dedicated to one of the provincial cultures. This vivid endeavor is to give a glimpse of the different cultures of India under one roof... which you may feel very strongly. "
+                    </em>
                     <br /><br />
                   </div>
                   <span>Palace on Ganges <br />A Grand Heritage Hotel</span>

@@ -34,7 +34,7 @@ export default function Features() {
                 <div className="inner-column">
                   <div className="content-box">
                     <div className="sec-title">
-                      <span className="sub-title">DISCOVER</span>
+                      <span className="sub-title">EXPERIENCE</span>
                       <h2>Boating Facilities</h2>
                       <div className="text">Embark on a captivating journey across the glistening waters that frame our breath-taking hotel with our custom-designed Boat Booking Service. Whether you are drawn to the quietude of a sunset sail, eager to explore the lesser-known treasures of the River Ganges or looking to indulge in the luxury of a private yacht excursion, our service is meticulously designed to meet every nautical whim.</div>
                     </div>

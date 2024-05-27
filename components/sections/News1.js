@@ -24,7 +24,7 @@ const News1 = () => {
                 <div className="auto-container">
                     <div className="sec-title text-center">
                         <span className="sub-title">Empowering Futures, Building Legacies</span>
-                        <h2>Our Sister Companies</h2>
+                        <h2>Our Sister Concern</h2>
                     </div>
                         <div className="row">
                         {data.map((item, i) => (
