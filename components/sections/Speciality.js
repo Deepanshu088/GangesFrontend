@@ -36,10 +36,12 @@ export default function SPECIALITY() {
                     India, the nation, with its diverse culture has one commonality that is Varanasi. Where cultures from across India have congregated and accepted this pious city as their spiritual destiny. It is thought that the person who takes his last breath in old Varanasi will surely attain salvation
                     <br /><br />
                     For over 3000 years, people have been coming from different parts of India, and even world, to Varanasi with their cultural lineage. This amalgamation of oriental cultures and western lifestyle has made the colossal city "a panorama".
-                    <br /><br />
-                    <em>
-                    " Hotel Palace on Ganges has embraced all distinct cultures of India accordingly, altogether 24 rooms, under this Grand Heritage each room is designed and Dedicated to one of the provincial cultures. This vivid endeavor is to give a glimpse of the different cultures of India under one roof... which you may feel very strongly. "
-                    </em>
+
+                    <div className='mt-8'>
+                      <em>
+                        " Hotel Palace on Ganges has embraced all distinct cultures of India accordingly, altogether 24 rooms, under this Grand Heritage each room is designed and Dedicated to one of the provincial cultures. This vivid endeavor is to give a glimpse of the different cultures of India under one roof... which you may feel very strongly. "
+                      </em>
+                    </div>
                     <br /><br />
                   </div>
                   <span>Palace on Ganges <br />A Grand Heritage Hotel</span>
@@ -49,7 +51,7 @@ export default function SPECIALITY() {
           </div>
         </div>
       </section>
-      <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="FEGSV2bMNxA" onClose={() => setOpen(false)} />
+      <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="jIXQjSaE2kk" onClose={() => setOpen(false)} />
       {/* Add Services component here */}
       <Services />
       {/* Add Testimonial2 component here */}

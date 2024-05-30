@@ -38,7 +38,7 @@ On behalf of our entire team, we sincerely welcome all esteemed guests. Your pre
                                 <figure class="image-4 overlay-anim wow fadeInLeft"><img src="images/resource/icon-1.png" alt="" /></figure>
                                 <figure class="image-5 bounce-y overlay-anim wow fadeInLeft"><img src="images/resource/icon-6.png" alt="" /></figure>
                                 <div class="btn-box">
-                                    <a href="https://www.youtube.com/watch?v=FEGSV2bMNxA" class="play-now-two"
+                                    <a href="https://www.youtube.com/watch?v=jIXQjSaE2kk" class="play-now-two"
                                         data-fancybox="gallery" data-caption>
                                         <i class="icon fa fa-play" aria-hidden="true"></i>
                                         <span class="ripple"></span>
@@ -49,7 +49,7 @@ On behalf of our entire team, we sincerely welcome all esteemed guests. Your pre
                     </div>
                 </div>
             </section>
-            <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="FEGSV2bMNxA" onClose={() => setOpen(false)} />
+            <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="jIXQjSaE2kk" onClose={() => setOpen(false)} />
         </>
     )
 }

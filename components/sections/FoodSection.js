@@ -52,7 +52,7 @@ export default function FoodSection() {
               </div>
             </div>
           </section>
-            <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="FEGSV2bMNxA" onClose={() => setOpen(false)} />
+            <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="jIXQjSaE2kk" onClose={() => setOpen(false)} />
         </>
     )
 }

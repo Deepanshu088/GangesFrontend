@@ -11,7 +11,7 @@ export default function Facilitydetails() {
       <section className="food-section pt-0">
         
       </section>
-      <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="FEGSV2bMNxA" onClose={() => setOpen(false)} />
+      <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="jIXQjSaE2kk" onClose={() => setOpen(false)} />
       {/* Add Services component here */}
       <Services />
       {/* Add Testimonial2 component here */}
