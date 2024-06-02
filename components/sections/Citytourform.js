@@ -6,71 +6,88 @@ import useHttp from '@/hooks/useHttp';
 import SpinningLoader from '../shared/Loader/SpinningLoader';
 import Input from '../shared/Input/Input';
 import Toast from '../shared/Toast/Toast';
+import FixedTable42 from '../shared/FixedTable-4-2/FixedTable-4-2';
 
 const INITIAL_FORM_VALUES = {
-	plannedDate: '',
-	plannedTime: '',
-	// city: '',
-	// country: '',
-	numberOfAdults: null,
+  plannedDate: '',
+  plannedTime: '',
+  // city: '',
+  // country: '',
+  numberOfAdults: null,
   numberOfChild: null,
-	name: '',
-	email: '',
-	phoneNumber: ''
+  name: '',
+  email: '',
+  phoneNumber: ''
 }
 
 const INITIAL_FORM_ERRORS = {
-	plannedDate: true,
-	plannedTime: true,
-	// city: true,
-	// country: true,
-	numberOfAdults: true,
+  plannedDate: true,
+  plannedTime: true,
+  // city: true,
+  // country: true,
+  numberOfAdults: true,
   numberOfChild: true,
-	name: true,
-	email: true,
-	phoneNumber: true
+  name: true,
+  email: true,
+  phoneNumber: true
 }
+
+
+const CITY_TOUR_OPTIONS = [
+  [
+    'Morning Sunrise / Evening Ganga Arti tour - 05:30 AM/PM to 08:00 AM/PM - From Assi Ghat to Manikarnika Ghat and back by walk / boat (charges extra)',
+    'Morning City tour - 05:30 AM to 8:30 AM / 11:00 AM to 03:00 PM or Evening 04:00 PM To 08:00PM Transportation Charges Extra',
+  ],
+  [
+    '---------',
+    'Half Day',
+  ],
+  [
+    'Up to 4 Person - 2000  ( 500 per person will be chargeable for extra per person )',
+    'Up to 4 Person - 2000  ( 500 per person will be chargeable for extra per person )',
+  ]
+];
 
 const Cabbooking = () => {
   const [currentTab, setCurrentTab] = useState(0);
-  const [ toastDetails, setToastDetails ] = useState({
-		show: false,
-		type: "success",
-		title: "Success",
-		message: "Successfully submitted the form.",
-	});
-	const { formValues, formErrors, onTextChange, onDateChange, showFormErrors, setShowFormErrors, setFormDetails, setFormErrorDetails } = useForm(INITIAL_FORM_VALUES, INITIAL_FORM_ERRORS);
-	const { isLoading, apiService, error, clearError } = useHttp();
+  const [toastDetails, setToastDetails] = useState({
+    show: false,
+    type: "success",
+    title: "Success",
+    message: "Successfully submitted the form.",
+  });
+  const { formValues, formErrors, onTextChange, onDateChange, showFormErrors, setShowFormErrors, setFormDetails, setFormErrorDetails } = useForm(INITIAL_FORM_VALUES, INITIAL_FORM_ERRORS);
+  const { isLoading, apiService, error, clearError } = useHttp();
 
-  
-	const nextPrev = (n) => {
-		let newValue = ((currentTab + n)  > 0) ? currentTab + n : 0;
-		setCurrentTab(newValue);
-	};
+
+  const nextPrev = (n) => {
+    let newValue = ((currentTab + n) > 0) ? currentTab + n : 0;
+    setCurrentTab(newValue);
+  };
 
   const handleInputChange = (event) => {
     // event.target.className = '';
   };
 
-	const onSubmitHandler = async (e) => {
-		e.preventDefault();
-		console.log("osnsubmtit henallder")
-		try {
-			const isFormInvalid = Object.values(formErrors).reduce((a, b) => a || b, false);
-			if (isFormInvalid) {
-				setShowFormErrors(true);
-				return;
-			}
+  const onSubmitHandler = async (e) => {
+    e.preventDefault();
+    console.log("osnsubmtit henallder")
+    try {
+      const isFormInvalid = Object.values(formErrors).reduce((a, b) => a || b, false);
+      if (isFormInvalid) {
+        setShowFormErrors(true);
+        return;
+      }
 
-			await apiService("/enquiryForm/boat", "POST", formValues);
-			setFormDetails(INITIAL_FORM_VALUES);
-			setFormErrorDetails(INITIAL_FORM_ERRORS);
-			setToastDetails({ show: true, type: 'success', title: 'Success', message: 'Form Submitted Successfully.' });
-		} catch (e) {
-			console.log(e);
-			setToastDetails({ show: true, type: 'error', title: 'Error', message: 'Something went wrong.' });
-		}
-	}
+      await apiService("/enquiryForm/boat", "POST", formValues);
+      setFormDetails(INITIAL_FORM_VALUES);
+      setFormErrorDetails(INITIAL_FORM_ERRORS);
+      setToastDetails({ show: true, type: 'success', title: 'Success', message: 'Form Submitted Successfully.' });
+    } catch (e) {
+      console.log(e);
+      setToastDetails({ show: true, type: 'error', title: 'Error', message: 'Something went wrong.' });
+    }
+  }
 
   return (
     <section className="cabbooking-booking pt-10 pb-10 p-relative fix" style={{ paddingTop: '20px', paddingBottom: '20px', position: 'relative' }}>
@@ -107,11 +124,11 @@ const Cabbooking = () => {
           }
         `}
       </style>
-      
-			{
-				toastDetails.show && 
-				<Toast show={toastDetails.show} type={toastDetails.type} title={toastDetails.title} message={toastDetails.message} setToastDetails={setToastDetails} />
-			}
+
+      {
+        toastDetails.show &&
+        <Toast show={toastDetails.show} type={toastDetails.type} title={toastDetails.title} message={toastDetails.message} setToastDetails={setToastDetails} />
+      }
 
       <div className="container">
         <div className="row align-items-center">
@@ -150,28 +167,28 @@ const Cabbooking = () => {
                   </div>
                 </div>
                 <div className={`cabbooking-tab ${currentTab === 1 ? 'active' : ''}`} style={{ display: currentTab === 1 ? 'block' : 'none' }}>
-                  
-									<Input id="name" name="name" placeholder="Enter Your Name" errorMessage="This field is required."
-										value={formValues.name} onChange={onTextChange}
-										validator={["REQUIRE"]} isError={showFormErrors && formErrors.name}
-									/>
 
-									<Input id="email" name="email" placeholder="example@example.com" errorMessage="This field is required."
-										value={formValues.email} onChange={onTextChange}
-										validator={["EMAIL"]} isError={showFormErrors && formErrors.email}
-									/>
+                  <Input id="name" name="name" placeholder="Enter Your Name" errorMessage="This field is required."
+                    value={formValues.name} onChange={onTextChange}
+                    validator={["REQUIRE"]} isError={showFormErrors && formErrors.name}
+                  />
 
-									<Input id="phoneNumber" name="phoneNumber" placeholder="Phone Number" errorMessage="Please enter a valid number (10 digits)."
-										value={formValues.phoneNumber} onChange={onTextChange}
-										validator={["PHONE_NUMBER"]} isError={showFormErrors && formErrors.phoneNumber}
-									/>
+                  <Input id="email" name="email" placeholder="example@example.com" errorMessage="This field is required."
+                    value={formValues.email} onChange={onTextChange}
+                    validator={["EMAIL"]} isError={showFormErrors && formErrors.email}
+                  />
+
+                  <Input id="phoneNumber" name="phoneNumber" placeholder="Phone Number" errorMessage="Please enter a valid number (10 digits)."
+                    value={formValues.phoneNumber} onChange={onTextChange}
+                    validator={["PHONE_NUMBER"]} isError={showFormErrors && formErrors.phoneNumber}
+                  />
 
                   <div style={{ overflow: 'auto' }}>
                     <div style={{ float: 'left' }}>
                       <button type="button" id="cabbooking-prevBtn" onClick={() => nextPrev(-1)} className="cabbooking-button1">Previous</button>
                     </div>
                     <div style={{ float: 'right' }}>
-                    <button type="button" className="cabbooking-button" onClick={onSubmitHandler} disabled={isLoading}>{ isLoading ? <SpinningLoader /> : "Submit" }</button>
+                      <button type="button" className="cabbooking-button" onClick={onSubmitHandler} disabled={isLoading}>{isLoading ? <SpinningLoader /> : "Submit"}</button>
                     </div>
                   </div>
                 </div>
@@ -185,6 +202,9 @@ const Cabbooking = () => {
           <div className="col-lg-6 col-md-6">
             <div className="booking-img">
               <img src="images/facilities/cityTour/cityTour1.jpg" alt="img" style={{ width: '100%', height: 'auto' }} />
+            </div>
+            <div className='my-10'>
+              <FixedTable42 items={CITY_TOUR_OPTIONS} images={["/images/facilities/boat/boat3.jpg", "/images/facilities/boat/boat3.jpg"]} />
             </div>
           </div>
         </div>

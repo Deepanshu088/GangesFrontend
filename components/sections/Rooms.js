@@ -16,7 +16,7 @@ export default function Rooms({homeRoomImgs}) {
 						<div className="room-block col-lg-6 col-md-6 col-sm-12">
 							<div className="inner-box wow fadeIn">
 								<div className="image-box">
-									<figure className="image-2 overlay-anim"><img src="images/home/room-1.jpg" alt="" className="md:h-[360px] max-h-[400px] w-full object-cover"/></figure>
+									<figure className="image-2 overlay-anim"><img src={`${process.env.NEXT_PUBLIC_BASE_URL}/${homeRoomImgs[0]}`} alt="" className="md:h-[360px] max-h-[400px] w-full object-cover"/></figure>
 								</div>
 								<div className="content-box">
 									<h6 className="title"><Link href="/page-groundfloor">Lower Level Heritage Deluxe</Link></h6>
@@ -37,7 +37,7 @@ export default function Rooms({homeRoomImgs}) {
 						<div className="room-block col-lg-6 col-md-6 col-sm-12">
 							<div className="inner-box wow fadeIn" data-wow-delay="200ms">
 								<div className="image-box">
-									<figure className="image-2 overlay-anim"><img src="images/home/room-2.jpg" alt="" className="md:h-[360px] max-h-[400px] w-full object-cover"/></figure>
+									<figure className="image-2 overlay-anim"><img src={`${process.env.NEXT_PUBLIC_BASE_URL}/${homeRoomImgs[1]}`} alt="" className="md:h-[360px] max-h-[400px] w-full object-cover"/></figure>
 								</div>
 								<div className="content-box">
 									<h6 className="title"><Link href="/page-firstfloor">Upper Level Heritage Deluxe</Link></h6>
@@ -58,7 +58,7 @@ export default function Rooms({homeRoomImgs}) {
 						<div className="room-block col-lg-3 col-md-6 col-sm-12">
 							<div className="inner-box wow fadeIn" data-wow-delay="300ms">
 								<div className="image-box">
-									<figure className="image-2 overlay-anim"><img src="images/home/roomPortrait2.jpg" alt="" className="md:h-[360px] max-h-[400px] w-full object-cover"/></figure>
+									<figure className="image-2 overlay-anim"><img src={`${process.env.NEXT_PUBLIC_BASE_URL}/${homeRoomImgs[2]}`} alt="" className="md:h-[360px] max-h-[400px] w-full object-cover"/></figure>
 								</div>
 								<div className="content-box">
 									<h6 className="title"><Link href="/page-groundfloor">Ganges View</Link></h6>
@@ -79,7 +79,7 @@ export default function Rooms({homeRoomImgs}) {
 						<div className="room-block col-lg-6 col-md-6 col-sm-12">
 							<div className="inner-box large-style wow fadeIn" data-wow-delay="400ms">
 								<div className="image-box">
-									<figure className="image-2 overlay-anim"><img src="images/home/room-4.jpg" alt="" className="md:h-[360px] max-h-[400px] w-full object-cover"/></figure>
+									<figure className="image-2 overlay-anim"><img src={`${process.env.NEXT_PUBLIC_BASE_URL}/${homeRoomImgs[3]}`} alt="" className="md:h-[360px] max-h-[400px] w-full object-cover"/></figure>
 								</div>
 								<div className="content-box">
 									<h6 className="title"><Link href="/page-thirdfloor">Lower Level Heritage Deluxe</Link></h6>
@@ -100,7 +100,7 @@ export default function Rooms({homeRoomImgs}) {
 						<div className="room-block col-lg-3 col-md-6 col-sm-12">
 							<div className="inner-box wow fadeIn" data-wow-delay="500ms">
 								<div className="image-box">
-									<figure className="image-2 overlay-anim"><img src="images/home/roomPortrait1.jpg" alt="" className="md:h-[360px] max-h-[400px] w-full object-cover"/></figure>
+									<figure className="image-2 overlay-anim"><img src={`${process.env.NEXT_PUBLIC_BASE_URL}/${homeRoomImgs[4]}`} alt="" className="md:h-[360px] max-h-[400px] w-full object-cover"/></figure>
 								</div>
 								<div className="content-box">
 									<h6 className="title"><Link href="/page-thirdfloor">Ganges View</Link></h6>

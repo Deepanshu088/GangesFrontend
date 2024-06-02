@@ -6,6 +6,8 @@ import Input from '../shared/Input/Input';
 import useHttp from '@/hooks/useHttp';
 import SpinningLoader from '../shared/Loader/SpinningLoader';
 import Toast from '../shared/Toast/Toast';
+import Carousel from '../shared/Carousel/Carousel';
+import FixedTable42 from '../shared/FixedTable-4-2/FixedTable-4-2';
 
 const INITIAL_FORM_VALUES = {
 	plannedDate: '',
@@ -31,9 +33,32 @@ const INITIAL_FORM_ERRORS = {
 	phoneNumber: true
 }
 
+const BoatCarouselItems = [
+	{ imagePath: "/images/facilities/boat/boat3.jpg" },
+	{ imagePath: "/images/facilities/boat/boat4.jpg" },
+	{ imagePath: "/images/facilities/boat/boat5.jpg" },
+	{ imagePath: "/images/facilities/boat/boat6.jpg" },
+	{ imagePath: "/images/facilities/boat/boat7.jpg" }
+]
+
+const items = [
+	[
+		'Morning Sunrise tour - 05:30 AM to 7:00 AM - From Assi Ghat to Manikarnika Ghat and back',
+		'Evening Sunrise tour - 05:30 AM to 7:00 AM - From Assi Ghat to Dashaswamedh Ghat and back',
+	],
+	[
+		'Motor Boat - 3200, Hand boat 2800 prices for 4 person',
+		'Motor boat',
+	],
+	[
+		'Above 4 Person - 400 will be charged for extra per person',
+		'Above 4 Person - 400 will be charged for extra per person'
+	]
+];
+
 const Cabbooking = () => {
 	const [currentTab, setCurrentTab] = useState(0);
-    const [ toastDetails, setToastDetails ] = useState({
+	const [toastDetails, setToastDetails] = useState({
 		show: false,
 		type: "success",
 		title: "Success",
@@ -47,7 +72,6 @@ const Cabbooking = () => {
 		setCurrentTab(newValue);
 	};
 
-	
 	const onSubmitHandler = async (e) => {
 		e.preventDefault();
 		console.log("osnsubmtit henallder")
@@ -68,38 +92,37 @@ const Cabbooking = () => {
 		}
 	}
 
-
 	return (
 		<section className="cabbooking-booking pt-10 pb-10 p-relative fix" style={{ paddingTop: '20px', paddingBottom: '20px', position: 'relative' }}>
 			<style>
 				{`
-          .cabbooking-button {
-            background-color: #ad9700;
-            color: white;
-            padding: 10px 30px;
-            border: none;
-            cursor: pointer;
-            border-radius: 4px;
-            margin-right: 10px;
-          }
+					.cabbooking-button {
+						background-color: #ad9700;
+						color: white;
+						padding: 10px 30px;
+						border: none;
+						cursor: pointer;
+						border-radius: 4px;
+						margin-right: 10px;
+					}
 
-          .cabbooking-button:hover {
-            background-color: #ad9700;
-          }
-          .error {
-            border-bottom: 2px solid red !important;
-          }
-        `}
+					.cabbooking-button:hover {
+						background-color: #ad9700;
+					}
+					.error {
+						border-bottom: 2px solid red !important;
+					}
+				`}
 			</style>
-			
+
 			{
-				toastDetails.show && 
+				toastDetails.show &&
 				<Toast show={toastDetails.show} type={toastDetails.type} title={toastDetails.title} message={toastDetails.message} setToastDetails={setToastDetails} />
 			}
 
 			<div className="container">
 				<div className="row align-items-center">
-					<div className="col-lg-6 col-md-6 cabbooking-contact-bg02" style={{ paddingLeft: '20px' }}>
+					<div className="col-lg-6 col-md-6 cabbooking-contact-bg02 " style={{ paddingLeft: '20px' }}>
 						<div className="section-title center-align">
 							<h2>Boat Ride Booking</h2>
 						</div>
@@ -161,7 +184,7 @@ const Cabbooking = () => {
 											<button type="button" id="cabbooking-prevBtn" onClick={() => nextPrev(-1)} className="cabbooking-button1">Previous</button>
 										</div>
 										<div style={{ float: 'right' }}>
-											<button type="button" className="cabbooking-button" onClick={onSubmitHandler} disabled={isLoading}>{ isLoading ? <SpinningLoader /> : "Submit" }</button>
+											<button type="button" className="cabbooking-button" onClick={onSubmitHandler} disabled={isLoading}>{isLoading ? <SpinningLoader /> : "Submit"}</button>
 										</div>
 									</div>
 								</div>
@@ -174,7 +197,12 @@ const Cabbooking = () => {
 					</div>
 					<div className="col-lg-6 col-md-6">
 						<div className="booking-img">
-							<img src="images/home/boat2.jpg" alt="" className='h-full w-auto object-cover' />
+							{/* <img src="images/home/boat2.jpg" alt="" className='h-full w-auto object-cover' /> */}
+							<Carousel items={BoatCarouselItems} />
+						</div>
+
+						<div className='mt-10'>
+							<FixedTable42 items={items} images={["/images/facilities/boat/boat3.jpg", "/images/facilities/boat/boat3.jpg"]} />
 						</div>
 					</div>
 				</div>

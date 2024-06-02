@@ -30,6 +30,11 @@ License: copyright commercial
 24. Map Section
 25. Clients Section
 26. Main Footer
+
+27. Booking Details Section
+28. Prime React Styling
+29. Carousel Styling
+30. ChatBot 
 **********************************************/
 @tailwind base;
 @tailwind components;
@@ -45,6 +50,10 @@ License: copyright commercial
 @import url("tm-utility-classes.css");
 
 @import "primereact/resources/themes/lara-light-cyan/theme.css";
+
+/* Chat Bot CSS Link */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
 
 :root {
   --theme-color-light: #ffffff;
@@ -102,6 +111,24 @@ License: copyright commercial
   --container-pt: 120px;
   --container-pb: 120px;
 }
+
+
+/*
+ * Animations
+ * -----------------------------------------------
+*/
+
+@keyframes breathing {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  }
+}
+
 
 /*
  * typography.scss
@@ -3773,6 +3800,7 @@ Section Title
   display: inline-block;
   position: relative;
   z-index: 99;
+  animation: breathing 1.5s ease-in-out infinite;
 }
 .about-section .outer-box {
   display: -webkit-box;
@@ -4758,6 +4786,7 @@ Section Title
   border: 1px solid var(--theme-color-light);
   border-radius: 50%;
   display: inline-block;
+  animation: breathing 1.5s ease-in-out infinite;
 }
 @media (max-width: 575.98px) {
   .video-section .btn-column .inner-column .play-now-two {
@@ -4765,6 +4794,7 @@ Section Title
     height: 100px;
     line-height: 100px;
     top: 70px;
+    animation: breathing 1.5s ease-in-out infinite;
   }
 }
 
@@ -6514,6 +6544,7 @@ Section Title
   border: 1px solid var(--theme-color-light);
   border-radius: 50%;
   display: inline-block;
+  animation: breathing 1.5s ease-in-out infinite;
 }
 @media (max-width: 1199.98px) {
   .food-section .image-column .inner-column .play-now-two {
@@ -6522,6 +6553,7 @@ Section Title
     top: 40px;
     right: 40px;
     line-height: 100px;
+    animation: breathing 1.5s ease-in-out infinite;
   }
 }
 .food-section .image-column .inner-column .quote-box {
@@ -9704,9 +9736,17 @@ Sidebar
 --------------------------------------------------------------*/
 
 .cabbooking-booking-form {
-  background-color: #f9f9f9;
-  padding: 32px;
+  /* background-color: #f9f9f9; */
+  /* padding: 32px; */
+  margin: auto;
+}
+
+.cabbooking-contact-bg02 {
+  background-color: #f8f5f0;
+  padding: 30px !important ;
+  border-radius: 8px;
   box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+  /* text-align: start; */
 }
 
 .cabbooking-button1 {
@@ -10039,4 +10079,78 @@ a {
 .no-scrollbar {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+}
+
+/*--------------------------------------------------------------
+# Carousel CSS
+--------------------------------------------------------------*/
+
+.custom-carousel ::-webkit-scrollbar {
+  display: none;
+}
+
+/*--------------------------------------------------------------
+# Chat Bot
+--------------------------------------------------------------*/
+
+#botfullyPrompt i {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  font-size: 20px;
+  color: #a9a7a7;
+}
+
+.dio-chat-button {
+  position: fixed;
+  width: 80px;
+  height: 80px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #aa8453;
+  color: #fff;
+  border-radius: 50px;
+  border: none;
+  text-align: center;
+  font-size: 30px;
+  margin: 0px;
+  padding: 0px;
+  z-index: 100;
+}
+
+.chat-bubble-message {
+  position: fixed;
+  bottom: 128px;
+  right: 44px;
+  margin: auto;
+  max-width: 215px;
+  box-shadow: 1px 1px 10px -1px #aaa;
+  border-radius: 5px;
+  padding: 0px 15px;
+  height: 60px;
+  color: #333;
+  line-height: 20px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 14px;
+  z-index: 100;
+}
+.chat-bubble-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
+  object-fit: cover;
+  vertical-align: top;
+}
+
+.bubble-message-header {
+  font-weight:600;
+  cursor: pointer;
+}
+
+.bubble-message-text {
+  color: #666;
+  font-size: 13px;
 }

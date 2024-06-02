@@ -6,12 +6,15 @@ import CounterInput from '../shared/Input/CounterInput';
 import useHttp from '@/hooks/useHttp';
 import SpinningLoader from '../shared/Loader/SpinningLoader';
 import Toast from '../shared/Toast/Toast';
+import DropDownInput from '../shared/Input/DropDown';
+import FixedTable42 from '../shared/FixedTable-4-2/FixedTable-4-2';
 
 const INITIAL_FORM_VALUES = {
 	pickupPoint: "",
 	dropoffPoint: "",
 	plannedDate: "",
 	plannedTime: "",
+	cabType: "",
 	numberOfAdults: null,
 	numberOfChild: null,
 	name: "",
@@ -31,8 +34,50 @@ const INITIAL_FORM_ERRORS = {
 	phoneNumber: true
 }
 
+const items = [
+	[
+		'Taxi for upto 4 Person | Airport Pickup/Drop - 1250 | Railway Station Pickup/Drop - 800 | Full Day - 2200 | Half Day - 1400 | Sarnath Tour - 1600',
+		'Taxi for upto 6 Person | Airport Pickup/Drop - 1500 | Railway Station Pickup/Drop - 1100 | Full Day - 3200 | Half Day - 2200 | Sarnath Tour - 2000',
+	],
+	[
+		'Swift Dzire, Indigo or Amaze',
+		'Innova, Crysta or Ertiga',
+	],
+	[
+		'Parking and toll charges will be extra, after 09:00 PM 300 will be chargable as driver night charge',
+		'Parking and toll charges will be extra, after 09:00 PM 300 will be chargable as driver night charge',
+	]
+];
+
+const CabBookingCarOptions = [
+	{
+		name: "Swift Dzire",
+		value: "Swift Dzire"
+	},
+	{
+		name: "Indigo",
+		value: "Indigo"
+	},
+	{
+		name: "Amaze",
+		value: "Amaze"
+	},
+	{
+		name: "Innova",
+		value: "Innova"
+	},
+	{
+		name: "Crysta",
+		value: "Crysta"
+	},
+	{
+		name: "Ertiga",
+		value: "Ertiga"
+	},
+]
+
 const Cabbooking = () => {
-    const [ toastDetails, setToastDetails ] = useState({
+	const [toastDetails, setToastDetails] = useState({
 		show: false,
 		type: "success",
 		title: "Success",
@@ -74,7 +119,7 @@ const Cabbooking = () => {
 
 	return (
 		<section className="cabbooking-booking pt-10 pb-10 p-relative fix" style={{ paddingTop: '120px', paddingBottom: '120px', position: 'relative' }}>
-			
+
 			<style>
 				{`
           .cabbooking-input {
@@ -118,7 +163,7 @@ const Cabbooking = () => {
 			</style>
 
 			{
-				toastDetails.show && 
+				toastDetails.show &&
 				<Toast show={toastDetails.show} type={toastDetails.type} title={toastDetails.title} message={toastDetails.message} setToastDetails={setToastDetails} />
 			}
 
@@ -130,7 +175,7 @@ const Cabbooking = () => {
 						</div>
 						<p>To reserve the ride, please complete and submit the booking form.</p>
 						<div className="w3layoutscontactagileits cabbooking-booking-form">
-							<form id="cabbooking-regForm" action="/action_page.php">
+							<form id="cabbooking-regForm" className='bk-form' action="/action_page.php">
 								{
 									currentTab === 0 &&
 									<div className={`cabbooking-tab ${currentTab === 0 ? 'active' : ''}`} style={{ display: currentTab === 0 ? 'block' : 'none' }}>
@@ -151,6 +196,11 @@ const Cabbooking = () => {
 										<DatePicker id="plannedTime" name="plannedTime" placeholder="Select Time" errorMessage="This field is required."
 											value={formValues.plannedTime} onChange={onDateChange} timeOnly isError={showFormErrors && formErrors.plannedTime}
 										/>
+
+										{/* <DropDownInput id="cabType" name="cabType" placeholder="Select Cab Size" errorMessage="This field is required."
+											value={formValues.cabType} onChange={onTextChange} isError={showFormErrors && formErrors.cabType}
+											options={CabBookingCarOptions}
+										/> */}
 
 										<CounterInput id="numberOfAdults" name="numberOfAdults" placeholder="Number of Adults" type='number' errorMessage="This field is required."
 											value={formValues.numberOfAdults} onChange={onTextChange}
@@ -185,13 +235,13 @@ const Cabbooking = () => {
 											value={formValues.phoneNumber} onChange={onTextChange}
 											validator={["PHONE_NUMBER"]} isError={showFormErrors && formErrors.phoneNumber}
 										/>
-										
+
 										<div style={{ width: "100%" }}>
 											<div style={{ float: 'left' }}>
 												<button type="button" id="cabbooking-prevBtn" onClick={() => nextPrev(-1)} className="cabbooking-button1 w-full">Previous</button>
 											</div>
 											<div style={{ float: 'right' }}>
-												<button type="submit" id="cabbooking-submitBtn" className="cabbooking-button w-full text-center" onClick={onSubmitHandler} disabled={isLoading}>{ isLoading ? <SpinningLoader /> : "Submit" }</button>
+												<button type="submit" id="cabbooking-submitBtn" className="cabbooking-button w-full text-center" onClick={onSubmitHandler} disabled={isLoading}>{isLoading ? <SpinningLoader /> : "Submit"}</button>
 											</div>
 										</div>
 									</div>
@@ -207,7 +257,11 @@ const Cabbooking = () => {
 					</div>
 					<div className="col-lg-6 col-md-6">
 						<div className="booking-img">
-							<img src="images/cab.jpg" alt="img" style={{ width: '100%', height: 'auto' }} />
+							<img src="/images/facilities/table/car2.jpg" alt="img" style={{ width: '100%', height: 'auto' }} />
+						</div>
+
+						<div className='my-10'>
+							<FixedTable42 items={items} images={["/images/facilities/boat/boat3.jpg", "/images/facilities/boat/boat3.jpg"]} />
 						</div>
 					</div>
 				</div>

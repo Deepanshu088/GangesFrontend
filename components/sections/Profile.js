@@ -6,13 +6,12 @@ import ModalVideo from 'react-modal-video';
 import { useDispatch, useSelector } from 'react-redux';
 
 export default function Profile() {
-	const [isOpen, setOpen] = useState(false);
-	const [showPopup, setShowPopup] = useState(true);
-	const [hoveredCity, setHoveredCityDetails] = useState({});
-
 	const { groundFloor, firstFloor, secondFloor, thirdFloor } = useSelector(state => state.room);
 	const dispatch = useDispatch();
 	const { apiService } = useHttp();
+	const [isOpen, setOpen] = useState(false);
+	const [showPopup, setShowPopup] = useState(true);
+	const [hoveredCity, setHoveredCityDetails] = useState(groundFloor[0] || {});
 
 	useEffect(() => {
 		dispatch(fetchAllRooms(apiService))

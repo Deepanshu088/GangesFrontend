@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 import store, { persistor } from "@/redux/store";
+import ChatbotScript from "@/components/ChatBot";
 
 function MyApp({ Component, pageProps }) {
     // const [loading, setLoading] = useState(false);
@@ -24,6 +25,7 @@ function MyApp({ Component, pageProps }) {
             ) : (
                 <div className="preloader"></div>
             )}
+            <ChatbotScript />
         </PersistGate>
     </Provider>
 }

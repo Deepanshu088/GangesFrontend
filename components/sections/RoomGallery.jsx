@@ -39,7 +39,7 @@ const RoomGallery = ({ data }) => {
                 </div>
                 <div className={`z-[2000] fixed m-auto text-center top-1/2 bg-white rounded-2xl -translate-y-1/2 shadow-modal inset-x-4 lg:inset-x-60 w-3/5  max-h-[70vh]`}>
                     <div className="text-center max-h-[90vh] m-auto text-black w-full relative">
-                        <img src={`${process.env.NEXT_PUBLIC_BASE_URL}/${data[selectedIndex]}`} className="w-full object-cover max-h-[70vh]" />
+                        <img src={data[selectedIndex]} className="w-full object-cover max-h-[70vh]" />
                     </div>
                 </div>
             </>
@@ -49,7 +49,7 @@ const RoomGallery = ({ data }) => {
         </div>
         <div className="flex justify-start overflow-x-auto no-scrollbar">
             {
-                data.map((item, index) => index != selectedIndex && 
+                data.map((item, index) => index != selectedIndex &&
                     <div className="mr-4 last:mr-4 ">
                         <img src={item} className="h-[70px] mr-4 last:mr-0 md:h-[100px] object-cover" onClick={() => changeSelectedIndex(index)} />
                     </div>
