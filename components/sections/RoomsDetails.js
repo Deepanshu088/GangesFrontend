@@ -2,6 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 import RoomGallery from './RoomGallery';
 import { useSelector } from 'react-redux';
+import StandardQueryForm from '../StandardQueryForm/StandardQueryForm';
 
 const listOfImages = ["/images/room-1.jpg", "/images/rooms/room4.jpg", "/images/room-3.jpg", "/images/rooms/room1.jpg", "/images/rooms/room3.jpg"]
 
@@ -163,31 +164,7 @@ export default function RoomDetails({ roomDetail = {} }) {
 									</ul>
 								</div><br /><br />
 
-								<div className="p-4 p-lg-5 bg-light">
-									<h4 className="mt-0">Send Query</h4>
-									<form id="contact_form" name="contact_form" className="" action="includes/sendmail.php" method="post">
-										<div className="mb-3">
-
-											<input name="form_name" id="name" className="form-control bg-white" type="text" placeholder="Enter Name" />
-										</div>
-										<div className="mb-3">
-
-											<input name="form_email" id="email" className="form-control bg-white required email" type="email" placeholder="Enter Email" />
-										</div>
-										<div className="mb-3">
-
-											<input name="form_phone" id="phone" className="form-control bg-white required phone" type="number" placeholder="Enter Phone" />
-										</div>
-										<div className="mb-3">
-
-											<textarea name="form_message" id="message" className="form-control bg-white required" rows="5" placeholder="Enter Message"></textarea>
-										</div>
-										<div className="mb-0">
-											<input name="form_botcheck" className="form-control" type="hidden" value="" />
-											<button type="submit" className="theme-btn btn-style-one" data-loading-text="Please wait..."><span className="btn-title">Submit </span></button>
-										</div>
-									</form>
-								</div>
+								<StandardQueryForm />
 
 
 							</div>

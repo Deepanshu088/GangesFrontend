@@ -7,14 +7,16 @@ import SpinningLoader from '../shared/Loader/SpinningLoader';
 import Input from '../shared/Input/Input';
 import Toast from '../shared/Toast/Toast';
 import FixedTable42 from '../shared/FixedTable-4-2/FixedTable-4-2';
+import { useRouter } from 'next/router';
 
 const INITIAL_FORM_VALUES = {
   plannedDate: '',
   plannedTime: '',
   // city: '',
   // country: '',
-  numberOfAdults: null,
-  numberOfChild: null,
+  // numberOfAdults: null,
+  // numberOfChild: null,
+	noOfPassengers: null,
   name: '',
   email: '',
   phoneNumber: ''
@@ -25,8 +27,9 @@ const INITIAL_FORM_ERRORS = {
   plannedTime: true,
   // city: true,
   // country: true,
-  numberOfAdults: true,
-  numberOfChild: true,
+  // numberOfAdults: true,
+  // numberOfChild: true,
+	noOfPassengers: true,
   name: true,
   email: true,
   phoneNumber: true
@@ -49,6 +52,7 @@ const CITY_TOUR_OPTIONS = [
 ];
 
 const Cabbooking = () => {
+  const router = useRouter();
   const [currentTab, setCurrentTab] = useState(0);
   const [toastDetails, setToastDetails] = useState({
     show: false,
@@ -79,15 +83,23 @@ const Cabbooking = () => {
         return;
       }
 
-      await apiService("/enquiryForm/boat", "POST", formValues);
+      await apiService("/enquiryForm/tour", "POST", formValues);
       setFormDetails(INITIAL_FORM_VALUES);
       setFormErrorDetails(INITIAL_FORM_ERRORS);
       setToastDetails({ show: true, type: 'success', title: 'Success', message: 'Form Submitted Successfully.' });
+      router.push("/form-success");
     } catch (e) {
       console.log(e);
       setToastDetails({ show: true, type: 'error', title: 'Error', message: 'Something went wrong.' });
     }
   }
+
+
+  let isFormInvalid = null;
+  if (showFormErrors) {
+    isFormInvalid = Object.values(formErrors).reduce((a, b) => a || b, false);
+  }
+
 
   return (
     <section className="cabbooking-booking pt-10 pb-10 p-relative fix" style={{ paddingTop: '20px', paddingBottom: '20px', position: 'relative' }}>
@@ -150,17 +162,17 @@ const Cabbooking = () => {
                     isError={showFormErrors && formErrors.plannedTime}
                   />
 
-                  <CounterInput id="numberOfAdults" name="numberOfAdults" placeholder="Number of Adults" type='number' errorMessage="This field is required."
-                    value={formValues.numberOfAdults}
+                  <CounterInput id="noOfPassengers" name="noOfPassengers" placeholder="Number of Passengers" type='number' errorMessage="This field is required."
+                    value={formValues.noOfPassengers}
                     onChange={onTextChange}
-                    isError={showFormErrors && formErrors.numberOfAdults}
+                    isError={showFormErrors && formErrors.noOfPassengers}
                   />
 
-                  <CounterInput id="numberOfChild" name="numberOfChild" placeholder="Number of Children" type='number' errorMessage="This field is required."
+                  {/* <CounterInput id="numberOfChild" name="numberOfChild" placeholder="Number of Children" type='number' errorMessage="This field is required."
                     value={formValues.numberOfChild}
                     onChange={onTextChange}
                     isError={showFormErrors && formErrors.numberOfChild}
-                  />
+                  /> */}
 
                   <div style={{ textAlign: 'right' }}>
                     <button type="button" id="cabbooking-nextBtn" onClick={() => nextPrev(1)} className="cabbooking-button">Next</button>
@@ -183,6 +195,10 @@ const Cabbooking = () => {
                     validator={["PHONE_NUMBER"]} isError={showFormErrors && formErrors.phoneNumber}
                   />
 
+                  {
+                    isFormInvalid && <div className="text-orange-600 text-right text-sm my-6 mb-8"> <i class="fa-solid fa-triangle-exclamation mr-2"></i> Please fill the form completely.</div>
+                  }
+
                   <div style={{ overflow: 'auto' }}>
                     <div style={{ float: 'left' }}>
                       <button type="button" id="cabbooking-prevBtn" onClick={() => nextPrev(-1)} className="cabbooking-button1">Previous</button>
@@ -201,7 +217,7 @@ const Cabbooking = () => {
           </div>
           <div className="col-lg-6 col-md-6">
             <div className="booking-img">
-              <img src="images/facilities/cityTour/cityTour1.jpg" alt="img" style={{ width: '100%', height: 'auto' }} />
+              <img src="images/facilities/cityTour/cityTour1.jpg" className='rounded-xl' alt="img" style={{ width: '100%', height: 'auto' }} />
             </div>
             <div className='my-10'>
               <FixedTable42 items={CITY_TOUR_OPTIONS} images={["/images/facilities/boat/boat3.jpg", "/images/facilities/boat/boat3.jpg"]} note="Up to 4 Person - 2000  ( 500 per person will be chargeable for extra per person )" />

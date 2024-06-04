@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ModalVideo from 'react-modal-video';
 import Carousel from '../shared/Carousel/Carousel';
+import FourImagesCarousel from '../shared/Carousel/FourImageCarousel';
 
 const RestaurentCarouselItems = [
   { imagePath: "/images/facilities/restaurant/restaurant1.jpg" },
@@ -31,9 +32,6 @@ export default function Restaurant() {
                 </div>
               </div>
 
-              {/* <div className='my-20 w-full left-0'>
-                <Carousel items={RestaurentCarouselItems} />
-              </div> */}
             </div>
             <div className="content-column col-xl-8">
               <div className="inner-column">
@@ -69,6 +67,10 @@ export default function Restaurant() {
           </div>
         </div>
 
+      </section>
+
+      <section className='container mb-[20vh]'>
+        <FourImagesCarousel items={RestaurentCarouselItems} />
       </section>
 
 

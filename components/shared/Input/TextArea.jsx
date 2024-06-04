@@ -1,6 +1,6 @@
 import validate from "../../../utilities/validate";
 
-const Input = ({
+const TextArea = ({
     id,
     name,
     placeholder,
@@ -30,14 +30,14 @@ const Input = ({
         }
     };
 
-    let variantClassName = "";
+    let variantClassName = "form-control ";
 
     switch(variant) {
-        case "primary": variantClassName = "form-control bg-white rounded-none border border-[#adadad]"
+        case "primary": variantClassName = "form-control overflow-auto bg-white rounded-none border border-[#adadad] h-[250px]"
             break;
-        case "secondary": variantClassName = "form-control";
+        case "secondary": variantClassName = "form-control overflow-auto h-[250px]";
             break;
-        case "third": variantClassName = "form-control bg-white"
+        case "third": variantClassName = "form-control overflow-auto bg-white h-[200px]";
             break;
     }
 
@@ -46,7 +46,7 @@ const Input = ({
             {label && <div className="font-medium mb-2 text-base">{label}</div>}
             <div>
                 <span className="w-full p-input-icon-left">
-                    <input
+                    <textarea
                         className={`${variantClassName}`}
                         style={{width: "100%"}}
                         id={id}
@@ -66,4 +66,4 @@ const Input = ({
     );
 };
 
-export default Input;
+export default TextArea;

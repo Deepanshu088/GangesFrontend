@@ -12,9 +12,9 @@ export default function Document() {
 				<Main />
 				<NextScript />
 				<div className="chat-bubble-message" id="botfullyPrompt">
-					<i className="fa fa-times" style={{ position: 'absolute', right: '5px', top: '5px', fontSize: '20px', color: '#a9a7a7' }} onClick={() => document.getElementById('botfullyPrompt').style.display = 'none'}></i>
-					<div style={{ fontWeight: '600', cursor: 'pointer' }} id="promptHeader" className="bubble-message-header"></div>
-					<div style={{ color: '#666', fontSize: '13px' }} id="promptBody" className="bubble-message-text"></div>
+					<i id="chatBotCross" className="chatBotCross fa fa-times" onClick={() => document.getElementById('botfullyPrompt').style.display = 'none'}></i>
+					<div id="promptHeader" className="bubble-message-header"></div>
+					<div id="promptBody" className="bubble-message-text"></div>
 				</div>
 			</body>
 		</Html>

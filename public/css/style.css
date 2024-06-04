@@ -4826,7 +4826,7 @@ Section Title
 }
 .room-block .inner-box {
   /* overflow: hidden; */
-  border-radius: 8px;
+  border-radius: 12px;
   position: relative;
 }
 .room-block .inner-box:before {
@@ -4853,7 +4853,7 @@ Section Title
 
 .room-block .inner-box .content-box {
   text-shadow: 0px 1px 13px rgb(0, 0, 0);
-  border-radius: 8px;
+  border-radius: 12px;
 }
 
 .room-block .inner-box:hover .box-caption {
@@ -4871,12 +4871,12 @@ Section Title
 }
 .room-block .inner-box:hover .image-box figure {
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: 12px;
 }
 .room-block .inner-box:hover .image-box figure img {
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
-  border-radius: 8px;
+  border-radius: 12px;
 }
 .room-block .inner-box .box-caption {
   position: absolute;
@@ -4935,7 +4935,7 @@ Section Title
 .room-block .inner-box .image-box figure {
   margin-bottom: 27px;
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: 12px;
 }
 .room-block .inner-box .image-box figure img {
   -webkit-transition: all 0.3s ease;
@@ -6517,11 +6517,11 @@ Section Title
     padding-bottom: 30px;
   }
 }
-@media (max-width: 991.98px) {
+/* @media (max-width: 991.98px) {
   .food-section .image-column {
     display: none;
   }
-}
+} */
 .food-section .image-column .inner-column {
   position: relative;
   margin-left: -375px;
@@ -6572,11 +6572,11 @@ Section Title
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
-@media (max-width: 1399.98px) {
+/* @media (max-width: 1399.98px) {
   .food-section .image-column .inner-column .quote-box {
     display: none;
   }
-}
+} */
 .food-section .image-column .inner-column .quote-box .icon-box {
   line-height: 83px;
 }
@@ -6689,11 +6689,11 @@ Section Title
   margin-right: 0;
 }
 
-@media only screen and (max-width: 1200px) {
+/* @media only screen and (max-width: 1200px) {
   .food-section .image-column {
     display: none;
   }
-}
+} */
 /*** 
 
 ====================================================================
@@ -9744,7 +9744,7 @@ Sidebar
 .cabbooking-contact-bg02 {
   background-color: #f8f5f0;
   padding: 30px !important ;
-  border-radius: 8px;
+  border-radius: 12px;
   box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
   /* text-align: start; */
 }
@@ -9840,6 +9840,11 @@ Sidebar
   /* background-color: #0a267a; */
 }
 
+.p-dropdown:focus, .p-dropdown:active {
+  outline: none;
+  box-shadow: none;
+}
+
 .p-button-icon-only {
   margin-right: 20px;
 }
@@ -9854,6 +9859,11 @@ Sidebar
   box-shadow: none !important; /* Removes focus box-shadow if there is any */
 }
 
+
+
+/*--------------------------------------------------------------
+# Gallery Section styles
+--------------------------------------------------------------*/
 /* Gallery Section styles*/
 
 * {
@@ -9904,9 +9914,18 @@ a {
   gap: 10px; /* Space between filter buttons */
 }
 
-.gallery-btn-active {
-  font-weight: bold;
+.gallery-filter a {
+  margin: auto 12px;
   color: black;
+}
+
+.gallery-filter .gallery-btn-active {
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 12px;
+  color: white;
+  margin: auto 0;
+  background-color: var(--theme-color1);
 }
 
 .gallery-gallery {
@@ -10095,7 +10114,7 @@ a {
 
 #botfullyPrompt i {
   position: absolute;
-  right: 5px;
+  right: 10px;
   top: 5px;
   font-size: 20px;
   color: #a9a7a7;

@@ -14,10 +14,14 @@ const ChatbotScript = () => {
 
             document.getElementById("promptHeader").innerHTML = promptHeader;
             document.getElementById("promptBody").innerHTML = promptBody;
+            
+            document.getElementById("chatBotCross")?.addEventListener("click", closeBotfullyPrompt);
 
             function closeBotfullyPrompt() {
                 document.getElementById('botfullyPrompt').style.display = 'none';
             }
+
+
         `;
 
         const script = document.createElement('script');

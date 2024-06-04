@@ -8,14 +8,29 @@ import SpinningLoader from '../shared/Loader/SpinningLoader';
 import Toast from '../shared/Toast/Toast';
 import Carousel from '../shared/Carousel/Carousel';
 import FixedTable42 from '../shared/FixedTable-4-2/FixedTable-4-2';
+import { useRouter } from 'next/router';
+import DropDownInput from '../shared/Input/DropDown';
+
+const BoatType = [
+	{
+		name: "Motor Boat",
+		value: "motorBoat"
+	},
+	{
+		name: "Hand Boat",
+		value: "handBoat"
+	},
+]
 
 const INITIAL_FORM_VALUES = {
 	plannedDate: '',
 	plannedTime: '',
 	city: '',
 	country: '',
-	numberOfAdults: null,
-	numberOfChild: null,
+	noOfPassengers: null,
+	// numberOfAdults: null,
+	// numberOfChild: null,
+	boatType: null,
 	name: '',
 	email: '',
 	phoneNumber: ''
@@ -26,8 +41,10 @@ const INITIAL_FORM_ERRORS = {
 	plannedTime: true,
 	city: true,
 	country: true,
-	numberOfAdults: true,
-	numberOfChild: true,
+	// numberOfAdults: true,
+	// numberOfChild: true,
+	boatType: true,
+	noOfPassengers: true,
 	name: true,
 	email: true,
 	phoneNumber: true
@@ -57,6 +74,7 @@ const items = [
 ];
 
 const Cabbooking = () => {
+	const router = useRouter();
 	const [currentTab, setCurrentTab] = useState(0);
 	const [toastDetails, setToastDetails] = useState({
 		show: false,
@@ -75,6 +93,7 @@ const Cabbooking = () => {
 	const onSubmitHandler = async (e) => {
 		e.preventDefault();
 		console.log("osnsubmtit henallder")
+		console.log(formErrors);
 		try {
 			const isFormInvalid = Object.values(formErrors).reduce((a, b) => a || b, false);
 			if (isFormInvalid) {
@@ -86,11 +105,18 @@ const Cabbooking = () => {
 			setFormDetails(INITIAL_FORM_VALUES);
 			setFormErrorDetails(INITIAL_FORM_ERRORS);
 			setToastDetails({ show: true, type: 'success', title: 'Success', message: 'Form Submitted Successfully.' });
+			router.push("/form-success");
 		} catch (e) {
 			console.log(e);
 			setToastDetails({ show: true, type: 'error', title: 'Error', message: 'Something went wrong.' });
 		}
 	}
+
+	let isFormInvalid = null;
+	if (showFormErrors) {
+		isFormInvalid = Object.values(formErrors).reduce((a, b) => a || b, false);
+	}
+
 
 	return (
 		<section className="cabbooking-booking pt-10 pb-10 p-relative fix" style={{ paddingTop: '20px', paddingBottom: '20px', position: 'relative' }}>
@@ -151,10 +177,15 @@ const Cabbooking = () => {
 										validator={["REQUIRE"]} isError={showFormErrors && formErrors.country}
 									/>
 
-									<CounterInput id="numberOfAdults" name="numberOfAdults" placeholder="Number of Passengers" type='number' errorMessage="This field is required."
-										value={formValues.numberOfAdults}
+									<DropDownInput id="boatType" name="boatType" placeholder="Select Boat Type" errorMessage="This field is required."
+										value={formValues.boatType} onChange={onTextChange} isError={showFormErrors && formErrors.boatType}
+										options={BoatType}
+									/>
+
+									<CounterInput id="noOfPassengers" name="noOfPassengers" placeholder="Number of Passengers" type='number' errorMessage="This field is required."
+										value={formValues.noOfPassengers}
 										onChange={onTextChange}
-										isError={showFormErrors && formErrors.numberOfAdults}
+										isError={showFormErrors && formErrors.noOfPassengers}
 									/>
 
 									{/* <p className="ng-binding text-[#c3bd10] text-2xl"><b>Amount Payable:</b> Rs. {+formValues.numberOfAdults * 1000}</p> */}
@@ -178,6 +209,10 @@ const Cabbooking = () => {
 										value={formValues.phoneNumber} onChange={onTextChange}
 										validator={["PHONE_NUMBER"]} isError={showFormErrors && formErrors.phoneNumber}
 									/>
+
+									{
+										isFormInvalid && <div className="text-orange-600 text-right text-sm my-6 mb-8"> <i class="fa-solid fa-triangle-exclamation mr-2"></i> Please fill the form completely.</div>
+									}
 
 									<div style={{ overflow: 'auto' }}>
 										<div style={{ float: 'left' }}>

@@ -48,7 +48,7 @@ function Citytour() {
                     <div className="image-side col-xl-4 col-lg-4">
                         <div className="inner-column">
                             <div className="imagecorner">
-                                <figure className="new-image wow fadeInUp"><img src="images/facilities/cityTour/cityTour2.jpg" alt="" /></figure>
+                                <figure className="new-image wow fadeInUp"><img src="images/facilities/cityTour/cityTour2.jpg" alt="" className='rounded-xl' /></figure>
                             </div>
                             <div className="new-quote-box">
                                 <div className="new-icon-box"><i className="flaticon-quotation"></i></div>

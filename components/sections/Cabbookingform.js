@@ -2,37 +2,14 @@ import React, { useRef, useState } from 'react';
 import Input from '../shared/Input/Input';
 import DatePicker from '../shared/Input/DatePicker';
 import useForm from '@/hooks/useForm';
-import CounterInput from '../shared/Input/CounterInput';
+// import CounterInput from '../shared/Input/CounterInput';
 import useHttp from '@/hooks/useHttp';
 import SpinningLoader from '../shared/Loader/SpinningLoader';
 import Toast from '../shared/Toast/Toast';
 import DropDownInput from '../shared/Input/DropDown';
 import FixedTable42 from '../shared/FixedTable-4-2/FixedTable-4-2';
-
-const INITIAL_FORM_VALUES = {
-	pickupPoint: "",
-	dropoffPoint: "",
-	plannedDate: "",
-	plannedTime: "",
-	cabType: "",
-	numberOfAdults: null,
-	numberOfChild: null,
-	name: "",
-	email: "",
-	phoneNumber: "",
-}
-
-const INITIAL_FORM_ERRORS = {
-	pickupPoint: true,
-	dropoffPoint: true,
-	plannedDate: true,
-	plannedTime: true,
-	numberOfAdults: true,
-	numberOfChild: true,
-	name: true,
-	email: true,
-	phoneNumber: true
-}
+import { redirect } from 'next/navigation';
+import { useRouter } from 'next/router';
 
 const items = [
 	[
@@ -51,30 +28,78 @@ const items = [
 
 const CabBookingCarOptions = [
 	{
-		name: "Swift Dzire",
-		value: "Swift Dzire"
+		name: "Hatchback ( Upto 4 Passengers )",
+		value: "hatchback"
 	},
 	{
-		name: "Indigo",
-		value: "Indigo"
+		name: "Sedan ( Upto 4 Passengers )",
+		value: "sedan"
 	},
 	{
-		name: "Amaze",
-		value: "Amaze"
+		name: "SUV ( Upto 7 Passengers )",
+		value: "suv"
+	}
+]
+
+const MaximumNumberOfPassengers = [
+	{
+		name: "1",
+		value: 1
 	},
 	{
-		name: "Innova",
-		value: "Innova"
+		name: "2",
+		value: 2
 	},
 	{
-		name: "Crysta",
-		value: "Crysta"
+		name: "3",
+		value: 3
 	},
 	{
-		name: "Ertiga",
-		value: "Ertiga"
+		name: "4",
+		value: 4
+	},
+	{
+		name: "5",
+		value: 5
+	},
+	{
+		name: "6",
+		value: 6
+	},
+	{
+		name: "7",
+		value: 7
 	},
 ]
+
+
+const INITIAL_FORM_VALUES = {
+	pickupPoint: "",
+	dropoffPoint: "",
+	plannedDate: "",
+	plannedTime: "",
+	cabType: null,
+	noOfPassengers: null,
+	// numberOfAdults: null,
+	// numberOfChild: null,
+	name: "",
+	email: "",
+	phoneNumber: "",
+}
+
+const INITIAL_FORM_ERRORS = {
+	pickupPoint: true,
+	dropoffPoint: true,
+	plannedDate: true,
+	plannedTime: true,
+	noOfPassengers: true,
+	cabType: true,
+	// numberOfAdults: true,
+	// numberOfChild: true,
+	name: true,
+	email: true,
+	phoneNumber: true
+}
 
 const Cabbooking = () => {
 	const [toastDetails, setToastDetails] = useState({
@@ -87,6 +112,7 @@ const Cabbooking = () => {
 	const [currentTab, setCurrentTab] = useState(0);
 	const { formValues, formErrors, onTextChange, onDateChange, showFormErrors, setShowFormErrors, setFormDetails, setFormErrorDetails } = useForm(INITIAL_FORM_VALUES, INITIAL_FORM_ERRORS);
 	const { isLoading, apiService, error, clearError } = useHttp();
+	const router = useRouter();
 
 	const nextPrev = (n) => {
 		let newValue = ((currentTab + n) > 0) ? currentTab + n : 0;
@@ -96,10 +122,7 @@ const Cabbooking = () => {
 	const onSubmitHandler = async (e) => {
 		e.preventDefault();
 		try {
-			console.log(formValues);
 			const isFormInvalid = Object.values(formErrors).reduce((a, b) => a || b, false);
-			console.log(formErrors);
-			console.log(isFormInvalid);
 			if (isFormInvalid) {
 				setShowFormErrors(true);
 				console.log("Invalid formmm")
@@ -107,14 +130,31 @@ const Cabbooking = () => {
 			}
 
 			const response = await apiService("/enquiryForm/cab", "POST", formValues);
-			console.log(response);
 			setFormDetails(INITIAL_FORM_VALUES);
 			setFormErrorDetails(INITIAL_FORM_ERRORS);
 			setToastDetails({ show: true, type: 'success', title: 'Success', message: 'Form Submitted Successfully.' });
+			router.push("/form-success");
 		} catch (e) {
 			console.log(e);
 			setToastDetails({ show: true, type: 'error', title: 'Error', message: 'Something went wrong.' });
 		}
+	}
+
+	let maxNumberOfPassengersItem = [];
+
+	switch(formValues.cabType) {
+		case "hatchback": maxNumberOfPassengersItem = MaximumNumberOfPassengers.slice(0, 4);
+			break;
+		case "sedan": maxNumberOfPassengersItem = MaximumNumberOfPassengers.slice(0, 4);
+			break;
+		case "suv": maxNumberOfPassengersItem = MaximumNumberOfPassengers.slice(0, 7);
+			break;
+		default: maxNumberOfPassengersItem = MaximumNumberOfPassengers;
+	}
+
+	let isFormInvalid = null;
+	if(showFormErrors) {
+		isFormInvalid = Object.values(formErrors).reduce((a, b) => a || b, false);
 	}
 
 	return (
@@ -197,12 +237,20 @@ const Cabbooking = () => {
 											value={formValues.plannedTime} onChange={onDateChange} timeOnly isError={showFormErrors && formErrors.plannedTime}
 										/>
 
-										{/* <DropDownInput id="cabType" name="cabType" placeholder="Select Cab Size" errorMessage="This field is required."
-											value={formValues.cabType} onChange={onTextChange} isError={showFormErrors && formErrors.cabType}
+										<DropDownInput id="cabType" name="cabType" placeholder="Select Cab Size" errorMessage="This field is required."
+											value={formValues.cabType} onChange={(...args) => {
+												onTextChange(...args);
+												onTextChange("noOfPassengers", null, false);
+											}} isError={showFormErrors && formErrors.cabType}
 											options={CabBookingCarOptions}
-										/> */}
+										/>
 
-										<CounterInput id="numberOfAdults" name="numberOfAdults" placeholder="Number of Adults" type='number' errorMessage="This field is required."
+										<DropDownInput id="noOfPassengers" name="noOfPassengers" placeholder="Select Number of Passengers" errorMessage="This field is required."
+											value={formValues.noOfPassengers} onChange={onTextChange} isError={showFormErrors && formErrors.noOfPassengers}
+											options={maxNumberOfPassengersItem}
+										/>
+
+										{/* <CounterInput id="numberOfAdults" name="numberOfAdults" placeholder="Number of Adults" type='number' errorMessage="This field is required."
 											value={formValues.numberOfAdults} onChange={onTextChange}
 											isError={showFormErrors && formErrors.numberOfAdults}
 										/>
@@ -210,7 +258,7 @@ const Cabbooking = () => {
 										<CounterInput id="numberOfChild" name="numberOfChild" placeholder="Number of Children" type='number' errorMessage="This field is required."
 											value={formValues.numberOfChild} onChange={onTextChange}
 											isError={showFormErrors && formErrors.numberOfChild}
-										/>
+										/> */}
 
 										<div style={{ textAlign: 'right' }}>
 											<button type="button" id="cabbooking-nextBtn" onClick={() => nextPrev(1)} className="cabbooking-button">Next</button>
@@ -236,6 +284,10 @@ const Cabbooking = () => {
 											validator={["PHONE_NUMBER"]} isError={showFormErrors && formErrors.phoneNumber}
 										/>
 
+										{
+											isFormInvalid && <div className="text-orange-600 text-right text-sm my-6 mb-8"> <i class="fa-solid fa-triangle-exclamation mr-2"></i> Please fill the form completely.</div>
+										}
+
 										<div style={{ width: "100%" }}>
 											<div style={{ float: 'left' }}>
 												<button type="button" id="cabbooking-prevBtn" onClick={() => nextPrev(-1)} className="cabbooking-button1 w-full">Previous</button>
@@ -256,7 +308,7 @@ const Cabbooking = () => {
 						</div>
 					</div>
 					<div className="col-lg-6 col-md-6">
-						<div className="booking-img">
+						<div className="booking- rounded-xl overflow-hidden">
 							<img src="/images/facilities/table/car2.jpg" alt="img" style={{ width: '100%', height: 'auto' }} />
 						</div>
 
