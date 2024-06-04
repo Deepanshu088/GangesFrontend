@@ -1,11 +1,13 @@
 import Link from 'next/link';
 import React from 'react';
 import RoomGallery from './RoomGallery';
+import { useSelector } from 'react-redux';
 
 const listOfImages = ["/images/room-1.jpg", "/images/rooms/room4.jpg", "/images/room-3.jpg", "/images/rooms/room1.jpg", "/images/rooms/room3.jpg"]
 
 export default function RoomDetails({ roomDetail = {} }) {
-	const { name, longDescription, floor, noOfBeds, isBreakfast, gallery = [], isDinner, isRiverView, isWifi, isTelevision, isAirConditioned, isParking, customerRating, luxuryCategory, regularPrice } = roomDetail;
+	const { homeRoomImgs } = useSelector(state => state.settings);
+ 	const { name, longDescription, floor, noOfBeds, isBreakfast, gallery = [], isDinner, isRiverView, isWifi, isTelevision, isAirConditioned, isParking, customerRating, luxuryCategory, regularPrice } = roomDetail;
 
 	const galleryURLs = gallery.map(item => process.env.NEXT_PUBLIC_BASE_URL + "/" + item);
 
@@ -124,7 +126,7 @@ export default function RoomDetails({ roomDetail = {} }) {
 
 									<div className="mb-3">
 										<input name="form_botcheck" className="form-control" type="hidden" value="" />
-										<button type="submit" className="theme-btn btn-style-one w-100" data-loading-text="Please wait..."><span className="btn-title">MAKE RESERVATION</span></button>
+										<button type="submit" className="theme-btn btn-style-one w-100" data-loading-text="Please wait..."><span className="btn-title"><Link href="https://staahmax.staah.net/be/indexpackdetail?propertyId=MTA5OQ==&individual=true" >MAKE RESERVATION</Link></span></button>
 									</div>
 
 								</div>
@@ -132,28 +134,28 @@ export default function RoomDetails({ roomDetail = {} }) {
 									<h3 className="sidebar__title">Also Available</h3>
 									<ul className="sidebar__post-list list-unstyled">
 										<li>
-											<div className="sidebar__post-image"> <img src="/images/room-1.jpg" alt="" /> </div>
+											<div className="sidebar__post-image"> <img src={`${process.env.NEXT_PUBLIC_BASE_URL}/${homeRoomImgs[0]}`} alt="" /> </div>
 											<div className="sidebar__post-content">
 												<h3>
-													<span className="sidebar__post-content-meta"><i className="far fa-door-open"></i>Heritage Luxury</span>
+													<span className="sidebar__post-content-meta"><i className="far fa-door-open"></i>Lower Level Heritage Deluxe</span>
 													{/* <Link href="">₹10000 / NIGHT</Link> */}
 												</h3>
 											</div>
 										</li>
 										<li>
-											<div className="sidebar__post-image"> <img src="/images/room-2.jpg" alt="" /> </div>
+											<div className="sidebar__post-image"> <img src={`${process.env.NEXT_PUBLIC_BASE_URL}/${homeRoomImgs[1]}`} alt="" /> </div>
 											<div className="sidebar__post-content">
 												<h3>
-													<span className="sidebar__post-content-meta"><i className="far fa-door-open"></i>Heritage Luxury</span>
+													<span className="sidebar__post-content-meta"><i className="far fa-door-open"></i>Upper Level Heritage Deluxe</span>
 													{/* <Link href="">₹10000 / NIGHT</Link> */}
 												</h3>
 											</div>
 										</li>
 										<li>
-											<div className="sidebar__post-image"> <img src="/images/room-3.jpg" alt="" /> </div>
+											<div className="sidebar__post-image"> <img src={`${process.env.NEXT_PUBLIC_BASE_URL}/${homeRoomImgs[2]}`} alt="" /> </div>
 											<div className="sidebar__post-content">
 												<h3>
-													<span className="sidebar__post-content-meta"><i className="far fa-door-open"></i>Heritage Luxury</span>
+													<span className="sidebar__post-content-meta"><i className="far fa-door-open"></i>Ganges View</span>
 													{/* <Link href="">₹10000 / NIGHT</Link> */}
 												</h3>
 											</div>

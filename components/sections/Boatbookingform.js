@@ -43,17 +43,17 @@ const BoatCarouselItems = [
 
 const items = [
 	[
-		'Morning Sunrise tour - 05:30 AM to 7:00 AM - From Assi Ghat to Manikarnika Ghat and back',
-		'Evening Sunrise tour - 05:30 AM to 7:00 AM - From Assi Ghat to Dashaswamedh Ghat and back',
-	],
-	[
 		'Motor Boat - 3200, Hand boat 2800 prices for 4 person',
 		'Motor boat',
 	],
 	[
-		'Above 4 Person - 400 will be charged for extra per person',
-		'Above 4 Person - 400 will be charged for extra per person'
-	]
+		'Morning Sunrise tour - 05:30 AM to 7:00 AM - From Assi Ghat to Manikarnika Ghat and back',
+		'Evening Sunset tour - 05:30 AM to 7:00 AM - From Assi Ghat to Dashaswamedh Ghat and back',
+	],
+	// [
+	// 	'Above 4 Person - 400 will be charged for extra per person',
+	// 	'Above 4 Person - 400 will be charged for extra per person'
+	// ]
 ];
 
 const Cabbooking = () => {
@@ -157,7 +157,7 @@ const Cabbooking = () => {
 										isError={showFormErrors && formErrors.numberOfAdults}
 									/>
 
-									<p className="ng-binding text-[#c3bd10] text-2xl"><b>Amount Payable:</b> Rs. {+formValues.numberOfAdults * 1000}</p>
+									{/* <p className="ng-binding text-[#c3bd10] text-2xl"><b>Amount Payable:</b> Rs. {+formValues.numberOfAdults * 1000}</p> */}
 									<div style={{ textAlign: 'right' }}>
 										<button type="button" id="cabbooking-nextBtn" onClick={() => nextPrev(1)} className="cabbooking-button">Next</button>
 									</div>
@@ -202,7 +202,7 @@ const Cabbooking = () => {
 						</div>
 
 						<div className='mt-10'>
-							<FixedTable42 items={items} images={["/images/facilities/boat/boat3.jpg", "/images/facilities/boat/boat3.jpg"]} />
+							<FixedTable42 items={items} images={["/images/facilities/boat/boat3.jpg", "/images/facilities/boat/boat3.jpg"]} note="Above 4 Person - 400 will be charged for extra per person" />
 						</div>
 					</div>
 				</div>

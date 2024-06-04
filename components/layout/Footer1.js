@@ -59,10 +59,12 @@ const Footer1 = () => {
 
 										<article className="recent-post">
 											<div className="inner">
-												<div className="post-info"><i className="fas fa-phone"></i> +91-7408423504, 7408423511,
-													+91-9984826656, 9198113594</div>
-												<div className="post-info">8765817841</div>
-												<div className="post-info"><i className="fa fa-envelope"></i> info@palaceonganges.com</div>
+												<div className="post-info"><i className="fas fa-phone"></i>
+													<Link href="tel:+7408423504" className="text-fontGray">+91-7408423504, +91-7408423511,
+														+91-9984826656, +91-9198113594</Link>
+												</div>
+												<div className="post-info text-fontGray">+91-8765817841</div>
+												<div className="post-info text-fontGray"><i className="fa fa-envelope"></i> <a href="mailto:info@palaceonganges.com" className='text-fontGray'>info@palaceonganges.com</a></div>
 												<div className="post-info"><i className="fas fa-location"></i> B-1/158, Assighat,<br />Varanasi. Pin 221001</div>
 											</div>
 										</article>

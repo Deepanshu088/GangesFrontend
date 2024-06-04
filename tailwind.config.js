@@ -24,6 +24,7 @@ module.exports = {
 				primaryButtonColor: "#ad9700",
 				errorColor: "#ea580c",
 				successColor: "#0ea5e9",
+				fontGray: "#adadad",
 			},
 			keyframes: {
 				bounceInTop: {

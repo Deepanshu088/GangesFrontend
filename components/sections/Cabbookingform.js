@@ -36,17 +36,17 @@ const INITIAL_FORM_ERRORS = {
 
 const items = [
 	[
-		'Taxi for upto 4 Person | Airport Pickup/Drop - 1250 | Railway Station Pickup/Drop - 800 | Full Day - 2200 | Half Day - 1400 | Sarnath Tour - 1600',
-		'Taxi for upto 6 Person | Airport Pickup/Drop - 1500 | Railway Station Pickup/Drop - 1100 | Full Day - 3200 | Half Day - 2200 | Sarnath Tour - 2000',
-	],
-	[
 		'Swift Dzire, Indigo or Amaze',
 		'Innova, Crysta or Ertiga',
 	],
 	[
-		'Parking and toll charges will be extra, after 09:00 PM 300 will be chargable as driver night charge',
-		'Parking and toll charges will be extra, after 09:00 PM 300 will be chargable as driver night charge',
-	]
+		'Taxi for upto 4 Person | Airport Pickup/Drop - 1250 | Railway Station Pickup/Drop - 800 | Full Day - 2200 | Half Day - 1400 | Sarnath Tour - 1600',
+		'Taxi for upto 6 Person | Airport Pickup/Drop - 1500 | Railway Station Pickup/Drop - 1100 | Full Day - 3200 | Half Day - 2200 | Sarnath Tour - 2000',
+	],
+	// [
+	// 	'Parking and toll charges will be extra, after 09:00 PM 300 will be chargable as driver night charge',
+	// 	'Parking and toll charges will be extra, after 09:00 PM 300 will be chargable as driver night charge',
+	// ]
 ];
 
 const CabBookingCarOptions = [
@@ -261,7 +261,7 @@ const Cabbooking = () => {
 						</div>
 
 						<div className='my-10'>
-							<FixedTable42 items={items} images={["/images/facilities/boat/boat3.jpg", "/images/facilities/boat/boat3.jpg"]} />
+							<FixedTable42 items={items} images={["/images/facilities/boat/boat3.jpg", "/images/facilities/boat/boat3.jpg"]} note="Parking and toll charges will be extra, after 09:00 PM 300 will be chargable as driver night charge" />
 						</div>
 					</div>
 				</div>

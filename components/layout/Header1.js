@@ -46,7 +46,7 @@ const Header1 = ({ handleMobileMenu, searchToggle, handleToggle, scroll }) => {
                                 <div className="contact-info-box">
                                     <span className="icon lnr-icon-envelope1" />
                                     <span className="title">Send Email</span>
-                                    <Link href="mailto:help@company.com">info@palaceonganges.com</Link>
+                                    <Link href="mailto:info@palaceonganges.com">info@palaceonganges.com</Link>
                                 </div>
                             </li>
                             <li>

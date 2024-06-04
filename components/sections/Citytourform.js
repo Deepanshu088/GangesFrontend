@@ -35,17 +35,17 @@ const INITIAL_FORM_ERRORS = {
 
 const CITY_TOUR_OPTIONS = [
   [
-    'Morning Sunrise / Evening Ganga Arti tour - 05:30 AM/PM to 08:00 AM/PM - From Assi Ghat to Manikarnika Ghat and back by walk / boat (charges extra)',
-    'Morning City tour - 05:30 AM to 8:30 AM / 11:00 AM to 03:00 PM or Evening 04:00 PM To 08:00PM Transportation Charges Extra',
-  ],
-  [
     '---------',
     'Half Day',
   ],
   [
-    'Up to 4 Person - 2000  ( 500 per person will be chargeable for extra per person )',
-    'Up to 4 Person - 2000  ( 500 per person will be chargeable for extra per person )',
-  ]
+    'Morning Sunrise / Evening Ganga Arti tour - 05:30 AM/PM to 08:00 AM/PM - From Assi Ghat to Manikarnika Ghat and back by walk / boat (charges extra)',
+    'Morning City tour - 05:30 AM to 8:30 AM / 11:00 AM to 03:00 PM or Evening 04:00 PM To 08:00PM Transportation Charges Extra',
+  ],
+  // [
+  //   'Up to 4 Person - 2000  ( 500 per person will be chargeable for extra per person )',
+  //   'Up to 4 Person - 2000  ( 500 per person will be chargeable for extra per person )',
+  // ]
 ];
 
 const Cabbooking = () => {
@@ -204,7 +204,7 @@ const Cabbooking = () => {
               <img src="images/facilities/cityTour/cityTour1.jpg" alt="img" style={{ width: '100%', height: 'auto' }} />
             </div>
             <div className='my-10'>
-              <FixedTable42 items={CITY_TOUR_OPTIONS} images={["/images/facilities/boat/boat3.jpg", "/images/facilities/boat/boat3.jpg"]} />
+              <FixedTable42 items={CITY_TOUR_OPTIONS} images={["/images/facilities/boat/boat3.jpg", "/images/facilities/boat/boat3.jpg"]} note="Up to 4 Person - 2000  ( 500 per person will be chargeable for extra per person )" />
             </div>
           </div>
         </div>

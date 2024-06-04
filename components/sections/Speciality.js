@@ -29,8 +29,8 @@ export default function SPECIALITY() {
             <div className="content-column col-xl-8">
               <div className="inner-column">
                 <div className="sec-title">
-                  <h2 className='whitespace-nowrap text-6xl'>Palace on Ganges </h2>
-                  <h2 className='md:whitespace-nowrap text-4xl'> A Grand Heritage Hotel in Varanasi</h2>
+                  <h2 className='whitespace-nowrap '>Palace on Ganges </h2>
+                  <h3 className='md:whitespace-nowrap md:text-4xl text-xl sm:text-2xl'> A Grand Heritage Hotel in Varanasi</h3>
                   <div className="text" > Kashi, Benaras or Varanasi is the oldest living city in the world. It begin a chief centre of civilization for more than 3000 years. It is acknowledged as the cultural capital of the globe, even embodied divine. Varanasi is "older than history, older than tradition, older even than legend and looks twice as old as all of them put together".
                     <br /><br />
                     India, the nation, with its diverse culture has one commonality that is Varanasi. Where cultures from across India have congregated and accepted this pious city as their spiritual destiny. It is thought that the person who takes his last breath in old Varanasi will surely attain salvation

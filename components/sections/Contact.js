@@ -61,7 +61,7 @@ export default function ContactPage() {
                         </div>
                         <div class="text">
                           <h6>Have any question?</h6>
-                          <a href="tel:+91-7408423504"> 7408423504, 7408423511,9984826656, 9198113594, 8765817841</a>
+                          <a href="tel:+91-7408423504"> +91-7408423504, +91-7408423511, <br/> +91-9984826656, +91-9198113594, <br/> +91-8765817841</a>
                         </div>
                       </li>
                       <li>
@@ -70,7 +70,7 @@ export default function ContactPage() {
                         </div>
                         <div class="text">
                           <h6>Write email</h6>
-                          <a href="mailto:needhelp@company.com">info@palaceonganges.com</a>
+                          <a href="mailto:info@palaceonganges.com">info@palaceonganges.com</a>
                         </div>
                       </li>
                       <li>

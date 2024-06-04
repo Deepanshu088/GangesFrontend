@@ -31,7 +31,7 @@ export default function Features() {
 										<h2>The Restaurant</h2>
 										<div className="text">Step into a world of culinary delight at our restaurant, where exceptional food meets unparalleled hospitality. At our pure Vegetarian restaurant, every dish is an art form, blending traditional local flavours with exciting global influences to create a menu that both surprises and satisfies.Our skilled chefs focus on the freshest ingredients, delivering a menu that not only excites the palate but also supports health and well-being.</div>
 									</div>
-									<Link href="/page-restaurant" className="theme-btn btn-style-one read-more">MAKE BOOKING</Link>
+									<Link href="/page-restaurant" className="theme-btn btn-style-one read-more">KNOW MORE</Link>
 									<figure className="image-2"><img src="images/resource/icon.png" alt="" /></figure>
 								</div>
 							</div>
