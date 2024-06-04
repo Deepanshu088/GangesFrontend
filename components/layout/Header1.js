@@ -39,7 +39,7 @@ const Header1 = ({ handleMobileMenu, searchToggle, handleToggle, scroll }) => {
                                 <div className="contact-info-box">
                                     <i className="icon lnr-icon-phone-handset" />
                                     <span className="title">Call Now</span>
-                                    <Link href="tel:+92880098670">+91-7408423504</Link>
+                                    <Link href="tel:+91-7408423504">+91-7408423504</Link>
                                 </div>
                             </li>
                             <li>
