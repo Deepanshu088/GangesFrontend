@@ -27,7 +27,7 @@ export default function Features() {
 							<div className="inner-column">
 								<div className="content-box">
 									<div className="sec-title">
-										<span className="sub-title">Divine Tour</span>
+										<span className="sub-title">Eat From the Land</span>
 										<h2>The Restaurant</h2>
 										<div className="text">Step into a world of culinary delight at our restaurant, where exceptional food meets unparalleled hospitality. At our pure Vegetarian restaurant, every dish is an art form, blending traditional local flavours with exciting global influences to create a menu that both surprises and satisfies.Our skilled chefs focus on the freshest ingredients, delivering a menu that not only excites the palate but also supports health and well-being.</div>
 									</div>
