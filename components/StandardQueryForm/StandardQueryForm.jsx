@@ -42,7 +42,7 @@ const StandardQueryForm = () => {
                 return;
             }
 
-            // await apiService("/enquiryForm/tour", "POST", formValues);
+            await apiService("/enquiryForm/contactUs", "POST", formValues);
             setFormDetails(INITIAL_FORM_VALUES);
             setFormErrorDetails(INITIAL_FORM_ERRORS);
             setToastDetails({ show: true, type: 'success', title: 'Success', message: 'Form Submitted Successfully.' });
@@ -67,24 +67,6 @@ const StandardQueryForm = () => {
 
     return <div className="p-4 p-lg-5 bg-light">
         <h4 className="mt-0">Send Query</h4>
-        <form id="contact_form" name="contact_form">
-            {/* <div className="mb-3">
-
-                <input name="form_name" id="name" className="form-control bg-white" type="text" placeholder="Enter Name" />
-            </div>
-            <div className="mb-3">
-
-                <input name="form_email" id="email" className="form-control bg-white required email" type="email" placeholder="Enter Email" />
-            </div>
-            <div className="mb-3">
-
-                <input name="form_phone" id="phone" className="form-control bg-white required phone" type="number" placeholder="Enter Phone" />
-            </div>
-            <div className="mb-3">
-
-                <textarea name="form_message" id="message" className="form-control bg-white required" rows="5" placeholder="Enter Message"></textarea>
-            </div> */}
-
             <Input id="name" name="name" placeholder="Enter Name" errorMessage="This field is required." variant="third"
                 onChange={onTextChange} value={formValues.name}
                 validator={["REQUIRE"]} isError={showFormErrors && formErrors.name}
@@ -110,7 +92,6 @@ const StandardQueryForm = () => {
                 <input name="form_botcheck" className="form-control" type="hidden" value="" />
                 <button className="theme-btn btn-style-one" data-loading-text="Please wait..."><span className="btn-title" onClick={onSubmitHandler}>Submit </span></button>
             </div>
-        </form>
     </div>
 }
 

@@ -5,7 +5,7 @@ export default function Cabbooking() {
 		<section className="booking-details-section">
 			<div className="container pt-0 pb-0 mb-0">
 				<div className="row">
-					<div className="image-side col-xl-4 col-lg-4">
+					<div className="image-side col-xl-4 col-lg-4 pt-8">
 						<div className="inner-column">
 							<div className="imagecorner">
 								<figure className="new-image wow fadeInUp rounded-xl overflow-hidden"><img src="/images/facilities/table/car1.jpg" alt="" /></figure>

@@ -13,7 +13,7 @@ const DatePicker = ({
     onChange = () => null,
     minDate,
     maxDate,
-    className,
+    className = "",
     isError,
     errorMessage,
     timeOnly = false

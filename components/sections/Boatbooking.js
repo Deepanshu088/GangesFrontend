@@ -5,7 +5,7 @@ export default function Boatbooking() {
 		<section className="booking-details-section">
 			<div className="container pt-0 pb-0 mb-0">
 				<div className="row">
-					<div className="image-side col-xl-4 col-lg-4">
+					<div className="image-side col-xl-4 col-lg-4 pt-8">
 						<div className="inner-column">
 							<div className="h-full">
 								<figure className=""><img src="/images/facilities/boat/boat3.jpg" alt="" className='h-full w-auto object-cover rounded-xl' /></figure>

@@ -6,20 +6,22 @@ import { useDispatch, useSelector } from "react-redux";
 
 
 const FloorRooms = ({ floor }) => {
-	const { groundFloor, firstFloor, secondFloor, thirdFloor } = useSelector(state => state.room);
+    const { groundFloor, firstFloor, secondFloor, thirdFloor } = useSelector(state => state.room);
     const dispatch = useDispatch();
-    const { apiService } = useHttp();
-    
-	useEffect(() => {
-		dispatch(fetchAllRooms(apiService))
-	}, [])
-    
+    const { apiService, isLoading } = useHttp();
+
+    useEffect(() => {
+        dispatch(fetchAllRooms(apiService))
+    }, [])
+
     let roomsList = [...groundFloor, ...firstFloor, ...secondFloor, ...thirdFloor];
     roomsList = roomsList.filter(item => item.floor == floor);
 
-    if(!roomsList || !(roomsList.length > 0)) {
-        return  <div className="m-auto text-center font-bold text-3xl bg-orange-200 py-6 rounded-lg">
-            No Rooms Found.
+    if (!roomsList || !(roomsList.length > 0)) {
+        return <div className="m-auto text-center font-bold text-3xl bg-orange-200 py-6 rounded-lg">
+            {
+                isLoading ? "Rooms are loading..." : "No Rooms Found."
+            }
         </div>
     }
 

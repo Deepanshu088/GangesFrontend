@@ -8,7 +8,7 @@ const listOfImages = ["/images/room-1.jpg", "/images/rooms/room4.jpg", "/images/
 
 export default function RoomDetails({ roomDetail = {} }) {
 	const { homeRoomImgs } = useSelector(state => state.settings);
- 	const { name, longDescription, floor, noOfBeds, isBreakfast, gallery = [], isDinner, isRiverView, isWifi, isTelevision, isAirConditioned, isParking, customerRating, luxuryCategory, regularPrice } = roomDetail;
+	const { name, longDescription, floor, noOfBeds, isBreakfast, gallery = [], isDinner, isRiverView, isWifi, isTelevision, isAirConditioned, isParking, customerRating, luxuryCategory, regularPrice } = roomDetail;
 
 	const galleryURLs = gallery.map(item => process.env.NEXT_PUBLIC_BASE_URL + "/" + item);
 
@@ -114,10 +114,15 @@ export default function RoomDetails({ roomDetail = {} }) {
 										}
 									</div>
 								</div>
-								<div className="d-sm-flex align-items-sm-center justify-content-sm-between py-10 border-top">
+								{/* <div className="d-sm-flex align-items-sm-center justify-content-sm-between py-10 border-top">
 									<h6 className="my-sm-0">Share Details</h6>
-									<div className="blog-details__social-list"> <Link href="news-details"><i className="fab fa-twitter"></i></Link> <Link href="news-details"><i className="fab fa-facebook"></i></Link> <Link href="news-details"><i className="fab fa-pinterest-p"></i></Link> <Link href="news-details"><i className="fab fa-instagram"></i></Link> </div>
-								</div>
+									<div className="blog-details__social-list">
+										<Link href="#"><i className="fab fa-twitter"></i></Link>
+										<Link href="#"><i className="fab fa-facebook"></i></Link>
+										<Link href="#"><i className="fab fa-pinterest-p"></i></Link>
+										<Link href="#"><i className="fab fa-instagram"></i></Link>
+									</div>
+								</div> */}
 
 							</div>
 						</div>
@@ -138,7 +143,12 @@ export default function RoomDetails({ roomDetail = {} }) {
 											<div className="sidebar__post-image"> <img src={`${process.env.NEXT_PUBLIC_BASE_URL}/${homeRoomImgs[0]}`} alt="" /> </div>
 											<div className="sidebar__post-content">
 												<h3>
-													<span className="sidebar__post-content-meta"><i className="far fa-door-open"></i>Lower Level Heritage Deluxe</span>
+													<a className="sidebar__post-content-meta" href='/page-groundfloor'>
+														<div className='flex justify-start'>
+															<i className="far fa-door-open mr-2"></i>
+															<span>Lower Level Heritage Deluxe</span>
+														</div>
+													</a>
 													{/* <Link href="">₹10000 / NIGHT</Link> */}
 												</h3>
 											</div>

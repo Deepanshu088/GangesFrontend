@@ -7,7 +7,7 @@ const Input = ({
     value,
     label,
     onChange = () => null,
-    className,
+    className = "",
     type = "text",
     onEnter = () => null,
     onFocus = () => null,

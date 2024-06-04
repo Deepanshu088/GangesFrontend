@@ -142,7 +142,7 @@ const Cabbooking = () => {
 
 	let maxNumberOfPassengersItem = [];
 
-	switch(formValues.cabType) {
+	switch (formValues.cabType) {
 		case "hatchback": maxNumberOfPassengersItem = MaximumNumberOfPassengers.slice(0, 4);
 			break;
 		case "sedan": maxNumberOfPassengersItem = MaximumNumberOfPassengers.slice(0, 4);
@@ -153,7 +153,7 @@ const Cabbooking = () => {
 	}
 
 	let isFormInvalid = null;
-	if(showFormErrors) {
+	if (showFormErrors) {
 		isFormInvalid = Object.values(formErrors).reduce((a, b) => a || b, false);
 	}
 
@@ -237,7 +237,7 @@ const Cabbooking = () => {
 											value={formValues.plannedTime} onChange={onDateChange} timeOnly isError={showFormErrors && formErrors.plannedTime}
 										/>
 
-										<DropDownInput id="cabType" name="cabType" placeholder="Select Cab Size" errorMessage="This field is required."
+										<DropDownInput id="cabType" name="cabType" placeholder="Select Vehicle" errorMessage="This field is required."
 											value={formValues.cabType} onChange={(...args) => {
 												onTextChange(...args);
 												onTextChange("noOfPassengers", null, false);
@@ -308,12 +308,14 @@ const Cabbooking = () => {
 						</div>
 					</div>
 					<div className="col-lg-6 col-md-6">
-						<div className="booking- rounded-xl overflow-hidden">
-							<img src="/images/facilities/table/car2.jpg" alt="img" style={{ width: '100%', height: 'auto' }} />
-						</div>
+						<div className='ml-6'>
+							<div className="booking- rounded-xl overflow-hidden">
+								<img src="/images/facilities/table/car2.jpg" alt="img" style={{ width: '100%', height: 'auto' }} />
+							</div>
 
-						<div className='my-10'>
-							<FixedTable42 items={items} images={["/images/facilities/boat/boat3.jpg", "/images/facilities/boat/boat3.jpg"]} note="Parking and toll charges will be extra, after 09:00 PM 300 will be chargable as driver night charge" />
+							<div className='my-10'>
+								<FixedTable42 items={items} images={["/images/facilities/boat/boat3.jpg", "/images/facilities/boat/boat3.jpg"]} note="Parking and toll charges will be extra, after 09:00 PM 300 will be chargable as driver night charge" />
+							</div>
 						</div>
 					</div>
 				</div>

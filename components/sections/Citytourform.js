@@ -16,7 +16,7 @@ const INITIAL_FORM_VALUES = {
   // country: '',
   // numberOfAdults: null,
   // numberOfChild: null,
-	noOfPassengers: null,
+  noOfPassengers: null,
   name: '',
   email: '',
   phoneNumber: ''
@@ -29,7 +29,7 @@ const INITIAL_FORM_ERRORS = {
   // country: true,
   // numberOfAdults: true,
   // numberOfChild: true,
-	noOfPassengers: true,
+  noOfPassengers: true,
   name: true,
   email: true,
   phoneNumber: true
@@ -152,17 +152,17 @@ const Cabbooking = () => {
               <form id="cabbooking-regForm">
                 <div className={`cabbooking-tab ${currentTab === 0 ? 'active' : ''}`} style={{ display: currentTab === 0 ? 'block' : 'none' }}>
 
-                  <DatePicker id="plannedDate" name="plannedDate" placeholder="Select Date" errorMessage="This field is required."
+                  <DatePicker className='mb-6' id="plannedDate" name="plannedDate" placeholder="Select Date" errorMessage="This field is required."
                     value={formValues.plannedDate} onChange={onDateChange}
                     isError={showFormErrors && formErrors.plannedDate}
                   />
 
-                  <DatePicker id="plannedTime" name="plannedTime" placeholder="Select Time" errorMessage="This field is required."
+                  <DatePicker className='mb-6' id="plannedTime" name="plannedTime" placeholder="Select Time" errorMessage="This field is required."
                     value={formValues.plannedTime} onChange={onDateChange} timeOnly
                     isError={showFormErrors && formErrors.plannedTime}
                   />
 
-                  <CounterInput id="noOfPassengers" name="noOfPassengers" placeholder="Number of Passengers" type='number' errorMessage="This field is required."
+                  <CounterInput className='mb-6' id="noOfPassengers" name="noOfPassengers" placeholder="Number of Passengers" type='number' errorMessage="This field is required."
                     value={formValues.noOfPassengers}
                     onChange={onTextChange}
                     isError={showFormErrors && formErrors.noOfPassengers}
@@ -174,53 +174,55 @@ const Cabbooking = () => {
                     isError={showFormErrors && formErrors.numberOfChild}
                   /> */}
 
-                  <div style={{ textAlign: 'right' }}>
+                  {/* <div style={{ textAlign: 'right' }}>
                     <button type="button" id="cabbooking-nextBtn" onClick={() => nextPrev(1)} className="cabbooking-button">Next</button>
-                  </div>
-                </div>
-                <div className={`cabbooking-tab ${currentTab === 1 ? 'active' : ''}`} style={{ display: currentTab === 1 ? 'block' : 'none' }}>
+                  </div> */}
 
-                  <Input id="name" name="name" placeholder="Enter Your Name" errorMessage="This field is required."
+                  <Input className='mb-6' id="name" name="name" placeholder="Enter Your Name" errorMessage="This field is required."
                     value={formValues.name} onChange={onTextChange}
                     validator={["REQUIRE"]} isError={showFormErrors && formErrors.name}
                   />
 
-                  <Input id="email" name="email" placeholder="example@example.com" errorMessage="This field is required."
+                  <Input className='mb-6' id="email" name="email" placeholder="example@example.com" errorMessage="This field is required."
                     value={formValues.email} onChange={onTextChange}
                     validator={["EMAIL"]} isError={showFormErrors && formErrors.email}
                   />
 
-                  <Input id="phoneNumber" name="phoneNumber" placeholder="Phone Number" errorMessage="Please enter a valid number (10 digits)."
+                  <Input className='mb-6' id="phoneNumber" name="phoneNumber" placeholder="Phone Number" errorMessage="Please enter a valid number (10 digits)."
                     value={formValues.phoneNumber} onChange={onTextChange}
                     validator={["PHONE_NUMBER"]} isError={showFormErrors && formErrors.phoneNumber}
                   />
+
+                  <div className='my-10'></div>
 
                   {
                     isFormInvalid && <div className="text-orange-600 text-right text-sm my-6 mb-8"> <i class="fa-solid fa-triangle-exclamation mr-2"></i> Please fill the form completely.</div>
                   }
 
                   <div style={{ overflow: 'auto' }}>
-                    <div style={{ float: 'left' }}>
+                    {/* <div style={{ float: 'left' }}>
                       <button type="button" id="cabbooking-prevBtn" onClick={() => nextPrev(-1)} className="cabbooking-button1">Previous</button>
-                    </div>
+                    </div> */}
                     <div style={{ float: 'right' }}>
                       <button type="button" className="cabbooking-button" onClick={onSubmitHandler} disabled={isLoading}>{isLoading ? <SpinningLoader /> : "Submit"}</button>
                     </div>
                   </div>
                 </div>
-                <div style={{ textAlign: 'center', marginTop: '40px' }}>
+                {/* <div style={{ textAlign: 'center', marginTop: '40px' }}>
                   <span className={`step ${currentTab === 0 ? 'active' : ''}`}></span>
                   <span className={`step ${currentTab === 1 ? 'active' : ''}`}></span>
-                </div>
+                </div> */}
               </form>
             </div>
           </div>
           <div className="col-lg-6 col-md-6">
-            <div className="booking-img">
-              <img src="images/facilities/cityTour/cityTour1.jpg" className='rounded-xl' alt="img" style={{ width: '100%', height: 'auto' }} />
-            </div>
-            <div className='my-10'>
-              <FixedTable42 items={CITY_TOUR_OPTIONS} images={["/images/facilities/boat/boat3.jpg", "/images/facilities/boat/boat3.jpg"]} note="Up to 4 Person - 2000  ( 500 per person will be chargeable for extra per person )" />
+            <div className='ml-6'>
+              <div className="booking-img">
+                <img src="images/facilities/cityTour/cityTour1.jpg" className='rounded-xl' alt="img" style={{ width: '100%', height: 'auto' }} />
+              </div>
+              <div className='mt-10'>
+                <FixedTable42 items={CITY_TOUR_OPTIONS} images={["/images/facilities/boat/boat3.jpg", "/images/facilities/boat/boat3.jpg"]} note="Up to 4 Person - 2000  ( 500 per person will be chargeable for extra per person )" />
+              </div>
             </div>
           </div>
         </div>

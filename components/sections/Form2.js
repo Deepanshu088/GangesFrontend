@@ -41,12 +41,12 @@ export default function Form2() {
                       <div className="text">Immerse yourself in the spiritual heart of Varanasi with our rooms offering unobstructed views of the Ganges River. These rooms provide a serene space to witness the vibrant cultural activities and rituals performed on the ghats.</div>
                     </div>
                   </div>
-                  <div className="btn-box"> <Link href="https://staahmax.staah.net/be/indexpackdetail?propertyId=MTA5OQ==&individual=true" className="read-more whitespace-nowrap px-10 w-auto">MAKE A RESERVATION</Link> </div>
+                  {/* <div className="btn-box"> <Link href="https://staahmax.staah.net/be/indexpackdetail?propertyId=MTA5OQ==&individual=true" className="read-more whitespace-nowrap px-10 w-auto">MAKE A RESERVATION</Link> </div> */}
                 </div>
               </div>
               <div className="col-lg-6 booking-form-column">
                 <div className="inner-column wow fadeInRight" data-wow-delay="200ms">
-                  <div className="sec-title"> <span className="sub-title">ROOMS & SUITES</span>
+                  <div className="sec-title"> <span className="sub-title">HERITAGE ROOMS</span>
                     <h2>Hotel Booking </h2>
                   </div>
                   <form className="bk-form" onSubmit={onSubmitHandler}>

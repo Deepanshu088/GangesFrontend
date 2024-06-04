@@ -231,13 +231,15 @@ const Cabbooking = () => {
 						</div>
 					</div>
 					<div className="col-lg-6 col-md-6">
-						<div className="booking-img">
-							{/* <img src="images/home/boat2.jpg" alt="" className='h-full w-auto object-cover' /> */}
-							<Carousel items={BoatCarouselItems} />
-						</div>
+						<div className='ml-6'>
+							<div className="booking-img">
+								{/* <img src="images/home/boat2.jpg" alt="" className='h-full w-auto object-cover' /> */}
+								<Carousel items={BoatCarouselItems} />
+							</div>
 
-						<div className='mt-10'>
-							<FixedTable42 items={items} images={["/images/facilities/boat/boat3.jpg", "/images/facilities/boat/boat3.jpg"]} note="Above 4 Person - 400 will be charged for extra per person" />
+							<div className='mt-10'>
+								<FixedTable42 items={items} images={["/images/facilities/boat/boat3.jpg", "/images/facilities/boat/boat3.jpg"]} note="Above 4 Person - 400 will be charged for extra per person" />
+							</div>
 						</div>
 					</div>
 				</div>

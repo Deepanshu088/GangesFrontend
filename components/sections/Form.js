@@ -1,5 +1,6 @@
 import React from 'react';
 import DatePicker from '../shared/Input/DatePicker';
+import Link from 'next/link';
 
 export default function Form() {
   const onSubmitHandler = (e) => {
@@ -14,7 +15,7 @@ export default function Form() {
               <div className="col-lg-6 booking-form-column wow fadeInUp">
                 <div className="inner-column">
                   <div className="sec-title">
-                    <span className="sub-title">ROOMS & SUITES</span>
+                    <span className="sub-title">HERITAGE ROOMS</span>
                     <h2>Hotel Booking </h2>
                   </div>
                   <form className="bk-form" onSubmit={onSubmitHandler}>
@@ -52,7 +53,7 @@ export default function Form() {
                       <i className="fa fa-angle-down"></i>
                     </div>
                     <div className="form-submit">
-                      <button><a href="https://staahmax.staah.net/be/indexpackdetail?propertyId=MTA5OQ==&individual=true" className='text-white' >BOOK NOW</a></button>
+                      <Link href="https://staahmax.staah.net/be/indexpackdetail?propertyId=MTA5OQ==&individual=true" className='text-white' ><button>BOOK NOW</button></Link>
                     </div>
                   </form>
                 </div>

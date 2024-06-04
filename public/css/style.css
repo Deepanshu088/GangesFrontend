@@ -4097,9 +4097,9 @@ Section Title
   .contact-info {
     margin-top: 40px;
   }
-  .about-section-two .image-column .image-1:before {
+  /* .about-section-two .image-column .image-1:before {
     display: none;
-  }
+  } */
   .about-section-two .content-column .inner-column .sec-title h2 {
     font-size: 32px;
     line-height: 40px;
@@ -6517,11 +6517,11 @@ Section Title
     padding-bottom: 30px;
   }
 }
-/* @media (max-width: 991.98px) {
+@media (max-width: 991.98px) {
   .food-section .image-column {
     display: none;
   }
-} */
+}
 .food-section .image-column .inner-column {
   position: relative;
   margin-left: -375px;
@@ -6572,11 +6572,11 @@ Section Title
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
-/* @media (max-width: 1399.98px) {
+@media (max-width: 1399.98px) {
   .food-section .image-column .inner-column .quote-box {
     display: none;
   }
-} */
+}
 .food-section .image-column .inner-column .quote-box .icon-box {
   line-height: 83px;
 }
@@ -6689,11 +6689,11 @@ Section Title
   margin-right: 0;
 }
 
-/* @media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1200px) {
   .food-section .image-column {
     display: none;
   }
-} */
+}
 /*** 
 
 ====================================================================
@@ -9179,7 +9179,7 @@ Sidebar
           flex: 70px 0 0; */
 }
 .sidebar__post .sidebar__post-list .sidebar__post-image > img {
-  width: 120px;
+  width: 200px;
   object-fit: cover;
   height: 70px;
   /* border-radius: 10px; */

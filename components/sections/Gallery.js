@@ -9,7 +9,7 @@ export default function Gallery() {
       "images/DSC_2491.jpg", "images/DSC_2492.jpg", "images/DSC_2494.jpg",
       "images/DSC_2495.jpg", "images/DSC_2496.jpg", "images/DSC_2497.jpg",
       "images/DSC_2499.jpg", "images/DSC_2501.jpg", "images/DSC_2503.jpg",
-      "images/DSC_2505.jpg", "images/DSC_2508.jpg", "images/DSC_2487.jpg",
+      // "images/DSC_2505.jpg", "images/DSC_2508.jpg", "images/DSC_2487.jpg",
       "images/DSC_2510.jpg", "images/a1.jpg", "images/a2.jpg", "images/v1.jpg",
       "images/v2.jpg", "images/v3.jpg", "images/v4.jpg", "images/v5.jpg",
       "images/v6.jpg", "images/p2.jpg", "images/p3.jpg", "images/p4.jpg",
@@ -20,7 +20,7 @@ export default function Gallery() {
       "images/DSC_2491.jpg", "images/DSC_2492.jpg", "images/DSC_2494.jpg",
       "images/DSC_2495.jpg", "images/DSC_2496.jpg", "images/DSC_2497.jpg",
       "images/DSC_2499.jpg", "images/DSC_2501.jpg", "images/DSC_2503.jpg",
-      "images/DSC_2505.jpg", "images/DSC_2508.jpg", "images/DSC_2487.jpg",
+      // "images/DSC_2505.jpg", "images/DSC_2508.jpg", "images/DSC_2487.jpg",
       "images/DSC_2510.jpg"
     ],
     gangaAarti: ["images/a1.jpg", "images/a2.jpg"],

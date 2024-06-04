@@ -45,7 +45,7 @@ function Citytour() {
         <section className="booking-details-section">
             <div className="container pt-0 pb-0 mb-0">
                 <div className="row">
-                    <div className="image-side col-xl-4 col-lg-4">
+                    <div className="image-side col-xl-4 col-lg-4 pt-8">
                         <div className="inner-column">
                             <div className="imagecorner">
                                 <figure className="new-image wow fadeInUp"><img src="images/facilities/cityTour/cityTour2.jpg" alt="" className='rounded-xl' /></figure>

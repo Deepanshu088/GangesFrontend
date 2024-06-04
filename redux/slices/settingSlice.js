@@ -5,7 +5,7 @@ const initialState = {
     isLoading: false,
     bannerImgs: [],
     homeRoomImgs: [],
-    mdProfileImg: "",
+    mdProfileImg: [],
 };
 
 export const fetchSettings = createAsyncThunk("fetchSettings", async (apiService) => {
@@ -32,7 +32,7 @@ const settingSlice = createSlice({
         });
 
         builder.addCase(fetchSettings.fulfilled, (state, action) => {
-            const { mdProfileImg, homeRoomImgs, bannerImgs} = action.payload.settings;
+            const { mdProfileImg, homeRoomImgs, bannerImgs} = action.payload.settings || {};
             state.mdProfileImg = mdProfileImg;
             state.homeRoomImgs = homeRoomImgs;
             state.bannerImgs = bannerImgs;

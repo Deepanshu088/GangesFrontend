@@ -46,7 +46,7 @@ export default function ContactPage() {
 				return;
 			}
 
-			// await apiService("/enquiryForm/tour", "POST", formValues);
+			await apiService("/enquiryForm/contactUs", "POST", formValues);
 			setFormDetails(INITIAL_FORM_VALUES);
 			setFormErrorDetails(INITIAL_FORM_ERRORS);
 			setToastDetails({ show: true, type: 'success', title: 'Success', message: 'Form Submitted Successfully.' });

@@ -9,7 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 const OurRooms = () => {
 	const { groundFloor, firstFloor, secondFloor, thirdFloor } = useSelector(state => state.room);
     const dispatch = useDispatch();
-    const { apiService } = useHttp();
+    const { apiService, isLoading } = useHttp();
     
 	useEffect(() => {
 		dispatch(fetchAllRooms(apiService))
@@ -71,60 +71,15 @@ const OurRooms = () => {
                             )
                             :
                             <div className="m-auto text-center font-bold text-3xl bg-orange-200 py-6 rounded-lg">
-                                No Rooms Found.
+                                {
+                                    isLoading ? "Rooms are loading..." : "No Rooms Found."
+                                }
                             </div>
                         }
 
                     </div>
                 </div>
             </section>
-
-
-            {/* <section class="rooms-section pb-20">
-                <div class="md:mx-10 lg:mx-[5vw] m-auto">
-                    <div class="row">
-                        <div class="sec-title">
-                            <h2>Heritage luxury (Ground Floor)<br />
-                            </h2>
-                        </div>
-
-                        {   groundFloor && groundFloor.length > 0 ?
-                            groundFloor.map(item =>
-                                <div class="room-block col-lg-4 col-md-4">
-                                    <div class="inner-box wow fadeIn">
-                                        <div class="image-box">
-                                            <figure class="image-2 overlay-anim"><img src={`${process.env.NEXT_PUBLIC_BASE_URL}/${item.gallery[0]}`} alt="" className="h-[50vh] md:h-[60vh] w-full object-cover" /></figure>
-                                        </div>
-                                        <div class="content-box">
-                                            <h6 class="title"><a href={`/room-details/${item.roomId}`}>{item.name}</a></h6>
-
-                                            <span class="price">₹10000 / NIGHT</span>
-                                        </div>
-                                        <div class="box-caption">
-
-                                            <a href="https://staahmax.staah.net/be/indexpack?propertyId=MTA5OQ&individual=true&roomTypeId=100333"
-                                                title class="book-btn">book now</a><br />
-
-                                            <ul class="bx-links">
-                                                <li><a title><i class="fa fa-wifi"></i></a></li>
-                                                <li><a title><i class="fa fa-bed"></i></a></li>
-                                                <li><a title><i class="fa fa-bath"></i></a></li>
-                                                <li><a title><i class="fa fa-shower"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            )
-                            :
-                            <div className="m-auto text-center font-bold text-3xl bg-orange-200 py-6 rounded-lg">
-                                No Rooms Found.
-                            </div>
-                        }
-
-                    </div>
-                </div>
-            </section> */}
-
 
             <section class="rooms-section pb-100">
                 <div class="md:mx-10 lg:mx-[5vw] m-auto">
@@ -163,7 +118,9 @@ const OurRooms = () => {
                             )
                             :
                             <div className="m-auto text-center font-bold text-3xl bg-orange-200 py-6 rounded-lg">
-                                No Rooms Found.
+                            {
+                                isLoading ? "Rooms are loading..." : "No Rooms Found."
+                            }
                             </div>
                         }
                     </div>
@@ -209,7 +166,9 @@ const OurRooms = () => {
                             )
                             :
                             <div className="m-auto text-center font-bold text-3xl bg-orange-200 py-6 rounded-lg">
-                                No Rooms Found.
+                            {
+                                isLoading ? "Rooms are loading..." : "No Rooms Found."
+                            }
                             </div>
                         }
                     </div>
