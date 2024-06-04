@@ -9146,23 +9146,25 @@ Sidebar
 }
 .sidebar__post .sidebar__post-list {
   margin: 0;
+  text-align: left;
 }
 .sidebar__post .sidebar__post-list li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  justify-content: start;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 16px 20px 17px;
+  padding: 8px 20px;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
+  text-align: left;
 }
 @media only screen and (max-width: 767px) {
   .sidebar__post .sidebar__post-list li {
-    padding: 16px 0;
     display: flex;
-    justify-content: center;
+    justify-content: start;
   }
 }
 .sidebar__post .sidebar__post-list li:hover {
@@ -9170,7 +9172,7 @@ Sidebar
   border-radius: 10px;
 }
 .sidebar__post .sidebar__post-list li + li {
-  margin-top: 11px;
+  margin-top: 0;
 }
 .sidebar__post .sidebar__post-list .sidebar__post-image {
   margin-right: 20px;
@@ -9179,7 +9181,9 @@ Sidebar
           flex: 70px 0 0; */
 }
 .sidebar__post .sidebar__post-list .sidebar__post-image > img {
-  width: 200px;
+  width: 100px;
+  min-width: 100px;
+  max-width: 100px;
   object-fit: cover;
   height: 70px;
   /* border-radius: 10px; */

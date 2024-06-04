@@ -33,7 +33,7 @@ const FourImagesCarousel = ({ items }) => {
         >
             <button
                 onClick={() => scroll(-scrollRef.current.offsetWidth)}
-                className={`text-3xl md:text-7xl absolute left-0 ml-2 z-10 p-4 bg-black bg-opacity-30 h-full text-white transition-opacity duration-300 ease-in-out focus:outline-none ${isHovered ? 'opacity-100' : 'opacity-0'
+                className={`text-3xl md:text-7xl absolute left-0 ml-2 z-10 p-4 bg-black bg-opacity-30 h-full rounded-l-xl text-white transition-opacity duration-300 ease-in-out focus:outline-none ${isHovered ? 'opacity-100' : 'opacity-0'
                     }`}
                 style={{ pointerEvents: isHovered ? 'auto' : 'none' }}
             >
@@ -43,15 +43,15 @@ const FourImagesCarousel = ({ items }) => {
 
             <div ref={scrollRef} className="flex overflow-x-scroll scrollbar-hide" style={{ scrollBehavior: 'smooth' }}>
                 {items.map((item, index) => (
-                    <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 flex-none">
-                        <img key={index} src={item.imagePath} alt={`Slide ${index}`} className="w-full last:mr-0 object-cover px-2 h-[250px]" />
+                    <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 flex-none px-2">
+                        <img key={index} src={item.imagePath} alt={`Slide ${index}`} className="w-full last:mr-0 object-cover h-[250px] rounded-xl " />
                     </div>
                 ))}
             </div>
 
             <button
                 onClick={() => scroll(scrollRef.current.offsetWidth)}
-                className={`text-3xl md:text-7xl absolute right-0 mr-2 z-10 p-4 bg-black bg-opacity-30 h-full text-white transition-opacity duration-300 ease-in-out focus:outline-none ${isHovered ? 'opacity-100' : 'opacity-0'
+                className={`text-3xl md:text-7xl absolute right-0 mr-2 z-10 p-4 bg-black bg-opacity-30 h-full rounded-r-xl text-white transition-opacity duration-300 ease-in-out focus:outline-none ${isHovered ? 'opacity-100' : 'opacity-0'
                     }`}
                 style={{ pointerEvents: isHovered ? 'auto' : 'none' }}
             >

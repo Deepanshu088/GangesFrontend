@@ -144,7 +144,7 @@ export default function RoomDetails({ roomDetail = {} }) {
 											<div className="sidebar__post-content">
 												<h3>
 													<a className="sidebar__post-content-meta" href='/page-groundfloor'>
-														<div className='flex justify-start'>
+														<div className='flex justify-start font-normal'>
 															<i className="far fa-door-open mr-2"></i>
 															<span>Lower Level Heritage Deluxe</span>
 														</div>
@@ -157,7 +157,13 @@ export default function RoomDetails({ roomDetail = {} }) {
 											<div className="sidebar__post-image"> <img src={`${process.env.NEXT_PUBLIC_BASE_URL}/${homeRoomImgs[1]}`} alt="" /> </div>
 											<div className="sidebar__post-content">
 												<h3>
-													<span className="sidebar__post-content-meta"><i className="far fa-door-open"></i>Upper Level Heritage Deluxe</span>
+													<a className="sidebar__post-content-meta" href='/page-firstfloor'>
+														<div className='flex justify-start font-normal'>
+															<i className="far fa-door-open mr-2"></i>
+															<span>Upper Level Heritage Deluxe</span>
+														</div>
+													</a>
+													{/* <span className="sidebar__post-content-meta"><i className="far fa-door-open"></i> Level Heritage Deluxe</span> */}
 													{/* <Link href="">₹10000 / NIGHT</Link> */}
 												</h3>
 											</div>
@@ -166,7 +172,13 @@ export default function RoomDetails({ roomDetail = {} }) {
 											<div className="sidebar__post-image"> <img src={`${process.env.NEXT_PUBLIC_BASE_URL}/${homeRoomImgs[2]}`} alt="" /> </div>
 											<div className="sidebar__post-content">
 												<h3>
-													<span className="sidebar__post-content-meta"><i className="far fa-door-open"></i>Ganges View</span>
+													<a className="sidebar__post-content-meta" href='/page-thirdfloor'>
+														<div className='flex justify-start font-normal'>
+															<i className="far fa-door-open mr-2"></i>
+															<span>Ganges View</span>
+														</div>
+													</a>
+													{/* <span className="sidebar__post-content-meta"><i className="far fa-door-open"></i>Ganges View</span> */}
 													{/* <Link href="">₹10000 / NIGHT</Link> */}
 												</h3>
 											</div>
