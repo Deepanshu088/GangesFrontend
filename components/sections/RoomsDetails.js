@@ -150,9 +150,9 @@ export default function RoomDetails({ roomDetail = {} }) {
 										</PinterestShareButton>
 
 										<WhatsappShareButton
-											url={"http://localhost:3000/room-details/002"}
-											title={"Room Name"}
-											separator=":: "
+											url={shareUrl}
+											title={name}
+											separator=" "
 										>
 											<a><i className="fab fa-whatsapp text-black"></i></a>
 										</WhatsappShareButton>
