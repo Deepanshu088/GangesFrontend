@@ -3714,7 +3714,10 @@ Section Title
   margin-bottom: 50px;
 }
 @media (max-width: 575.98px) {
-  .about-section .image-column {
+  /* .about-section .image-column {
+    display: none;
+  } */
+  .about-section .exp-box {
     display: none;
   }
 }

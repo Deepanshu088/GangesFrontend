@@ -3,14 +3,17 @@ import React from 'react';
 import RoomGallery from './RoomGallery';
 import { useSelector } from 'react-redux';
 import StandardQueryForm from '../StandardQueryForm/StandardQueryForm';
-
-const listOfImages = ["/images/room-1.jpg", "/images/rooms/room4.jpg", "/images/room-3.jpg", "/images/rooms/room1.jpg", "/images/rooms/room3.jpg"]
+import { FacebookShareButton, PinterestShareButton, TwitterShareButton, WhatsappShareButton } from 'react-share';
+import { usePathname } from 'next/navigation';
 
 export default function RoomDetails({ roomDetail = {} }) {
+	const pathname = usePathname();
 	const { homeRoomImgs } = useSelector(state => state.settings);
 	const { name, longDescription, floor, noOfBeds, isBreakfast, gallery = [], isDinner, isRiverView, isWifi, isTelevision, isAirConditioned, isParking, customerRating, luxuryCategory, regularPrice } = roomDetail;
 
 	const galleryURLs = gallery.map(item => process.env.NEXT_PUBLIC_BASE_URL + "/" + item);
+
+	const shareUrl = process.env.NEXT_PUBLIC_CLIENT_BASE_URL + pathname;
 
 	return (
 		<>
@@ -114,15 +117,47 @@ export default function RoomDetails({ roomDetail = {} }) {
 										}
 									</div>
 								</div>
-								{/* <div className="d-sm-flex align-items-sm-center justify-content-sm-between py-10 border-top">
+								<div className="d-sm-flex align-items-sm-center justify-content-sm-between py-10 border-top">
 									<h6 className="my-sm-0">Share Details</h6>
-									<div className="blog-details__social-list">
-										<Link href="#"><i className="fab fa-twitter"></i></Link>
+									<div className="blog-details__social-list gap-2">
+										{/* <Link href="#"><i className="fab fa-twitter"></i></Link>
 										<Link href="#"><i className="fab fa-facebook"></i></Link>
 										<Link href="#"><i className="fab fa-pinterest-p"></i></Link>
-										<Link href="#"><i className="fab fa-instagram"></i></Link>
+										<Link href="#"><i className="fab fa-instagram"></i></Link> */}
+
+
+										<TwitterShareButton
+											url={shareUrl}
+											title={name}
+										>
+											<a><i className="fab fa-twitter text-black"></i></a>
+										</TwitterShareButton>
+
+										<FacebookShareButton
+											url={shareUrl}
+											title={name}
+										>
+											<a><i className="fab fa-facebook text-black"></i></a>
+										</FacebookShareButton>
+
+										
+										<PinterestShareButton
+											url={shareUrl}
+											title={name}											
+											media={galleryURLs[0]}
+										>
+											<a><i className="fab fa-pinterest-p text-black"></i></a>
+										</PinterestShareButton>
+
+										<WhatsappShareButton
+											url={"http://localhost:3000/room-details/002"}
+											title={"Room Name"}
+											separator=":: "
+										>
+											<a><i className="fab fa-whatsapp text-black"></i></a>
+										</WhatsappShareButton>
 									</div>
-								</div> */}
+								</div>
 
 							</div>
 						</div>
