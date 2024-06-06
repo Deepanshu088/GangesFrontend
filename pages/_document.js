@@ -1,5 +1,4 @@
 import { Html, Head, Main, NextScript } from "next/document";
-import logo from ""
 export default function Document() {
 
 
