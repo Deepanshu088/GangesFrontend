@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux';
 import StandardQueryForm from '../StandardQueryForm/StandardQueryForm';
 import { FacebookShareButton, PinterestShareButton, TwitterShareButton, WhatsappShareButton } from 'react-share';
 import { usePathname } from 'next/navigation';
+import Head from 'next/head';
 
 export default function RoomDetails({ roomDetail = {} }) {
 	const pathname = usePathname();
@@ -17,6 +18,15 @@ export default function RoomDetails({ roomDetail = {} }) {
 
 	return (
 		<>
+			<Head>
+				<title>{name}</title>
+				<meta property="og:title" content={name} key="title" />
+				<meta property="og:description" content={longDescription} />
+				<meta property="og:type" content="article" />
+				
+				<meta property="og:image" content={galleryURLs[0]} />
+				<meta property="og:URL" content={galleryURLs[0]} />
+			</Head>
 			<section className="blog-details pt-120 pb-120">
 				<div className="auto-container">
 					<div className="row">
@@ -140,10 +150,10 @@ export default function RoomDetails({ roomDetail = {} }) {
 											<a><i className="fab fa-facebook text-black"></i></a>
 										</FacebookShareButton>
 
-										
+
 										<PinterestShareButton
 											url={shareUrl}
-											title={name}											
+											title={name}
 											media={galleryURLs[0]}
 										>
 											<a><i className="fab fa-pinterest-p text-black"></i></a>
