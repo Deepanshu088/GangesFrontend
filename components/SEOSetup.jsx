@@ -13,13 +13,13 @@ const SEOSetup = ({
   return (
     <Head>
       <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <meta name="author" content={author} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:url" content={`https://palaceonganges.com"${url}`} />
-      <meta property="og:image" content={image} />
+      <meta name="description" key="description" content={description} />
+      <meta name="keywords" key="keywords" content={keywords} />
+      <meta name="author" key="author" content={author} />
+      <meta property="og:title" key="og:title" content={title} />
+      <meta property="og:description" key="og:description" content={description} />
+      <meta property="og:url" key="og:url" content={`https://palaceonganges.com"${url}`} />
+      <meta property="og:image" key="og:image" content={image} />
     </Head>
   );
 };
