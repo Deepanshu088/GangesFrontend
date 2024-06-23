@@ -8,6 +8,7 @@ const SEOSetup = ({
   url = "/",
   image = "/favicon.ico",
 }) => {
+  console.log(title, description, keywords, author, url, image)
   console.log("here is the seo setupppppp");
   return (
     <Head>
