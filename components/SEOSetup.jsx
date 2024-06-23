@@ -1,4 +1,3 @@
-// components/SEO.js
 import Head from 'next/head';
 
 const SEOSetup = ({
@@ -9,6 +8,7 @@ const SEOSetup = ({
   url = "/",
   image = "/favicon.ico",
 }) => {
+  console.log("here is the seo setupppppp");
   return (
     <Head>
       <title>{title}</title>
