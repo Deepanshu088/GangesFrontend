@@ -17,6 +17,15 @@ export default function Document() {
 				<meta property="og:description" content="Welcome to the Palace on Ganges, an exquisite fusion of traditional elegance and contemporary luxury located at the heart of Varanasi’s spiritual landscape, on the famous Assi Ghat." />
 
 				<meta property="og:image" content="/favicon.ico" /> */}
+
+				<script async src="https://www.googletagmanager.com/gtag/js?id=G-7MP5XE6CM5"></script>
+				<script>
+					window.dataLayer = window.dataLayer || [];
+					function gtag(){dataLayer.push(arguments)}
+					gtag('js', new Date());
+
+					gtag('config', 'G-7MP5XE6CM5');
+				</script>
 			</Head>
 
 			<SEOSetup />

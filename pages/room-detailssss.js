@@ -9,7 +9,7 @@ import { fetchAllRooms } from "@/redux/slices/roomSlice";
 export default function RoomDetails({ roomId = 1 }) {
 	const { groundFloor, firstFloor, secondFloor, thirdFloor } = useSelector(state => state.room);
 	const RoomsList = [...firstFloor, ...groundFloor, ...secondFloor, ...thirdFloor];
-	const roomDetail = RoomsList.find(item => item.roomId == roomId);
+	const roomDetail = RoomsList.find(item => item.roomId == roomId || item.urlTag == roomId);
 	const { isLoading, apiService } = useHttp();
 	const dispatch = useDispatch();
 
