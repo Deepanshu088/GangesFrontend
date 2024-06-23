@@ -20,6 +20,9 @@ const SEOSetup = ({
       <meta property="og:description" key="og:description" content={description} />
       <meta property="og:url" key="og:url" content={`https://palaceonganges.com"${url}`} />
       <meta property="og:image" key="og:image" content={image} />
+      <meta property="og:image:type" content={image} />
+      <meta property="og:image:width" content={image} />
+      <meta property="og:image:height" content={image} />
     </Head>
   );
 };
