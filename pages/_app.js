@@ -8,7 +8,6 @@ import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 import store, { persistor } from "@/redux/store";
 import ChatbotScript from "@/components/ChatBot";
-import SEOSetup from "@/components/SEOSetup";
 
 function MyApp({ Component, pageProps }) {
     // const [loading, setLoading] = useState(false);
@@ -21,7 +20,6 @@ function MyApp({ Component, pageProps }) {
     // }, []);
     return <Provider store={store}>
         <PersistGate persistor={persistor}>
-            <SEOSetup />
             {!loading ? (
                 <Component {...pageProps} />
             ) : (
