@@ -1,16 +1,11 @@
 import Head from 'next/head'
-import SEOSetup from '../SEOSetup'
 
 const PageHead = ({ headTitle }) => {
     return (
         <>
             <Head>
-                {/* <title>
-                    {headTitle ? headTitle : "Palace on Ganges"}
-                </title> */}
                 <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
             </Head>
-            <SEOSetup />
         </>
     )
 }

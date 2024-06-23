@@ -35,7 +35,7 @@ export default function Slider1({ bannerImgs }) {
           {/* Slide Item */}
           {
             bannerImgs && bannerImgs.length && bannerImgs.map(item =>
-              <SwiperSlide className="banner-slide slide-item">
+              <SwiperSlide className="banner-slide slide-item" key={item}>
                 <figure className="image"><img src={`${process.env.NEXT_PUBLIC_BASE_URL}/${item}`} alt="" /></figure>
                 <div className="content-box">
                   <span className="sub-title" data-animation-in="fadeInUp" data-delay-in="0.1">unique place and luxury hotel</span>

@@ -42,7 +42,7 @@ const Carousel = ({ items }) => {
 
             <div ref={scrollRef} className="flex overflow-x-scroll scrollbar-hide rounded-xl " style={{ scrollBehavior: 'smooth' }}>
                 {items.map((item, index) => (
-                    <div className="w-full flex-none">
+                    <div className="w-full flex-none" key={item.imagePath}>
                         <img key={index} src={item.imagePath} alt={`Slide ${index}`} className="w-full object-cover h-[400px] " />
                     </div>
                 ))}

@@ -9,6 +9,7 @@ import PageHead from './PageHead'
 import { useDispatch, useSelector } from "react-redux"
 import { fetchSettings } from "@/redux/slices/settingSlice"
 import useHttp from "@/hooks/useHttp"
+import SEOSetup from "../SEOSetup"
 
 export default function Layout({ headerStyle, handleRemove, footerStyle, headTitle, breadcrumbTitle, children }) {
     const [scroll, setScroll] = useState(0)
@@ -38,6 +39,7 @@ export default function Layout({ headerStyle, handleRemove, footerStyle, headTit
     return (
         <>
             <PageHead />
+            <SEOSetup />
             <div className="page-wrapper" id="top">
                 {!headerStyle && <Header1 scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} isSearch={isSearch} handleSearch={handleSearch} />}
                 {headerStyle == 1 ? <Header1 scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} isSearch={isSearch} handleSearch={handleSearch} /> : null}
