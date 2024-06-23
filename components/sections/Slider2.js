@@ -1,4 +1,5 @@
 'use client'
+import { ABOUT_US } from "@/constants/RoutesConstants"
 import Link from "next/link"
 import { Autoplay, Navigation, Pagination } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
@@ -38,7 +39,7 @@ export default function Slider2() {
             <div className="content-box">
               <span className="sub-title" data-animation-in="fadeInUp" data-delay-in="0.1">unique place and luxury hotel</span>
               <h1 data-animation-in="fadeInUp" data-delay-in="0.3">life enjoy with <br/>the great moments</h1>
-              <Link href="/page-about" className="btn" data-animation-in="fadeInUp" data-delay-in="0.5">rooms & suites</Link>
+              <Link href={ABOUT_US} className="btn" data-animation-in="fadeInUp" data-delay-in="0.5">rooms & suites</Link>
             </div>
           </SwiperSlide>
           {/* Slide Item */}
@@ -47,7 +48,7 @@ export default function Slider2() {
             <div className="content-box">
               <span className="sub-title" data-animation-in="fadeInUp" data-delay-in="0.1">unique place and luxury hotel</span>
               <h1 data-animation-in="fadeInUp" data-delay-in="0.3">life enjoy with <br/>the great moments</h1>
-              <Link href="/page-about" className="btn" data-animation-in="fadeInUp" data-delay-in="0.5">rooms & suites</Link>
+              <Link href={ABOUT_US} className="btn" data-animation-in="fadeInUp" data-delay-in="0.5">rooms & suites</Link>
             </div>
           </SwiperSlide>
           <div className="owl-nav" style={{zIndex:"999"}}>

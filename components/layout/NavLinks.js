@@ -1,3 +1,4 @@
+import { ABOUT_US } from '@/constants/RoutesConstants';
 import Link from 'next/link';
 import React from 'react';
 
@@ -41,7 +42,7 @@ const NavLinks = ({ extraClassName }) => {
         </ul>
       </li>
       <li className="dropdown">
-        <Link className="text-sm" href="/page-about">About</Link>
+        <Link className="text-sm" href={ABOUT_US}>About</Link>
         <ul>
           <li> <Link className="text-sm" href="/page-md">Director's Message</Link> </li>
           <li><Link className="text-sm" href="/page-profile">Profile</Link></li>

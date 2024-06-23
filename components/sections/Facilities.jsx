@@ -1,3 +1,4 @@
+import { ABOUT_US } from '@/constants/RoutesConstants';
 import React, { useState } from 'react';
 import ModalVideo from 'react-modal-video';
 
@@ -33,7 +34,7 @@ export default function Facilities() {
                                 </div>
                                 </div>
                                 <div className="btn-box">
-                                <a href="page-about.html" className="theme-btn btn-style-one"><span className="btn-title">Discover More</span></a>
+                                <a href={ABOUT_US} className="theme-btn btn-style-one"><span className="btn-title">Discover More</span></a>
                                 <div className="contact-info">
                                     <div className="icon-box"><i className="flaticon-customer-service"></i></div>
                                     <a href="https://staahmax.staah.net/be/indexpackdetail?propertyId=MTA5OQ==&individual=true" className='whitespace-nowrap'>Book Now</a>

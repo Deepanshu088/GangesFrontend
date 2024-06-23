@@ -1,3 +1,4 @@
+import { ABOUT_US } from '@/constants/RoutesConstants';
 import Link from 'next/link';
 export default function About2() {
     return (
@@ -34,7 +35,7 @@ export default function About2() {
                                     <li><i className="icon fa fa-circle-check"></i>There are many variations of Lorem Ipsum majority</li>
                                 </ul>
                                 <div className="btn-box">
-                                    <Link href="page-about" className="theme-btn btn-style-one"><span className="btn-title">Discover More</span></Link>
+                                    <Link href={ABOUT_US} className="theme-btn btn-style-one"><span className="btn-title">Discover More</span></Link>
                                 </div>
                             </div>
                         </div>

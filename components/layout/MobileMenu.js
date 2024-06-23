@@ -1,4 +1,5 @@
 'use client'
+import { ABOUT_US } from "@/constants/RoutesConstants"
 import Link from "next/link"
 import { useState } from 'react'
 
@@ -44,7 +45,7 @@ export default function MobileMenu({ handleMobileMenu }) {
                     </ul>
                     <div className="dropdown-btn" onClick={() => handleClick(3)}><i className="fa fa-angle-down"/></div>
                 </li>
-                <li className="dropdown"><Link href="/page-about" onClick={() => handleMobileMenu()}>About</Link>
+                <li className="dropdown"><Link href={ABOUT_US} onClick={() => handleMobileMenu()}>About</Link>
                     <ul style={{ display: `${isActive.key == 4 ? "block" : "none"}` }}>
                         <li><Link onClick={() => handleMobileMenu()} href="/page-md">Director's Message</Link></li>
                         <li><Link onClick={() => handleMobileMenu()} href="/page-profile">Profile</Link></li>

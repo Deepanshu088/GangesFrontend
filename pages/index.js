@@ -1,3 +1,4 @@
+import SEOSetup from "@/components/SEOSetup"
 import Layout from "@/components/layout/Layout"
 import About1 from "@/components/sections/About1"
 import Features from "@/components/sections/Features"
@@ -17,6 +18,12 @@ export default function Home() {
 
 	return (
 		<>
+			<SEOSetup
+				title="Palace on Ganges Heritage Hotel | Stay at Assi Ghat, Varanasi"
+				description="Discover the timeless beauty of Varanasi at Palace on Ganges Heritage Hotel. Situated on Assi Ghat, this heritage hotel offers comfortable rooms, traditional cuisine, and stunning views of the Ganges River. Book your heritage stay today."
+				keywords="Palace on Ganges Heritage Hotel, Heritage Hotel Varanasi, Hotel Assi Ghat Varanasi, Stay on Assi Ghat, Ganges River Hotel Varanasi, Varanasi Heritage Accommodation, Palace on Ganges, Assi Ghat Hotels"
+			/>
+
 			<Layout>
 				<Slider1 bannerImgs={bannerImgs} />
 				<About1 addClass={"pt-0"} />
