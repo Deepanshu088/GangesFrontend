@@ -6,6 +6,7 @@ import StandardQueryForm from '../StandardQueryForm/StandardQueryForm';
 import { FacebookShareButton, PinterestShareButton, TwitterShareButton, WhatsappShareButton } from 'react-share';
 import { usePathname } from 'next/navigation';
 import SEOSetup from '../SEOSetup';
+import Head from 'next/head';
 
 export default function RoomDetails({ roomDetail = {} }) {
 	const pathname = usePathname();
@@ -25,6 +26,20 @@ export default function RoomDetails({ roomDetail = {} }) {
 				url={`/rooms/${urlTag}`}
 				image={galleryURLs[0]}
 			/>
+
+			<Head>
+				<title>title</title>
+				<meta name="description" key="description" content={"description"} />
+				<meta name="keywords" key="keywords" content={keywords} />
+				<meta name="author" key="author" content={"author"} />
+				<meta property="og:title" key="og:title" content={"title"} />
+				<meta property="og:description" key="og:description" content={"description"} />
+				<meta property="og:url" key="og:url" content={`https://palaceonganges.com"${"/url"}`} />
+				<meta property="og:image" key="og:image" content={galleryURLs[0]} />
+				<meta property="og:image:type" content={galleryURLs[0]} />
+				<meta property="og:image:width" content={galleryURLs[0]} />
+				<meta property="og:image:height" content={galleryURLs[0]} />
+			</Head>
 
 			<section className="blog-details pt-120 pb-120">
 				<div className="auto-container">
