@@ -18,14 +18,14 @@ export default function Document() {
 
 				<meta property="og:image" content="/favicon.ico" /> */}
 
-				{/* <script async src="https://www.googletagmanager.com/gtag/js?id=G-7MP5XE6CM5"></script>
+				<script async src="https://www.googletagmanager.com/gtag/js?id=G-7MP5XE6CM5"></script>
 				<script>
 					window.dataLayer = window.dataLayer || [];
 					function gtag(){dataLayer.push(arguments)}
 					gtag('js', new Date());
 
 					gtag('config', 'G-7MP5XE6CM5');
-				</script> */}
+				</script>
 			</Head>
 
 			<SEOSetup />
@@ -34,7 +34,7 @@ export default function Document() {
 				<Main />
 				<NextScript />
 				<Script src="https://www.googletagmanager.com/gtag/js?id=G-7MP5XE6CM5" />
-				<GoogleAnalyticsScript />
+				{/* <GoogleAnalyticsScript /> */}
 				<div className="chat-bubble-message" id="botfullyPrompt">
 					<i id="chatBotCross" className="chatBotCross fa fa-times" onClick={() => document.getElementById('botfullyPrompt').style.display = 'none'}></i>
 					<div id="promptHeader" className="bubble-message-header"></div>
