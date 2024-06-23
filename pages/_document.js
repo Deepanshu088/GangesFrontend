@@ -28,6 +28,9 @@ export default function Document() {
 				</script> */}
 			</Head>
 			Testingg texxxttt
+			<Head>
+				<title>Hi there</title>
+			</Head>
 			<SEOSetup />
 
 			<body>
