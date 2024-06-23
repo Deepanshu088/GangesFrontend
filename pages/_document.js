@@ -9,7 +9,7 @@ export default function Document() {
 			<Head>
 				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
 
-				<title>Palace on Ganges Heritage Hotel | Stay at Assi Ghat, Varanasi</title>
+				{/* <title>Palace on Ganges Heritage Hotel | Stay at Assi Ghat, Varanasi</title> */}
 				{/* <meta name="description" key="description" content="Discover the timeless beauty of Varanasi at Palace on Ganges Heritage Hotel. Situated on Assi Ghat, this heritage hotel offers comfortable rooms, traditional cuisine, and stunning views of the Ganges River. Book your heritage stay today." />
 				<meta name="keywords" key="keywords" content="Palace on Ganges Heritage Hotel, Heritage Hotel Varanasi, Hotel Assi Ghat Varanasi, Stay on Assi Ghat, Ganges River Hotel Varanasi, Varanasi Heritage Accommodation, Palace on Ganges, Assi Ghat Hotels" />
 				<meta name="author" key="author" content="Palace on Ganges" />
