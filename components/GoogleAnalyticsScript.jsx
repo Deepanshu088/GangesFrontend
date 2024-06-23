@@ -1,5 +1,3 @@
-const { default: Script } = require("next/script");
-
 const GoogleAnalyticsScript = () => {
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }

@@ -1,6 +1,7 @@
 import GoogleAnalyticsScript from "@/components/GoogleAnalyticsScript";
 import SEOSetup from "@/components/SEOSetup";
 import { Html, Head, Main, NextScript } from "next/document";
+import Script from "next/script";
 export default function Document() {
 
 	return (
