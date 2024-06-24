@@ -1,3 +1,4 @@
+import { GANGES_VIEW_FLOOR_ROUTE, LOWER_LEVEL_FLOOR_ROUTE, UPPER_LEVEL_FLOOR_ROUTE } from '@/constants/RoutesConstants';
 import Link from 'next/link';
 import React from 'react';
 
@@ -19,7 +20,7 @@ export default function Rooms({homeRoomImgs}) {
 									<figure className="image-2 overlay-anim"><img src={`${process.env.NEXT_PUBLIC_BASE_URL}/${homeRoomImgs[0]}`} alt="" className="md:h-[360px] max-h-[400px] w-full object-cover"/></figure>
 								</div>
 								<div className="content-box">
-									<h6 className="title"><Link href="/page-groundfloor">Lower Level Heritage Deluxe</Link></h6>
+									<h6 className="title"><Link href={LOWER_LEVEL_FLOOR_ROUTE}>Lower Level Heritage Deluxe</Link></h6>
 									{/* <span className="price">₹10000  / NIGHT</span> */}
 								</div>
 								<div className="box-caption">
@@ -40,7 +41,7 @@ export default function Rooms({homeRoomImgs}) {
 									<figure className="image-2 overlay-anim"><img src={`${process.env.NEXT_PUBLIC_BASE_URL}/${homeRoomImgs[1]}`} alt="" className="md:h-[360px] max-h-[400px] w-full object-cover"/></figure>
 								</div>
 								<div className="content-box">
-									<h6 className="title"><Link href="/page-firstfloor">Upper Level Heritage Deluxe</Link></h6>
+									<h6 className="title"><Link href={UPPER_LEVEL_FLOOR_ROUTE}>Upper Level Heritage Deluxe</Link></h6>
 									{/* <span className="price">₹10000  / NIGHT</span> */}
 								</div>
 								<div className="box-caption">
@@ -61,7 +62,7 @@ export default function Rooms({homeRoomImgs}) {
 									<figure className="image-2 overlay-anim"><img src={`${process.env.NEXT_PUBLIC_BASE_URL}/${homeRoomImgs[2]}`} alt="" className="md:h-[360px] max-h-[400px] w-full object-cover"/></figure>
 								</div>
 								<div className="content-box">
-									<h6 className="title"><Link href="/page-groundfloor">Ganges View</Link></h6>
+									<h6 className="title"><Link href={LOWER_LEVEL_FLOOR_ROUTE}>Ganges View</Link></h6>
 									{/* <span className="price">₹10000  / NIGHT</span> */}
 								</div>
 								<div className="box-caption">
@@ -82,7 +83,7 @@ export default function Rooms({homeRoomImgs}) {
 									<figure className="image-2 overlay-anim"><img src={`${process.env.NEXT_PUBLIC_BASE_URL}/${homeRoomImgs[3]}`} alt="" className="md:h-[360px] max-h-[400px] w-full object-cover"/></figure>
 								</div>
 								<div className="content-box">
-									<h6 className="title"><Link href="/page-thirdfloor">Lower Level Heritage Deluxe</Link></h6>
+									<h6 className="title"><Link href={GANGES_VIEW_FLOOR_ROUTE}>Lower Level Heritage Deluxe</Link></h6>
 									{/* <span className="price">₹10000  / NIGHT</span> */}
 								</div>
 								<div className="box-caption">
@@ -103,7 +104,7 @@ export default function Rooms({homeRoomImgs}) {
 									<figure className="image-2 overlay-anim"><img src={`${process.env.NEXT_PUBLIC_BASE_URL}/${homeRoomImgs[4]}`} alt="" className="md:h-[360px] max-h-[400px] w-full object-cover"/></figure>
 								</div>
 								<div className="content-box">
-									<h6 className="title"><Link href="/page-thirdfloor">Ganges View</Link></h6>
+									<h6 className="title"><Link href={GANGES_VIEW_FLOOR_ROUTE}>Ganges View</Link></h6>
 									{/* <span className="price">₹10000  / NIGHT</span> */}
 								</div>
 								<div className="box-caption">

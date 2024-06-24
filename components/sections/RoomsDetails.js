@@ -7,6 +7,7 @@ import { FacebookShareButton, PinterestShareButton, TwitterShareButton, Whatsapp
 import { usePathname } from 'next/navigation';
 import SEOSetup from '../SEOSetup';
 import Head from 'next/head';
+import { GANGES_VIEW_FLOOR_ROUTE, LOWER_LEVEL_FLOOR_ROUTE, UPPER_LEVEL_FLOOR_ROUTE } from '@/constants/RoutesConstants';
 
 export default function RoomDetails({ roomDetail = {} }) {
 	const pathname = usePathname();
@@ -202,7 +203,7 @@ export default function RoomDetails({ roomDetail = {} }) {
 											<div className="sidebar__post-image"> <img src={`${process.env.NEXT_PUBLIC_BASE_URL}/${homeRoomImgs[0]}`} alt="" /> </div>
 											<div className="sidebar__post-content">
 												<h3>
-													<a className="sidebar__post-content-meta" href='/page-groundfloor'>
+													<a className="sidebar__post-content-meta" href={LOWER_LEVEL_FLOOR_ROUTE}>
 														<div className='flex justify-start font-normal'>
 															<i className="far fa-door-open mr-2"></i>
 															<span>Lower Level Heritage Deluxe</span>
@@ -216,7 +217,7 @@ export default function RoomDetails({ roomDetail = {} }) {
 											<div className="sidebar__post-image"> <img src={`${process.env.NEXT_PUBLIC_BASE_URL}/${homeRoomImgs[1]}`} alt="" /> </div>
 											<div className="sidebar__post-content">
 												<h3>
-													<a className="sidebar__post-content-meta" href='/page-firstfloor'>
+													<a className="sidebar__post-content-meta" href={UPPER_LEVEL_FLOOR_ROUTE}>
 														<div className='flex justify-start font-normal'>
 															<i className="far fa-door-open mr-2"></i>
 															<span>Upper Level Heritage Deluxe</span>
@@ -231,7 +232,7 @@ export default function RoomDetails({ roomDetail = {} }) {
 											<div className="sidebar__post-image"> <img src={`${process.env.NEXT_PUBLIC_BASE_URL}/${homeRoomImgs[2]}`} alt="" /> </div>
 											<div className="sidebar__post-content">
 												<h3>
-													<a className="sidebar__post-content-meta" href='/page-thirdfloor'>
+													<a className="sidebar__post-content-meta" href={GANGES_VIEW_FLOOR_ROUTE}>
 														<div className='flex justify-start font-normal'>
 															<i className="far fa-door-open mr-2"></i>
 															<span>Ganges View</span>

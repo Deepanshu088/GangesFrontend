@@ -21,7 +21,7 @@ export default function RoomDetails({ roomId = 1 }) {
 	}, [])
 
 	if (!roomDetail || !roomDetail.name) {
-		// navigate("/our-rooms")
+		// navigate("/rooms-palace-on-ganges-heritage-hotel-assi-ghat-varanasi")
 		// return <>
 		// 	<Layout headerStyle={2}>
 		// 		<div>

@@ -1,3 +1,4 @@
+import SEOSetup from "@/components/SEOSetup";
 import Layout from "@/components/layout/Layout";
 import PageTitle from "@/components/sections/PageTitle";
 import { FirstFloorRooms, GroundFloorRooms, SecondFloorRooms, ThirdFloorRooms } from "@/constants/RoomDetailConstants";
@@ -18,24 +19,14 @@ const OurRooms = () => {
     const upperFloor = [  ...firstFloor, ...secondFloor ];
 
     return <div>
+        <SEOSetup
+            title="Our Rooms | Palace on Ganges Heritage Hotel at Assi Ghat, Varanasi"
+            description="Explore the rooms at Palace on Ganges Heritage Hotel in Varanasi. Situated on Assi Ghat, our heritage hotel offers a range of comfortable and uniquely decorated rooms with stunning views of the Ganges River. Book your stay now."
+            keywords="Rooms at Palace on Ganges Heritage Hotel, Heritage Hotel Varanasi, Assi Ghat Varanasi, Ganges River Hotel Rooms, Varanasi Heritage Accommodation, Palace on Ganges, Assi Ghat Hotel Rooms, Varanasi Hotel Stay"
+        />
+
         <Layout>
-
-
-            {/* <section class="page-title" style={{ backgroundImage: "url(images/background/page-title-bg.png)" }}>
-                <div class="auto-container">
-                    <div class="title-outer text-center">
-                        <h1 class="title">Our rooms</h1>
-                        <ul class="page-breadcrumb">
-                            <li><a href="index.html">Home</a></li>
-                            <li>Our Rooms</li>
-                        </ul>
-                    </div>
-                </div>
-            </section> */}
-
-
             <PageTitle pageName="Our Rooms" />
-
 
             <section class="rooms-section pb-20">
                 <div class="md:mx-10 lg:mx-[5vw] m-auto">

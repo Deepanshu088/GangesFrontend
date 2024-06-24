@@ -1,3 +1,4 @@
+import { CONTACT_US } from '@/constants/RoutesConstants';
 import Link from 'next/link';
 import React from 'react';
 
@@ -19,7 +20,7 @@ export default function CallToAction() {
                 </div>
 
                 <div className="btn-column col-lg-4 col-md-12 col-sm-12">
-                  <div className="inner-column"> <Link href="/page-contact" className="read-more">Book Now</Link> </div>
+                  <div className="inner-column"> <Link href={CONTACT_US} className="read-more">Book Now</Link> </div>
                 </div>
               </div>
             </div>

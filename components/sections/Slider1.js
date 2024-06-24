@@ -40,7 +40,7 @@ export default function Slider1({ bannerImgs }) {
                 <div className="content-box">
                   <span className="sub-title" data-animation-in="fadeInUp" data-delay-in="0.1">unique place and luxury hotel</span>
                   <h1 data-animation-in="fadeInUp" data-delay-in="0.3">LUXURY HERITAGE <br />EXPERIENCE</h1>
-                  <Link href="/our-rooms" className="btn" data-animation-in="fadeInUp" data-delay-in="0.5">OUR ROOMS</Link>
+                  <Link href="/rooms-palace-on-ganges-heritage-hotel-assi-ghat-varanasi" className="btn" data-animation-in="fadeInUp" data-delay-in="0.5">OUR ROOMS</Link>
                 </div>
               </SwiperSlide>
             )
@@ -50,7 +50,7 @@ export default function Slider1({ bannerImgs }) {
             <div className="content-box">
               <span className="sub-title" data-animation-in="fadeInUp" data-delay-in="0.1">unique place and luxury hotel</span>
               <h1 data-animation-in="fadeInUp" data-delay-in="0.3">LUXURY HERITAGE <br />EXPERIENCE</h1>
-              <Link href="/our-rooms" className="btn" data-animation-in="fadeInUp" data-delay-in="0.5">OUR ROOMS</Link>
+              <Link href="/rooms-palace-on-ganges-heritage-hotel-assi-ghat-varanasi" className="btn" data-animation-in="fadeInUp" data-delay-in="0.5">OUR ROOMS</Link>
             </div>
           </SwiperSlide> */}
           {/* Slide Item */}
@@ -59,7 +59,7 @@ export default function Slider1({ bannerImgs }) {
             <div className="content-box">
               <span className="sub-title" data-animation-in="fadeInUp" data-delay-in="0.1">unique place and luxury hotel</span>
               <h1 data-animation-in="fadeInUp" data-delay-in="0.3">LUXURY HERITAGE <br/>EXPERIENCE</h1>
-              <Link href="/our-rooms" className="btn" data-animation-in="fadeInUp" data-delay-in="0.5">OUR ROOMS</Link>
+              <Link href="/rooms-palace-on-ganges-heritage-hotel-assi-ghat-varanasi" className="btn" data-animation-in="fadeInUp" data-delay-in="0.5">OUR ROOMS</Link>
             </div>
           </SwiperSlide>
           <SwiperSlide className="banner-slide slide-item">
@@ -67,7 +67,7 @@ export default function Slider1({ bannerImgs }) {
             <div className="content-box">
               <span className="sub-title" data-animation-in="fadeInUp" data-delay-in="0.1">unique place and luxury hotel</span>
               <h1 data-animation-in="fadeInUp" data-delay-in="0.3">LUXURY HERITAGE <br/>EXPERIENCE</h1>
-              <Link href="/our-rooms" className="btn" data-animation-in="fadeInUp" data-delay-in="0.5">OUR ROOMS</Link>
+              <Link href="/rooms-palace-on-ganges-heritage-hotel-assi-ghat-varanasi" className="btn" data-animation-in="fadeInUp" data-delay-in="0.5">OUR ROOMS</Link>
             </div>
           </SwiperSlide> */}
           <div className="owl-nav" style={{ zIndex: "999" }}>

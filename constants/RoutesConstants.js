@@ -1,1 +1,13 @@
 export const ABOUT_US = "/about-palace-on-ganges-heritage-hotel-assi-ghat-varanasi";
+export const CAB_BOOKING = "/cab-booking-services-palace-on-ganges";
+export const CITY_TOUR = "/guided-city-tour-service-in-varanasi";
+export const BOAT_BOOKING = "/boat-booking-palace-on-ganges";
+export const RESTAURANT = "/restaurant-on-assi-ghat-varanasi";
+export const MD_PROFILE = "/director-message-palace-on-ganges-heritage-hotel";
+export const PROFILE = "/profile-of-palace-on-ganges-heritage-hotel";
+export const CONTACT_US = "/contact-us-palace-on-ganges-heritage-hotel-assi-ghat-varanasi";
+export const SPECIALITY_ROUTE = "/specialities-palace-on-ganges-heritage-hotel-assi-ghat-varanasi"
+export const GALLERY_ROUTE = "/gallery-palace-on-ganges-heritage-hotel-assi-ghat-varanasi";
+export const LOWER_LEVEL_FLOOR_ROUTE = "/lower-level-heritage-deluxe-room-palace-on-ganges-heritage-hotel-assi-ghat-varanasi";
+export const UPPER_LEVEL_FLOOR_ROUTE = "/upper-level-heritage-deluxe-room-palace-on-ganges-heritage-hotel-assi-ghat-varanasi";
+export const GANGES_VIEW_FLOOR_ROUTE = "/ganges-view-room-palace-on-ganges-heritage-hotel-assi-ghat-varanasi";

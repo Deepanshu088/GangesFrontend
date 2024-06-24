@@ -83,7 +83,7 @@ export default function Profile() {
 						</div>
 						<div className='content-column col-xl-7 inner-column'>
 							<div className='text-2xl mb-6 font-gilda'>
-								<a href='/our-rooms'>Our Rooms</a>
+								<a href='/rooms-palace-on-ganges-heritage-hotel-assi-ghat-varanasi'>Our Rooms</a>
 							</div>
 							<div className="healthy-food flex justify-start flex-wrap md:flex-nowrap 	">
 								<div className="food-list mb-10 mr-8 flex justify-start flex-col xl:flex-col-reverse">

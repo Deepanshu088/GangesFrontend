@@ -3,7 +3,7 @@ import React from 'react';
 import BackToTop from '../elements/BackToTop'
 import Image from 'next/image'
 import LogoDark from '../../public/images/icons/Logo-Black.png';
-import { ABOUT_US } from '@/constants/RoutesConstants';
+import { ABOUT_US, BOAT_BOOKING, CAB_BOOKING } from '@/constants/RoutesConstants';
 const Footer1 = () => {
 	return (
 		<>
@@ -43,9 +43,9 @@ const Footer1 = () => {
 									<div className="widget-content">
 										<ul className="user-links">
 											<li><Link href="/"><i className="fa-solid fa-crosshairs"></i>Home</Link></li>
-											<li><Link href="/our-rooms"><i className="fa-solid fa-crosshairs"></i>Rooms</Link></li>
-											<li><Link href="/page-cabbooking"><i className="fa-solid fa-crosshairs"></i>Cab Srvices</Link></li>
-											<li><Link href="/page-boatbooking"><i className="fa-solid fa-crosshairs"></i>Boat Booking</Link></li>
+											<li><Link href="/rooms-palace-on-ganges-heritage-hotel-assi-ghat-varanasi"><i className="fa-solid fa-crosshairs"></i>Rooms</Link></li>
+											<li><Link href={CAB_BOOKING}><i className="fa-solid fa-crosshairs"></i>Cab Services</Link></li>
+											<li><Link href={BOAT_BOOKING}><i className="fa-solid fa-crosshairs"></i>Boat Booking</Link></li>
 											<li><Link href={ABOUT_US}><i className="fa-solid fa-crosshairs"></i>About Hotel</Link></li>
 											<li><Link href="#"><i className="fa-solid fa-crosshairs"></i>Contact</Link></li>
 										</ul>

@@ -32,7 +32,7 @@ export default function About1() {
                                 </div>
                                 </div>
                                 <div className="btn-box">
-                                <a href="/our-rooms" className="theme-btn btn-style-one"><span className="btn-title">Discover More</span></a>
+                                <a href="/rooms-palace-on-ganges-heritage-hotel-assi-ghat-varanasi" className="theme-btn btn-style-one"><span className="btn-title">Discover More</span></a>
                                 <div className="contact-info">
                                     <div className="icon-box"><i className="flaticon-customer-service"></i></div>
                                     <a href="https://staahmax.staah.net/be/indexpackdetail?propertyId=MTA5OQ==&individual=true" className='whitespace-nowrap'>Book Now</a>
