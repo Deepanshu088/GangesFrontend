@@ -1,4 +1,3 @@
-'use client'
 import { ABOUT_US, BOAT_BOOKING, CAB_BOOKING, CITY_TOUR, CONTACT_US, GALLERY_ROUTE, GANGES_VIEW_FLOOR_ROUTE, LOWER_LEVEL_FLOOR_ROUTE, MD_PROFILE, PROFILE, RESTAURANT, SPECIALITY_ROUTE, UPPER_LEVEL_FLOOR_ROUTE } from "@/constants/RoutesConstants"
 import Link from "next/link"
 import { useState } from 'react'

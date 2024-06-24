@@ -1,4 +1,3 @@
-'use client'
 import Link from "next/link"
 import { useSelector } from "react-redux"
 import { Autoplay, Navigation, Pagination } from "swiper/modules"

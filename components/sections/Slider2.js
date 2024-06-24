@@ -1,4 +1,3 @@
-'use client'
 import { ABOUT_US } from "@/constants/RoutesConstants"
 import Link from "next/link"
 import { Autoplay, Navigation, Pagination } from "swiper/modules"
