@@ -14,6 +14,7 @@ export default function PageAbout() {
         description="Learn about Palace on Ganges Heritage Hotel, a distinguished heritage hotel situated on Assi Ghat in Varanasi. Discover our history, vision, and commitment to providing an authentic and comfortable stay along the sacred Ganges River."
         keywords="About Palace on Ganges Heritage Hotel, Heritage Hotel Varanasi, Assi Ghat Varanasi, Ganges River Hotel Varanasi, Varanasi Heritage Accommodation, Palace on Ganges, Ghat Hotels, Varanasi Hotel History"
       />
+
       <Layout headerStyle={2}>
       <PageTitle pageName="About Us" />
       <About1 />

@@ -13,7 +13,7 @@ export default function About1() {
                         <div className="content-column col-xl-6 col-lg-6 order-lg-2 wow fadeInRight" data-wow-delay="600ms">
                             <div className="inner-column">
                                 <div className="sec-title">
-                                <span className="sub-title">PALACE ON GANGES</span>
+                                <h1 className="sub-title">PALACE ON GANGES</h1>
                                 <h2>Most Booked & Rated <br/>Hotel in Varanasi.</h2>
                                 <div className="text text-justify">Welcome to the Palace on Ganges, an exquisite fusion of traditional elegance and contemporary luxury located at the heart of Varanasi’s spiritual landscape, on the famous Assi Ghat. Our hotel embodies the essence of Varanasi’s rich cultural tapestry and spiritual ethos, offering a uniquely immersive experience to discerning travellers from around the globe. With bespoke accommodations and thoughtful amenities, we ensure that every moment spent here resonates with comfort and serenity. Each of our 24 rooms is a testament to the diverse cultural influences that have shaped various parts of India over millennia. </div>
                                 </div>

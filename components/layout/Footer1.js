@@ -15,7 +15,7 @@ const Footer1 = () => {
 							<div className="footer-column col-xl-4 col-sm-6">
 								<div className="footer-widget about-widget">
 									<div className="logo w-60">
-										<Image src={LogoDark} alt="Hoexr" title="Hoexr" className='w-full h-auto' />
+										<Image src={LogoDark} alt="Logo" title="Logo" className='w-full h-auto' />
 									</div>
 									<div className="text"> Palace on Ganges has coined all distinct cultures of India and accordingly altogether twenty four rooms
 										under one grand heritage hotel roof are designed
