@@ -30,6 +30,7 @@ function MyApp({ Component, pageProps }) {
                 <meta property="og:url" key="og:url" content="https://palaceonganges.com" />
                 <meta property="og:image" key="og:image" content="/favicon.ico" />
             </Head>
+
             {!loading ? (
                 <Component {...pageProps} />
             ) : (
